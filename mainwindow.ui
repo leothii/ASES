@@ -16,6 +16,151 @@
     <height>0</height>
    </size>
   </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>190</red>
+        <green>190</green>
+        <blue>190</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>55</red>
+        <green>122</green>
+        <blue>183</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>190</red>
+        <green>190</green>
+        <blue>190</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>190</red>
+        <green>190</green>
+        <blue>190</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Accent">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>55</red>
+        <green>122</green>
+        <blue>183</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>190</red>
+        <green>190</green>
+        <blue>190</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>55</red>
+        <green>122</green>
+        <blue>183</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>190</red>
+        <green>190</green>
+        <blue>190</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>190</red>
+        <green>190</green>
+        <blue>190</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Accent">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>55</red>
+        <green>122</green>
+        <blue>183</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>190</red>
+        <green>190</green>
+        <blue>190</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>55</red>
+        <green>122</green>
+        <blue>183</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>190</red>
+        <green>190</green>
+        <blue>190</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>190</red>
+        <green>190</green>
+        <blue>190</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Accent">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>55</red>
+        <green>122</green>
+        <blue>183</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -23,6 +168,9 @@
    <string notr="true">QMainWindow{
 background-image: url(:/new/prefix1/background.png);
 }</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
@@ -40,9 +188,160 @@ background-image: url(:/new/prefix1/background.png);
       <height>441</height>
      </rect>
     </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>242</red>
+          <green>242</green>
+          <blue>242</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>55</red>
+          <green>122</green>
+          <blue>183</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>242</red>
+          <green>242</green>
+          <blue>242</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>242</red>
+          <green>242</green>
+          <blue>242</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Accent">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>55</red>
+          <green>122</green>
+          <blue>183</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>242</red>
+          <green>242</green>
+          <blue>242</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>55</red>
+          <green>122</green>
+          <blue>183</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>242</red>
+          <green>242</green>
+          <blue>242</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>242</red>
+          <green>242</green>
+          <blue>242</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Accent">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>55</red>
+          <green>122</green>
+          <blue>183</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>242</red>
+          <green>242</green>
+          <blue>242</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>55</red>
+          <green>122</green>
+          <blue>183</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>242</red>
+          <green>242</green>
+          <blue>242</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>242</red>
+          <green>242</green>
+          <blue>242</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Accent">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>55</red>
+          <green>122</green>
+          <blue>183</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(242, 242, 242);
- border-radius: 8px
+border-radius: 8px;
 </string>
     </property>
     <property name="frameShape">
@@ -59,6 +358,97 @@ background-image: url(:/new/prefix1/background.png);
        <width>141</width>
        <height>131</height>
       </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>218</red>
+           <green>218</green>
+           <blue>218</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>218</red>
+           <green>218</green>
+           <blue>218</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>218</red>
+           <green>218</green>
+           <blue>218</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>218</red>
+           <green>218</green>
+           <blue>218</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>218</red>
+           <green>218</green>
+           <blue>218</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>218</red>
+           <green>218</green>
+           <blue>218</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>218</red>
+           <green>218</green>
+           <blue>218</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>218</red>
+           <green>218</green>
+           <blue>218</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>218</red>
+           <green>218</green>
+           <blue>218</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
      </property>
      <property name="font">
       <font>
@@ -532,6 +922,9 @@ background-color: rgba(0, 0, 0, 0);
         </disabled>
        </palette>
       </property>
+      <property name="tabletTracking">
+       <bool>true</bool>
+      </property>
       <property name="accessibleName">
        <string>Select</string>
       </property>
@@ -551,13 +944,14 @@ QComboBox::drop-down {
     background-color: #377ab7; /* Blue background for the button */
     width: 20px; /* Width of the drop-down button */
 }
-
 /* QComboBox down arrow style */
 QComboBox::down-arrow {
-    image: url(:/qt-project.org/styles/commonstyle/images/arrow_down.png); /* Default arrow image */
+    
+	image: url(:/new/prefix1/icons8-expand-arrow-100.png);
     width: 12px; /* Width of the down arrow */
     height: 12px; /* Height of the down arrow */
 }
+
 
 /* Style for QAbstractItemView (dropdown list) */
 QComboBox QAbstractItemView {
@@ -573,6 +967,7 @@ QComboBox QAbstractItemView {
 QComboBox QAbstractItemView::item {
     padding: 4px 8px; /* Add padding to each item */
     color: black; /* Ensure text color contrasts with background */
+    text-align: center; /* Align text to center */
 }
 
 /* Hover effect for items in the dropdown list */
@@ -589,26 +984,26 @@ QComboBox QAbstractItemView::item:selected {
 </string>
       </property>
       <property name="placeholderText">
-       <string>&lt;Select&gt;</string>
+       <string/>
       </property>
       <item>
        <property name="text">
-        <string comment="Select Role">&lt;Select Role&gt;</string>
+        <string comment="Select Role">       &lt;Select&gt;</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Student</string>
+        <string>        Student</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Teacher</string>
+        <string>        Teacher</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Admin</string>
+        <string>         Admin</string>
        </property>
       </item>
      </widget>
@@ -1071,6 +1466,7 @@ QPushButton:hover{
        <family>Microsoft Sans Serif</family>
        <pointsize>39</pointsize>
        <bold>true</bold>
+       <strikeout>false</strikeout>
        <kerning>true</kerning>
       </font>
      </property>
@@ -1080,6 +1476,9 @@ QPushButton:hover{
      <property name="styleSheet">
       <string notr="true">color: rgb(51, 122, 183);
 border-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
      </property>
      <property name="text">
       <string>ASES</string>

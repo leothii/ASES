@@ -477,7 +477,7 @@ QComboBox::drop-down {
 
 /* QComboBox down arrow style */
 QComboBox::down-arrow {
-    image: url(:/qt-project.org/styles/commonstyle/images/arrow_down.png); /* Default arrow image */
+    	image: url(:/new/prefix1/icons8-expand-arrow-100.png);
     width: 12px; /* Width of the down arrow */
     height: 12px; /* Height of the down arrow */
 }
@@ -878,7 +878,7 @@ QComboBox::drop-down {
 
 /* QComboBox down arrow style */
 QComboBox::down-arrow {
-    image: url(:/qt-project.org/styles/commonstyle/images/arrow_down.png); /* Default arrow image */
+	image: url(:/new/prefix1/icons8-expand-arrow-100.png);
     width: 12px; /* Width of the down arrow */
     height: 12px; /* Height of the down arrow */
 }
@@ -1283,7 +1283,7 @@ QComboBox::drop-down {
 
 /* QComboBox down arrow style */
 QComboBox::down-arrow {
-    image: url(:/qt-project.org/styles/commonstyle/images/arrow_down.png); /* Default arrow image */
+	image: url(:/new/prefix1/icons8-expand-arrow-100.png);
     width: 12px; /* Width of the down arrow */
     height: 12px; /* Height of the down arrow */
 }

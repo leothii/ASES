@@ -27,12 +27,12 @@ class Ui_tselection
 public:
     QWidget *centralwidget;
     QFrame *frame;
-    QPushButton *BackButon;
+    QPushButton *backButton;
     QComboBox *Coursebox;
     QLabel *label_5;
     QLabel *label_7;
     QComboBox *Teacherbox;
-    QPushButton *NextButon;
+    QPushButton *nextButton;
     QFrame *frame_2;
     QLabel *label;
     QMenuBar *menubar;
@@ -53,9 +53,9 @@ public:
 ""));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
-        BackButon = new QPushButton(frame);
-        BackButon->setObjectName("BackButon");
-        BackButon->setGeometry(QRect(120, 210, 71, 31));
+        backButton = new QPushButton(frame);
+        backButton->setObjectName("backButton");
+        backButton->setGeometry(QRect(120, 210, 71, 31));
         QPalette palette;
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -90,8 +90,8 @@ public:
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush2);
 #endif
-        BackButon->setPalette(palette);
-        BackButon->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        backButton->setPalette(palette);
+        backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
 "	border-radius: 3px;\n"
@@ -106,7 +106,7 @@ public:
         Coursebox->addItem(QString());
         Coursebox->addItem(QString());
         Coursebox->setObjectName("Coursebox");
-        Coursebox->setGeometry(QRect(100, 150, 91, 21));
+        Coursebox->setGeometry(QRect(40, 150, 91, 21));
         QPalette palette1;
         QBrush brush3(QColor(0, 0, 0, 255));
         brush3.setStyle(Qt::SolidPattern);
@@ -175,7 +175,7 @@ public:
 "\n"
 "/* QComboBox down arrow style */\n"
 "QComboBox::down-arrow {\n"
-"    image: url(:/qt-project.org/styles/commonstyle/images/arrow_down.png); /* Default arrow image */\n"
+"   	image: url(:/new/prefix1/icons8-expand-arrow-100.png);\n"
 "    width: 12px; /* Width of the down arrow */\n"
 "    height: 12px; /* Height of the down arrow */\n"
 "}\n"
@@ -183,8 +183,8 @@ public:
 "/* Style for QAbstractItemView (dropdown list) */\n"
 "QComboBox QAbstractItemView {\n"
 "    border: 1px solid #377ab7; /* Border color matches blue */\n"
-"    background-c"
-                        "olor: #f2f2f2; /* Light gray background for dropdown */\n"
+"    background-color: #f2f2f2; /* Light gray background fo"
+                        "r dropdown */\n"
 "    selection-background-color: #2b6698; /* Darker blue for selection */\n"
 "    selection-color: white; /* White text color for selected items */\n"
 "    outline: none; /* No outline */\n"
@@ -211,7 +211,7 @@ public:
 ""));
         label_5 = new QLabel(frame);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(100, 60, 171, 31));
+        label_5->setGeometry(QRect(40, 70, 171, 21));
         QFont font;
         font.setFamilies({QString::fromUtf8("Product Sans")});
         font.setPointSize(9);
@@ -221,7 +221,7 @@ public:
         label_5->setWordWrap(true);
         label_7 = new QLabel(frame);
         label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(100, 130, 171, 16));
+        label_7->setGeometry(QRect(40, 130, 171, 16));
         label_7->setFont(font);
         label_7->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_7->setWordWrap(true);
@@ -231,7 +231,7 @@ public:
         Teacherbox->addItem(QString());
         Teacherbox->addItem(QString());
         Teacherbox->setObjectName("Teacherbox");
-        Teacherbox->setGeometry(QRect(80, 90, 131, 21));
+        Teacherbox->setGeometry(QRect(40, 90, 221, 21));
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::WindowText, brush3);
         palette2.setBrush(QPalette::Active, QPalette::Button, brush4);
@@ -291,7 +291,8 @@ public:
 "\n"
 "/* QComboBox down arrow style */\n"
 "QComboBox::down-arrow {\n"
-"    image: url(:/qt-project.org/styles/commonstyle/images/arrow_down.png); /* Default arrow image */\n"
+"   \n"
+"	image: url(:/new/prefix1/icons8-expand-arrow-100.png);\n"
 "    width: 12px; /* Width of the down arrow */\n"
 "    height: 12px; /* Height of the down arrow */\n"
 "}\n"
@@ -299,8 +300,8 @@ public:
 "/* Style for QAbstractItemView (dropdown list) */\n"
 "QComboBox QAbstractItemView {\n"
 "    border: 1px solid #377ab7; /* Border color matches blue */\n"
-"    background-c"
-                        "olor: #f2f2f2; /* Light gray background for dropdown */\n"
+"    background-color: #f2f2f2; /* Light gray backgrou"
+                        "nd for dropdown */\n"
 "    selection-background-color: #2b6698; /* Darker blue for selection */\n"
 "    selection-color: white; /* White text color for selected items */\n"
 "    outline: none; /* No outline */\n"
@@ -326,9 +327,9 @@ public:
 "}\n"
 ""));
         Teacherbox->setFrame(true);
-        NextButon = new QPushButton(frame);
-        NextButon->setObjectName("NextButon");
-        NextButon->setGeometry(QRect(210, 210, 71, 31));
+        nextButton = new QPushButton(frame);
+        nextButton->setObjectName("nextButton");
+        nextButton->setGeometry(QRect(210, 210, 71, 31));
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette3.setBrush(QPalette::Active, QPalette::Button, brush1);
@@ -357,8 +358,8 @@ public:
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette3.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush2);
 #endif
-        NextButon->setPalette(palette3);
-        NextButon->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        nextButton->setPalette(palette3);
+        nextButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
 "	border-radius: 3px;\n"
@@ -368,14 +369,14 @@ public:
 "}"));
         frame_2 = new QFrame(frame);
         frame_2->setObjectName("frame_2");
-        frame_2->setGeometry(QRect(-30, 0, 461, 31));
+        frame_2->setGeometry(QRect(0, 0, 301, 31));
         frame_2->setStyleSheet(QString::fromUtf8("background-color: rgb(55, 122, 183);\n"
-"border-radius: 15px;"));
+"border-radius: 8px;"));
         frame_2->setFrameShape(QFrame::StyledPanel);
         frame_2->setFrameShadow(QFrame::Raised);
         label = new QLabel(frame_2);
         label->setObjectName("label");
-        label->setGeometry(QRect(40, 10, 141, 16));
+        label->setGeometry(QRect(20, 10, 141, 16));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Product Sans Black")});
         font1.setPointSize(11);
@@ -399,7 +400,7 @@ public:
     void retranslateUi(QMainWindow *tselection)
     {
         tselection->setWindowTitle(QCoreApplication::translate("tselection", "MainWindow", nullptr));
-        BackButon->setText(QCoreApplication::translate("tselection", "Back", nullptr));
+        backButton->setText(QCoreApplication::translate("tselection", "Back", nullptr));
         Coursebox->setItemText(0, QCoreApplication::translate("tselection", "<Select>", nullptr));
         Coursebox->setItemText(1, QCoreApplication::translate("tselection", "CC202", "Select Role"));
         Coursebox->setItemText(2, QCoreApplication::translate("tselection", "CC203", nullptr));
@@ -410,9 +411,9 @@ public:
         Coursebox->setAccessibleName(QCoreApplication::translate("tselection", "Select", nullptr));
 #endif // QT_CONFIG(accessibility)
         Coursebox->setPlaceholderText(QCoreApplication::translate("tselection", "<Select>", nullptr));
-        label_5->setText(QCoreApplication::translate("tselection", "<html><head/><body><p>Teacher Name</p></body></html>", nullptr));
+        label_5->setText(QCoreApplication::translate("tselection", "<html><head/><body><p>Teacher/Instructor</p></body></html>", nullptr));
         label_7->setText(QCoreApplication::translate("tselection", "<html><head/><body><p>Course/Subject</p></body></html>", nullptr));
-        Teacherbox->setItemText(0, QCoreApplication::translate("tselection", "<Select>", nullptr));
+        Teacherbox->setItemText(0, QCoreApplication::translate("tselection", "                 <Select>", nullptr));
         Teacherbox->setItemText(1, QCoreApplication::translate("tselection", "John Christopher Mateo", nullptr));
         Teacherbox->setItemText(2, QCoreApplication::translate("tselection", "Ma. Luche Sabayle", nullptr));
         Teacherbox->setItemText(3, QCoreApplication::translate("tselection", "Evan Sumido", nullptr));
@@ -420,8 +421,8 @@ public:
 #if QT_CONFIG(accessibility)
         Teacherbox->setAccessibleName(QCoreApplication::translate("tselection", "Select", nullptr));
 #endif // QT_CONFIG(accessibility)
-        Teacherbox->setPlaceholderText(QCoreApplication::translate("tselection", "<Select>", nullptr));
-        NextButon->setText(QCoreApplication::translate("tselection", "Next", nullptr));
+        Teacherbox->setPlaceholderText(QString());
+        nextButton->setText(QCoreApplication::translate("tselection", "Next", nullptr));
         label->setText(QCoreApplication::translate("tselection", "TO RATE", nullptr));
     } // retranslateUi
 

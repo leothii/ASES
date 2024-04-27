@@ -163,6 +163,8 @@ public:
         label_4->setFont(font1);
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(55, 122, 183);\n"
 ""));
+        label_4->setWordWrap(true);
+        label_4->setOpenExternalLinks(true);
         loginButton = new QPushButton(frame);
         loginButton->setObjectName("loginButton");
         loginButton->setGeometry(QRect(170, 300, 83, 29));
@@ -191,7 +193,7 @@ public:
         label_1->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_2 = new QLabel(frame);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(60, 130, 161, 31));
+        label_2->setGeometry(QRect(60, 140, 161, 21));
         label_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         StudentLg->setCentralWidget(centralwidget);
         frame->raise();

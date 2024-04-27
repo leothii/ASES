@@ -11,6 +11,10 @@ CONFIG += c++17
 SOURCES += \
     adminlg.cpp \
     edit.cpp \
+    form1.cpp \
+    form2.cpp \
+    form3.cpp \
+    form4.cpp \
     index.cpp \
     instruction.cpp \
     main.cpp \
@@ -24,6 +28,10 @@ SOURCES += \
 HEADERS += \
     adminlg.h \
     edit.h \
+    form1.h \
+    form2.h \
+    form3.h \
+    form4.h \
     index.h \
     instruction.h \
     mainwindow.h \
@@ -36,6 +44,10 @@ HEADERS += \
 FORMS += \
     adminlg.ui \
     edit.ui \
+    form1.ui \
+    form2.ui \
+    form3.ui \
+    form4.ui \
     index.ui \
     instruction.ui \
     mainwindow.ui \

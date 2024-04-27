@@ -1,5 +1,9 @@
 release/adminlg.o
 release/edit.o
+release/form1.o
+release/form2.o
+release/form3.o
+release/form4.o
 release/index.o
 release/instruction.o
 release/main.o
@@ -13,6 +17,10 @@ release/qrc_Images.o
 release/qrc_Resource.o
 release/moc_adminlg.o
 release/moc_edit.o
+release/moc_form1.o
+release/moc_form2.o
+release/moc_form3.o
+release/moc_form4.o
 release/moc_index.o
 release/moc_instruction.o
 release/moc_mainwindow.o

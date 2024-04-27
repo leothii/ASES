@@ -9,6 +9,8 @@
         <file>background.png</file>
         <file>down-arrow-square-outlined-button.png</file>
         <file>ases (1).svg</file>
+        <file>icons8-drop-down-50.png</file>
+        <file>icons8-expand-arrow-100.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::on_NextButton_clicked() {
     // Check if the selected item is "Student"
-    if (ui->RoleBox->currentText() == "Student") {
+    if (ui->RoleBox->currentText() == "        Student") {
         // If an instance of StudentLg already exists, bring it to focus
         if (StudentLg::instance) {
             StudentLg::instance->show();
@@ -38,7 +38,7 @@ void MainWindow::on_NextButton_clicked() {
         // Hide the main window
         this->hide();
     }
-    if (ui->RoleBox->currentText() == "Teacher") {
+    if (ui->RoleBox->currentText() == "        Teacher") {
         // If an instance of StudentLg already exists, bring it to focus
         if (TeacherLg::instance) {
             TeacherLg::instance->show();
@@ -53,7 +53,7 @@ void MainWindow::on_NextButton_clicked() {
         this->hide();
     }
     if (ui->RoleBox->currentText() == ""
-                                      "Admin") {
+                                      "         Admin") {
         // If an instance of StudentLg already exists, bring it to focus
         if (AdminLg::instance) {
             AdminLg::instance->show();

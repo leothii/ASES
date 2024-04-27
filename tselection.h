@@ -15,7 +15,9 @@ public:
     explicit tselection(QWidget *parent = nullptr);
     ~tselection();
      static tselection*instance;
-
+private slots:
+     void on_backButton_clicked();
+     void on_nextButton_clicked();
 private:
     Ui::tselection *ui;
 };

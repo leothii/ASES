@@ -34,7 +34,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="BackButon">
+    <widget class="QPushButton" name="backButton">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -259,7 +259,7 @@ QPushButton:hover{
     <widget class="QComboBox" name="Coursebox">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>40</x>
        <y>150</y>
        <width>91</width>
        <height>21</height>
@@ -585,7 +585,7 @@ QComboBox::drop-down {
 
 /* QComboBox down arrow style */
 QComboBox::down-arrow {
-    image: url(:/qt-project.org/styles/commonstyle/images/arrow_down.png); /* Default arrow image */
+   	image: url(:/new/prefix1/icons8-expand-arrow-100.png);
     width: 12px; /* Width of the down arrow */
     height: 12px; /* Height of the down arrow */
 }
@@ -651,10 +651,10 @@ QComboBox QAbstractItemView::item:selected {
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>60</y>
+       <x>40</x>
+       <y>70</y>
        <width>171</width>
-       <height>31</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -668,7 +668,7 @@ QComboBox QAbstractItemView::item:selected {
       <string notr="true">color: rgb(0, 0, 0);</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Teacher Name&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Teacher/Instructor&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -677,7 +677,7 @@ QComboBox QAbstractItemView::item:selected {
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>40</x>
        <y>130</y>
        <width>171</width>
        <height>16</height>
@@ -703,9 +703,9 @@ QComboBox QAbstractItemView::item:selected {
     <widget class="QComboBox" name="Teacherbox">
      <property name="geometry">
       <rect>
-       <x>80</x>
+       <x>40</x>
        <y>90</y>
-       <width>131</width>
+       <width>221</width>
        <height>21</height>
       </rect>
      </property>
@@ -1032,7 +1032,8 @@ QComboBox::drop-down {
 
 /* QComboBox down arrow style */
 QComboBox::down-arrow {
-    image: url(:/qt-project.org/styles/commonstyle/images/arrow_down.png); /* Default arrow image */
+   
+	image: url(:/new/prefix1/icons8-expand-arrow-100.png);
     width: 12px; /* Width of the down arrow */
     height: 12px; /* Height of the down arrow */
 }
@@ -1067,14 +1068,14 @@ QComboBox QAbstractItemView::item:selected {
 </string>
      </property>
      <property name="placeholderText">
-      <string>&lt;Select&gt;</string>
+      <string/>
      </property>
      <property name="frame">
       <bool>true</bool>
      </property>
      <item>
       <property name="text">
-       <string>&lt;Select&gt;</string>
+       <string>                 &lt;Select&gt;</string>
       </property>
      </item>
      <item>
@@ -1093,7 +1094,7 @@ QComboBox QAbstractItemView::item:selected {
       </property>
      </item>
     </widget>
-    <widget class="QPushButton" name="NextButon">
+    <widget class="QPushButton" name="nextButton">
      <property name="geometry">
       <rect>
        <x>210</x>
@@ -1318,15 +1319,15 @@ QPushButton:hover{
     <widget class="QFrame" name="frame_2">
      <property name="geometry">
       <rect>
-       <x>-30</x>
+       <x>0</x>
        <y>0</y>
-       <width>461</width>
+       <width>301</width>
        <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(55, 122, 183);
-border-radius: 15px;</string>
+border-radius: 8px;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -1337,7 +1338,7 @@ border-radius: 15px;</string>
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>20</x>
         <y>10</y>
         <width>141</width>
         <height>16</height>

@@ -84,12 +84,23 @@
 
 
     void StudentLg::on_loginButton_clicked() {
-        // Open the database and retrieve user credentials
-        QSqlDatabase db = QSqlDatabase::database();
-        db.open();
+        // Retrieve user input
         QString email = ui->lineEdit_1->text();
         QString password = ui->lineEdit_3->text();
         QString studentNumber = ui->lineEdit_2->text();
+
+        // Check if any of the fields are empty
+        if (email.isEmpty() || password.isEmpty() || studentNumber.isEmpty()) {
+            QMessageBox::warning(this, "Error", "Please fill in all fields.");
+            return;
+        }
+
+        // Open the database and retrieve user credentials
+        QSqlDatabase db = QSqlDatabase::database();
+        if (!db.open()) {
+            QMessageBox::warning(this, "Error", "Database connection failed!");
+            return;
+        }
 
         // Query the database for the user
         QSqlQuery queryLogin(db);
@@ -114,28 +125,28 @@
 
             // Check if the provided password matches the stored password
             if (password == storedPassword) {
+                // Save login information if checkbox is checked
                 if (ui->checkBox->isChecked()) {
                     QSettings settings;
                     settings.setValue("rememberMe", true);
                     settings.setValue("email", email);
                     settings.setValue("studentNumber", studentNumber);
                 } else {
-                    // Clear the saved values if checkbox is not checked
+                    // Clear saved values if checkbox is not checked
                     QSettings settings;
                     settings.remove("rememberMe");
                     settings.remove("email");
                     settings.remove("studentNumber");
                 }
+
                 // Pass data to the Sdashb instance
                 if (Sdashb::instance) {
-                    // Pass the data to Sdashb instance's method
                     Sdashb::instance->setStudentInformation(fullName, studentNumber, email);
                     Sdashb::instance->ui->StudentName->setText(firstName + "!");
                     Sdashb::instance->show();
                     Sdashb::instance->raise();
                     Sdashb::instance->activateWindow();
                 } else {
-                    // Create a new instance of Sdashb
                     Sdashb::instance = new Sdashb(this);
                     Sdashb::instance->setStudentInformation(fullName, studentNumber, email);
                     Sdashb::instance->ui->StudentName->setText(firstName + "!");
@@ -147,15 +158,15 @@
 
                 QMessageBox::information(this, "Success", "Login successful!");
             } else {
-                QMessageBox::warning(this, "Error", "Invalid credential!");
+                QMessageBox::warning(this, "Error", "Invalid credentials!");
             }
-
-            db.close();
         } else {
             QMessageBox::warning(this, "Error", "No matching record found!");
-            db.close();
         }
+
+        db.close();
     }
+
 
 
     void StudentLg::on_signUpButton_clicked() {

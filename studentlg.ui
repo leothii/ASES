@@ -232,6 +232,12 @@ QCheckBox::indicator:checked::after {
      <property name="text">
       <string>Forgot Password</string>
      </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QPushButton" name="loginButton">
      <property name="geometry">
@@ -299,9 +305,9 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>130</y>
+       <y>140</y>
        <width>161</width>
-       <height>31</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="styleSheet">

@@ -10,15 +10,12 @@
 #define UI_SDASHB_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCalendarWidget>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -32,7 +29,6 @@ public:
     QWidget *centralwidget;
     QLabel *StudentName;
     QLabel *Welcome;
-    QPushButton *logoutButton;
     QFrame *frame;
     QFrame *frame_2;
     QCalendarWidget *calendarWidget;
@@ -53,8 +49,9 @@ public:
     QLabel *label_3;
     QLabel *label_4;
     QFrame *line;
-    QMenuBar *menubar;
-    QMenu *menuDashboard;
+    QPushButton *logoutButton;
+    QFrame *frame_3;
+    QLabel *label_5;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *Sdashb)
@@ -69,16 +66,16 @@ public:
         centralwidget->setStyleSheet(QString::fromUtf8(""));
         StudentName = new QLabel(centralwidget);
         StudentName->setObjectName("StudentName");
-        StudentName->setGeometry(QRect(100, 0, 231, 33));
+        StudentName->setGeometry(QRect(100, 70, 231, 33));
         QFont font;
         font.setFamilies({QString::fromUtf8("Product Sans")});
         font.setPointSize(15);
-        font.setUnderline(true);
+        font.setUnderline(false);
         StudentName->setFont(font);
         StudentName->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         Welcome = new QLabel(centralwidget);
         Welcome->setObjectName("Welcome");
-        Welcome->setGeometry(QRect(10, 0, 111, 33));
+        Welcome->setGeometry(QRect(10, 70, 111, 33));
         Welcome->setSizeIncrement(QSize(6, 5));
         Welcome->setBaseSize(QSize(9, 10));
         QFont font1;
@@ -86,21 +83,9 @@ public:
         font1.setPointSize(15);
         Welcome->setFont(font1);
         Welcome->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        logoutButton = new QPushButton(centralwidget);
-        logoutButton->setObjectName("logoutButton");
-        logoutButton->setGeometry(QRect(340, 0, 83, 29));
-        logoutButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #337ab7;  /* Button background color (blue) */\n"
-"    color: #ffffff;             /* Text color (white) */\n"
-"	border-radius: 3px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"	background-color: #285e8e;\n"
-"}\n"
-""));
         frame = new QFrame(centralwidget);
         frame->setObjectName("frame");
-        frame->setGeometry(QRect(0, -40, 511, 991));
+        frame->setGeometry(QRect(0, 0, 511, 991));
         frame->setStyleSheet(QString::fromUtf8("background-color: rgb(242, 242, 242);"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
@@ -258,25 +243,40 @@ public:
         line->setGeometry(QRect(20, 310, 391, 20));
         line->setFrameShape(QFrame::Shape::HLine);
         line->setFrameShadow(QFrame::Shadow::Sunken);
+        logoutButton = new QPushButton(frame);
+        logoutButton->setObjectName("logoutButton");
+        logoutButton->setGeometry(QRect(320, 80, 83, 29));
+        logoutButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #337ab7;  /* Button background color (blue) */\n"
+"    color: #ffffff;             /* Text color (white) */\n"
+"	border-radius: 3px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #285e8e;\n"
+"}\n"
+""));
+        frame_3 = new QFrame(frame);
+        frame_3->setObjectName("frame_3");
+        frame_3->setGeometry(QRect(-30, 0, 461, 61));
+        frame_3->setStyleSheet(QString::fromUtf8("background-color: rgb(55, 122, 183);"));
+        frame_3->setFrameShape(QFrame::StyledPanel);
+        frame_3->setFrameShadow(QFrame::Raised);
+        label_5 = new QLabel(frame_3);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(50, 20, 141, 20));
+        QFont font9;
+        font9.setFamilies({QString::fromUtf8("Product Sans Black")});
+        font9.setPointSize(11);
+        label_5->setFont(font9);
+        label_5->setTabletTracking(false);
+        label_5->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         Sdashb->setCentralWidget(centralwidget);
         frame->raise();
         StudentName->raise();
         Welcome->raise();
-        logoutButton->raise();
-        menubar = new QMenuBar(Sdashb);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 424, 25));
-        menubar->setStyleSheet(QString::fromUtf8("background-color: rgb(242, 242, 242);"));
-        menuDashboard = new QMenu(menubar);
-        menuDashboard->setObjectName("menuDashboard");
-        menuDashboard->setStyleSheet(QString::fromUtf8("background-color: rgb(242, 242, 242);"));
-        Sdashb->setMenuBar(menubar);
         statusbar = new QStatusBar(Sdashb);
         statusbar->setObjectName("statusbar");
         Sdashb->setStatusBar(statusbar);
-
-        menubar->addAction(menuDashboard->menuAction());
-        menuDashboard->addSeparator();
 
         retranslateUi(Sdashb);
 
@@ -288,7 +288,6 @@ public:
         Sdashb->setWindowTitle(QCoreApplication::translate("Sdashb", "MainWindow", nullptr));
         StudentName->setText(QCoreApplication::translate("Sdashb", "Name", nullptr));
         Welcome->setText(QCoreApplication::translate("Sdashb", "Welcome,", nullptr));
-        logoutButton->setText(QCoreApplication::translate("Sdashb", "Log Out", nullptr));
         groupBox_2->setTitle(QString());
         label_2->setText(QString());
         name->setText(QCoreApplication::translate("Sdashb", "Name: ", nullptr));
@@ -304,7 +303,8 @@ public:
         AcadYear_2->setText(QCoreApplication::translate("Sdashb", "<html><head/><body><p>Second Semester</p></body></html>", nullptr));
         label_3->setText(QCoreApplication::translate("Sdashb", "ENDED", nullptr));
         label_4->setText(QCoreApplication::translate("Sdashb", "/", nullptr));
-        menuDashboard->setTitle(QCoreApplication::translate("Sdashb", "Dashboard", nullptr));
+        logoutButton->setText(QCoreApplication::translate("Sdashb", "Log Out", nullptr));
+        label_5->setText(QCoreApplication::translate("Sdashb", "DASHBOARD", nullptr));
     } // retranslateUi
 
 };
