@@ -588,9 +588,12 @@ QComboBox QAbstractItemView::item:selected {
 }
 </string>
       </property>
+      <property name="placeholderText">
+       <string>&lt;Select&gt;</string>
+      </property>
       <item>
        <property name="text">
-        <string comment="Select Role">Select Role</string>
+        <string comment="Select Role">&lt;Select Role&gt;</string>
        </property>
       </item>
       <item>

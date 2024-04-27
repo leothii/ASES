@@ -367,7 +367,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label_2->setText(QString());
-        RoleBox->setItemText(0, QCoreApplication::translate("MainWindow", "Select Role", "Select Role"));
+        RoleBox->setItemText(0, QCoreApplication::translate("MainWindow", "<Select Role>", "Select Role"));
         RoleBox->setItemText(1, QCoreApplication::translate("MainWindow", "Student", nullptr));
         RoleBox->setItemText(2, QCoreApplication::translate("MainWindow", "Teacher", nullptr));
         RoleBox->setItemText(3, QCoreApplication::translate("MainWindow", "Admin", nullptr));
@@ -375,6 +375,7 @@ public:
 #if QT_CONFIG(accessibility)
         RoleBox->setAccessibleName(QCoreApplication::translate("MainWindow", "Select", nullptr));
 #endif // QT_CONFIG(accessibility)
+        RoleBox->setPlaceholderText(QCoreApplication::translate("MainWindow", "<Select>", nullptr));
         ExitButon->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
         NextButton->setText(QCoreApplication::translate("MainWindow", "Next", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "ASES", nullptr));

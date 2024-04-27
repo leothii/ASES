@@ -8,6 +8,7 @@ debug/sdashb.o
 debug/signup.o
 debug/studentlg.o
 debug/teacherlg.o
+debug/tselection.o
 debug/qrc_Images.o
 debug/qrc_Resource.o
 debug/moc_adminlg.o
@@ -19,3 +20,4 @@ debug/moc_sdashb.o
 debug/moc_signup.o
 debug/moc_studentlg.o
 debug/moc_teacherlg.o
+debug/moc_tselection.o

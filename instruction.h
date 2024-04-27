@@ -18,6 +18,7 @@ public:
 
 private slots:
     void on_backButton_clicked();
+    void on_nextButton_clicked();
 
 private:
     Ui::Instruction *ui;

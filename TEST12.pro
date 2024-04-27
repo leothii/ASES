@@ -18,7 +18,8 @@ SOURCES += \
     sdashb.cpp \
     signup.cpp \
     studentlg.cpp \
-    teacherlg.cpp
+    teacherlg.cpp \
+    tselection.cpp
 
 HEADERS += \
     adminlg.h \
@@ -29,7 +30,8 @@ HEADERS += \
     sdashb.h \
     signup.h \
     studentlg.h \
-    teacherlg.h
+    teacherlg.h \
+    tselection.h
 
 FORMS += \
     adminlg.ui \
@@ -40,7 +42,8 @@ FORMS += \
     sdashb.ui \
     signup.ui \
     studentlg.ui \
-    teacherlg.ui
+    teacherlg.ui \
+    tselection.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

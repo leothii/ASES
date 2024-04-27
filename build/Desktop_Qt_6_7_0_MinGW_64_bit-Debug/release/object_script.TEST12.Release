@@ -8,6 +8,7 @@ release/sdashb.o
 release/signup.o
 release/studentlg.o
 release/teacherlg.o
+release/tselection.o
 release/qrc_Images.o
 release/qrc_Resource.o
 release/moc_adminlg.o
@@ -19,3 +20,4 @@ release/moc_sdashb.o
 release/moc_signup.o
 release/moc_studentlg.o
 release/moc_teacherlg.o
+release/moc_tselection.o
