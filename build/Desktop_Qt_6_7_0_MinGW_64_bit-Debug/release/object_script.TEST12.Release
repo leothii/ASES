@@ -4,6 +4,7 @@ release/form1.o
 release/form2.o
 release/form3.o
 release/form4.o
+release/form5.o
 release/index.o
 release/instruction.o
 release/main.o
@@ -21,6 +22,7 @@ release/moc_form1.o
 release/moc_form2.o
 release/moc_form3.o
 release/moc_form4.o
+release/moc_form5.o
 release/moc_index.o
 release/moc_instruction.o
 release/moc_mainwindow.o

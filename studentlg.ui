@@ -209,6 +209,9 @@ QCheckBox::indicator:checked::after {
      <property name="text">
       <string>Remember me</string>
      </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">

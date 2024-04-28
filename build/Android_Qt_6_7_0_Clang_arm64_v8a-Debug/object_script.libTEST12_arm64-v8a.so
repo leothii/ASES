@@ -1,5 +1,9 @@
 adminlg.obj
 edit.obj
+form1.obj
+form2.obj
+form3.obj
+form4.obj
 index.obj
 instruction.obj
 main.obj
@@ -8,10 +12,15 @@ sdashb.obj
 signup.obj
 studentlg.obj
 teacherlg.obj
+tselection.obj
 qrc_Images.obj
 qrc_Resource.obj
 moc_adminlg.obj
 moc_edit.obj
+moc_form1.obj
+moc_form2.obj
+moc_form3.obj
+moc_form4.obj
 moc_index.obj
 moc_instruction.obj
 moc_mainwindow.obj
@@ -19,3 +28,4 @@ moc_sdashb.obj
 moc_signup.obj
 moc_studentlg.obj
 moc_teacherlg.obj
+moc_tselection.obj

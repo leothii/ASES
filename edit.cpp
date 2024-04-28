@@ -62,10 +62,11 @@ void Edit::on_updateButton_clicked(){
     queryInsertData.bindValue(":MIDDLENAME", middlename);
     queryInsertData.bindValue(":ACADEMICLEVEL", Academiclevel);
     queryInsertData.bindValue(":PROGRAM", Program);
+    queryInsertData.bindValue(":YEARLEVEL", Yearlevel);
     queryInsertData.bindValue(":SECTION", Section);
     queryInsertData.bindValue(":PASSWORD", password);
 
-    if (QMessageBox::information(this, "Confirmation", "Are you sure you want to update the account?", QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes) {
+    if (QMessageBox::information(this, "Confirmation", "Are you sure you want to update your account?", QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes) {
         if (!queryInsertData.exec()) {
             QMessageBox::warning(this, "Error", "Failed to update account: " + queryInsertData.lastError().text());
             db.rollback();
