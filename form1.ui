@@ -57,7 +57,7 @@ QPushButton:hover{
       <string>Next</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="backButton">
+    <widget class="QPushButton" name="canceButton">
      <property name="geometry">
       <rect>
        <x>250</x>
@@ -77,7 +77,7 @@ QPushButton:hover{
 }</string>
      </property>
      <property name="text">
-      <string>Back</string>
+      <string>Cancel</string>
      </property>
     </widget>
     <widget class="QFrame" name="frame_2">

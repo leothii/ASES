@@ -16,7 +16,9 @@ public:
     ~Form1();
     static Form1 *instance;
 
-
+private slots:
+    void on_nextButton_clicked();
+    void handleRadioButtonClicked();
 private:
     Ui::Form1 *ui;
 };

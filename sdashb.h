@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QLabel>
+#include <QString>
 
 namespace Ui {
 class Sdashb;
@@ -16,6 +17,7 @@ public:
     explicit Sdashb(QWidget *parent = nullptr);
     ~Sdashb();
     static Sdashb *instance;
+    static QString sNum;
 
     //function nga ma update sang user info
     void setStudentInformation(const QString& fullName, const QString& studentNumber, const QString& email);

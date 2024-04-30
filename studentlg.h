@@ -11,7 +11,7 @@
 #include <QtWidgets/QMessageBox>
 #include <QSettings>
 #include <signup.h>
-
+#include <QString>
 
 namespace Ui {
 class StudentLg;

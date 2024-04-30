@@ -4,7 +4,7 @@
 #include "teacherlg.h"
 #include "adminlg.h"
 
- // Initialize the static pointer
+// Initialize the static pointer
 MainWindow* MainWindow::instance = nullptr;
 TeacherLg* TeacherLg::instance = nullptr;
 AdminLg* AdminLg::instance = nullptr;

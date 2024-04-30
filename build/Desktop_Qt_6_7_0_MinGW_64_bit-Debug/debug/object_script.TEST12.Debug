@@ -5,6 +5,7 @@ debug/form2.o
 debug/form3.o
 debug/form4.o
 debug/form5.o
+debug/global.o
 debug/index.o
 debug/instruction.o
 debug/main.o
@@ -23,6 +24,7 @@ debug/moc_form2.o
 debug/moc_form3.o
 debug/moc_form4.o
 debug/moc_form5.o
+debug/moc_global.o
 debug/moc_index.o
 debug/moc_instruction.o
 debug/moc_mainwindow.o

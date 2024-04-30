@@ -14,7 +14,7 @@ class Index : public QMainWindow
 public:
     explicit Index(QWidget *parent = nullptr);
     ~Index();
-    static Index*instance;
+    static Index *instance;
 
 private slots:
     void on_backButton_clicked();

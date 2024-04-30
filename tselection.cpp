@@ -1,25 +1,24 @@
-#include "mainwindow.h"
 #include "tselection.h"
 #include "ui_tselection.h"
 #include "form1.h"
 #include "instruction.h"
+#include "sdashb.h"
 
-Form1* Form1::instance=nullptr;
+Form1* Form1::instance = nullptr;
 
 tselection::tselection(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::tselection)
 {
     ui->setupUi(this);
-    connect(ui->backButton, &QPushButton::clicked, this, &tselection::on_backButton_clicked);
-    connect(ui->nextButton, &QPushButton::clicked, this, &tselection::on_nextButton_clicked);
+    studentNumber = Sdashb::sNum;
 
-    connect(ui->Coursebox, SIGNAL(currentIndexChanged(QString&)),
-            this, SLOT(onCourseBoxIndexChanged(QString&)));
+    // Connect signals and slots only once
+    // For backButton
+    QObject::connect(ui->backButton, SIGNAL(clicked()), this, SLOT(on_backButton_clicked()));
 
-    // Connect Teacherbox's currentIndexChanged signal
-    connect(ui->Teacherbox, SIGNAL(currentIndexChanged(QString&)),
-            this, SLOT(onTeacherBoxIndexChanged(QString&)));
+    // For nextButton
+    QObject::connect(ui->nextButton, SIGNAL(clicked()), this, SLOT(on_nextButton_clicked()));
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("sql6.freesqldatabase.com");
@@ -28,20 +27,18 @@ tselection::tselection(QWidget *parent)
     db.setPassword("wQpFvGwERi");
     db.open();
 
-    if(db.open())
-    {
+
+    if (db.open()) {
         qDebug() << "Database is connected";
-    }
-    else
-    {
+    } else {
         qDebug() << "Database is not connected";
     }
 }
 
-
-
 void tselection::on_backButton_clicked()
 {
+    qDebug() << studentNumber;
+
     // Redirect to the main login window
     if (Instruction::instance == nullptr) {
         // Create a new instance of the main window if it doesn't already exist
@@ -51,63 +48,43 @@ void tselection::on_backButton_clicked()
     this->hide();
 }
 
-
-// Slot to handle Coursebox selection change
-void tselection::onCourseBoxIndexChanged(const QString &text) {
-    updateDatabase("SUBJECT", text);
-}
-
-// Slot to handle Teacherbox selection change
-void tselection::onTeacherBoxIndexChanged(const QString &text) {
-    updateDatabase("TEACHER", text);
-}
-
-// Function to update the database
-void tselection::updateDatabase(const QString &columnName, const QString &value) {
-    // Prepare the SQL query to update the database
-    QString queryString = QString("UPDATE EVALUATIONDATA SET %1 = ?").arg(columnName);
-    QSqlQuery query;
-
-    // Prepare the query
-    if (query.prepare(queryString)) {
-        // Bind the value to the query
-        query.addBindValue(value);
-
-        // Execute the query
-        if (!query.exec()) {
-            // Handle error
-            qDebug() << "Error executing query: " << query.lastError().text();
-        }
-    } else {
-        // Handle error in query preparation
-        qDebug() << "Error preparing query: " << query.lastError().text();
-    }
-}
 void tselection::on_nextButton_clicked()
-{
-
-    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+{    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("sql6.freesqldatabase.com");
     db.setDatabaseName("sql6698709");
     db.setUserName("sql6698709");
     db.setPassword("wQpFvGwERi");
     db.open();
+    // Ensure the database is connected
+    if (!db.isOpen()) {
+        qDebug() << "Database is not connected";
+        return;
+    }
+
     // Get the selected values from Coursebox and Teacherbox
     QString subject = ui->Coursebox->currentText();
     QString teacher = ui->Teacherbox->currentText();
 
-    // Update the database with the selected values
-    updateDatabase("SUBJECT", subject);
-    updateDatabase("TEACHER", teacher);
+    // Prepare SQL query
+    QSqlQuery query(db);
+    query.prepare("INSERT INTO EVALUATIONDATA (STUDENTNUMBER, SUBJECT, TEACHER) VALUES (:studentNumber, :subject, :teacher)");
+    query.bindValue(":studentNumber", studentNumber);
+    query.bindValue(":subject", subject);
+    query.bindValue(":teacher", teacher);
 
-    db.close();
+    // Execute the query
+    if (!query.exec()) {
+        qDebug() << "Failed to insert data into database:" << query.lastError().text();
+        return;
+    }
 
     // Redirect to the main login window
     if (Form1::instance == nullptr) {
         // Create a new instance of the main window if it doesn't already exist
         Form1::instance = new Form1(this);
+        Form1::instance->show();
     }
-    Form1::instance->show();
+
     this->hide();
 }
 

@@ -6,7 +6,7 @@
 
 Edit* Edit::instance = nullptr;
 
-
+QString Sdashb::sNum;
 Sdashb::Sdashb(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Sdashb)
@@ -27,6 +27,7 @@ void Sdashb::setStudentInformation(const QString& fullName, const QString& stude
     ui->name->setText("Name: " + fullName);
     ui->studentNum->setText("Student Number: " + studentNumber);
     ui->email->setText("Email: " + email);
+    this->sNum = studentNumber;
 }
 
 void Sdashb::on_logoutButton_clicked()
@@ -43,6 +44,8 @@ void Sdashb::on_logoutButton_clicked()
 
 void Sdashb::on_EvaluateButton_clicked()
 {
+
+    qDebug()<<sNum;
     // Redirect to the main login window
     if (Index::instance == nullptr) {
         // Create a new instance of the main window if it doesn't already exist

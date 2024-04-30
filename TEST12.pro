@@ -16,6 +16,7 @@ SOURCES += \
     form3.cpp \
     form4.cpp \
     form5.cpp \
+    global.cpp \
     index.cpp \
     instruction.cpp \
     main.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     form3.h \
     form4.h \
     form5.h \
+    global.h \
     index.h \
     instruction.h \
     mainwindow.h \
@@ -51,6 +53,7 @@ FORMS += \
     form3.ui \
     form4.ui \
     form5.ui \
+    global.ui \
     index.ui \
     instruction.ui \
     mainwindow.ui \

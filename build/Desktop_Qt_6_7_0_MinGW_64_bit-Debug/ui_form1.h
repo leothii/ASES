@@ -29,7 +29,7 @@ public:
     QWidget *centralwidget;
     QFrame *frame;
     QPushButton *nextButton;
-    QPushButton *backButton;
+    QPushButton *canceButton;
     QFrame *frame_2;
     QLabel *label;
     QFrame *frame_3;
@@ -111,10 +111,10 @@ public:
 "QPushButton:hover{\n"
 "	background-color: #285e8e;\n"
 "}"));
-        backButton = new QPushButton(frame);
-        backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(250, 730, 71, 29));
-        backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        canceButton = new QPushButton(frame);
+        canceButton->setObjectName("canceButton");
+        canceButton->setGeometry(QRect(250, 730, 71, 29));
+        canceButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
 "	border-radius: 3px;\n"
@@ -741,7 +741,7 @@ public:
     {
         Form1->setWindowTitle(QCoreApplication::translate("Form1", "MainWindow", nullptr));
         nextButton->setText(QCoreApplication::translate("Form1", "Next", nullptr));
-        backButton->setText(QCoreApplication::translate("Form1", "Back", nullptr));
+        canceButton->setText(QCoreApplication::translate("Form1", "Cancel", nullptr));
         label->setText(QCoreApplication::translate("Form1", "A. Commitment - 25%", nullptr));
         label_4->setText(QCoreApplication::translate("Form1", "<html><head/><body><p>1. Demonstrates sensitivity to learners\342\200\231 ability to attend and absorb content information.</p></body></html>", nullptr));
         groupBox->setTitle(QString());

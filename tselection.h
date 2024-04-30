@@ -2,6 +2,10 @@
 #define TSELECTION_H
 
 #include <QMainWindow>
+#include <QSql>
+#include <QSqlQuery>
+#include <QSqlDatabase>
+#include <QSqlError>
 
 namespace Ui {
 class tselection;
@@ -14,17 +18,16 @@ class tselection : public QMainWindow
 public:
     explicit tselection(QWidget *parent = nullptr);
     ~tselection();
-     static tselection*instance;
+    static tselection*instance;
+    QString studentNumber;
 
 private slots:
-     void on_backButton_clicked();
-     void on_nextButton_clicked();
-     void onCourseBoxIndexChanged(const QString &text);
-     void onTeacherBoxIndexChanged(const QString &text);
-     void updateDatabase(const QString &columnName, const QString &value);
-
+    void on_backButton_clicked();
+    void on_nextButton_clicked();
 private:
     Ui::tselection *ui;
+    friend class Sdashb;
+
 };
 
 #endif // TSELECTION_H

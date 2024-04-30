@@ -29,7 +29,7 @@ public:
     QWidget *centralwidget;
     QFrame *frame;
     QPushButton *nextButton;
-    QPushButton *backButton;
+    QPushButton *cancelButton;
     QFrame *frame_2;
     QLabel *label;
     QFrame *frame_3;
@@ -111,10 +111,10 @@ public:
 "QPushButton:hover{\n"
 "	background-color: #285e8e;\n"
 "}"));
-        backButton = new QPushButton(frame);
-        backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(250, 730, 71, 29));
-        backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        cancelButton = new QPushButton(frame);
+        cancelButton->setObjectName("cancelButton");
+        cancelButton->setGeometry(QRect(250, 730, 71, 29));
+        cancelButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
 "	border-radius: 3px;\n"
@@ -740,7 +740,7 @@ public:
     {
         Form2->setWindowTitle(QCoreApplication::translate("Form2", "MainWindow", nullptr));
         nextButton->setText(QCoreApplication::translate("Form2", "Next", nullptr));
-        backButton->setText(QCoreApplication::translate("Form2", "Back", nullptr));
+        cancelButton->setText(QCoreApplication::translate("Form2", "Cancel", nullptr));
         label->setText(QCoreApplication::translate("Form2", "B. Knowledge of Subject - 25%", nullptr));
         label_4->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>1. Demonstrates mastery of the subject matter (manifests comprehensive content knowledge, learning tasks, and varied assessment strategies from various references).</p></body></html>", nullptr));
         groupBox->setTitle(QString());
