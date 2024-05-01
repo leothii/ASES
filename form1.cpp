@@ -14,6 +14,32 @@ Form1::Form1(QWidget *parent)
     connectRadioButtons();
     connect(ui->nextButton, &QPushButton::clicked, this, &Form1::on_nextButton_clicked);
 
+    ui->radioButton_1->setProperty("value", 1);
+    ui->radioButton_2->setProperty("value", 2);
+    ui->radioButton_3->setProperty("value", 3);
+    ui->radioButton_4->setProperty("value", 4);
+    ui->radioButton_5->setProperty("value", 5);
+    ui->radioButton_6->setProperty("value", 1);
+    ui->radioButton_7->setProperty("value", 2);
+    ui->radioButton_8->setProperty("value", 3);
+    ui->radioButton_9->setProperty("value", 4);
+    ui->radioButton_10->setProperty("value", 5);
+    ui->radioButton_11->setProperty("value", 1);
+    ui->radioButton_12->setProperty("value", 2);
+    ui->radioButton_13->setProperty("value", 3);
+    ui->radioButton_14->setProperty("value", 4);
+    ui->radioButton_15->setProperty("value", 5);
+    ui->radioButton_16->setProperty("value", 1);
+    ui->radioButton_17->setProperty("value", 2);
+    ui->radioButton_18->setProperty("value", 3);
+    ui->radioButton_19->setProperty("value", 4);
+    ui->radioButton_20->setProperty("value", 5);
+    ui->radioButton_21->setProperty("value", 1);
+    ui->radioButton_22->setProperty("value", 2);
+    ui->radioButton_23->setProperty("value", 3);
+    ui->radioButton_24->setProperty("value", 4);
+    ui->radioButton_25->setProperty("value", 5);
+
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("sql6.freesqldatabase.com");
     db.setDatabaseName("sql6698709");
