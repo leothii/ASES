@@ -1,14 +1,18 @@
 #include "form1.h"
 #include "ui_form1.h"
 #include <QtSql>
+#include "tselection.h"
 
 Form1::Form1(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Form1)
 {
     ui->setupUi(this);
+    studentnum= tselection::studentNumber;
+    Teacher= tselection::teacher;
+    Subject= tselection::subject;
+    connectRadioButtons();
     connect(ui->nextButton, &QPushButton::clicked, this, &Form1::on_nextButton_clicked);
-
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("sql6.freesqldatabase.com");
@@ -16,6 +20,15 @@ Form1::Form1(QWidget *parent)
     db.setUserName("sql6698709");
     db.setPassword("wQpFvGwERi");
     db.open();
+}
+
+void Form1::connectRadioButtons()
+{qDebug()<<studentnum<<Teacher<<Subject;
+    // Connect all radio buttons to the slot handleRadioButtonClicked()
+    QList<QRadioButton*> radioButtons = this->findChildren<QRadioButton*>();
+    foreach (QRadioButton* radioButton, radioButtons) {
+        connect(radioButton, &QRadioButton::clicked, this, &Form1::handleRadioButtonClicked);
+    }
 }
 
 void Form1::handleRadioButtonClicked()
@@ -26,50 +39,59 @@ void Form1::handleRadioButtonClicked()
         // Retrieve the numerical value assigned to the clicked radio button
         int value = clickedButton->property("value").toInt();
 
-        // Update the database with the selected value
-
-        QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
-        db.setHostName("sql6.freesqldatabase.com");
-        db.setDatabaseName("sql6698709");
-        db.setUserName("sql6698709");
-        db.setPassword("wQpFvGwERi");
-        db.open();
-        QSqlQuery query(db);
-        QString queryString = "UPDATE EVALUATIONDATA SET A = :value";
-        query.prepare(queryString);
-        query.bindValue(":value", value);
-
-        if (!query.exec()) {
-            qDebug() << "Error updating database:" << query.lastError().text();
-        } else {
-            qDebug() << "Database updated successfully with value:" << value;
-        }
+        // Store the value in the selectedValues list
+        selectedValues.append(value);
     }
 }
 
 void Form1::on_nextButton_clicked()
 {
-    // Connect the clicked signal of each radio button to the handleRadioButtonClicked slot
-    connect(ui->radioButton, &QRadioButton::clicked, this, &Form1::handleRadioButtonClicked);
-    connect(ui->radioButton_2, &QRadioButton::clicked, this,&Form1::handleRadioButtonClicked);
-    connect(ui->radioButton_3, &QRadioButton::clicked, this, &Form1::handleRadioButtonClicked);
-    connect(ui->radioButton_4, &QRadioButton::clicked, this, &Form1::handleRadioButtonClicked);
-    connect(ui->radioButton_5, &QRadioButton::clicked, this, &Form1::handleRadioButtonClicked);
+    // Calculate the average of selected values
+    double average = calculateAverage();
 
-    // Assign respective numerical values to each radio button
-    ui->radioButton->setProperty("value", 1);
-    ui->radioButton_2->setProperty("value", 2);
-    ui->radioButton_3->setProperty("value", 3);
-    ui->radioButton_4->setProperty("value", 4);
-    ui->radioButton_5->setProperty("value", 5);
+    // Update the database with the average value
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("sql6.freesqldatabase.com");
+    db.setDatabaseName("sql6698709");
+    db.setUserName("sql6698709");
+    db.setPassword("wQpFvGwERi");
+    db.open();
 
-    // Now the radio buttons are connected and set up, proceed with the rest of the functionality
-    // For example, you can show the next window
+    QSqlQuery query(db);
+    QString queryString = "UPDATE EVALUATIONDATA SET A = :average WHERE STUDENTNUMBER = :studentNumber AND TEACHER = :teacher AND SUBJECT = :subject";
+    query.prepare(queryString);
+    query.bindValue(":average", average);
+    query.bindValue(":studentNumber", studentnum);
+    query.bindValue(":teacher", Teacher);
+    query.bindValue(":subject", Subject);
+
+    if (!query.exec()) {
+        qDebug() << "Error updating database:" << query.lastError().text();
+    } else {
+        qDebug() << "Database updated successfully with average value:" << average;
+    }
+
+    // Proceed to the next window
     if (Form1::instance == nullptr) {
         Form1::instance = new Form1(this);
     }
     Form1::instance->show();
     this->hide();
+}
+
+
+double Form1::calculateAverage()
+{
+    // Calculate the average of selected values
+    int sum = 0;
+    for (int value : selectedValues) {
+        sum += value;
+    }
+    if (!selectedValues.isEmpty()) {
+        return static_cast<double>(sum) / selectedValues.size();
+    } else {
+        return 0.0; // Handle the case where no values are selected
+    }
 }
 
 Form1::~Form1()

@@ -19,7 +19,9 @@ public:
     explicit tselection(QWidget *parent = nullptr);
     ~tselection();
     static tselection*instance;
-    QString studentNumber;
+    static QString studentNumber;
+    static QString subject;
+    static QString teacher;
 
 private slots:
     void on_backButton_clicked();

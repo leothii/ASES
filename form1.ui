@@ -169,7 +169,7 @@ border-radius: 15px;</string>
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QGroupBox" name="groupBox_1">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -185,7 +185,7 @@ border-radius: 5px;</string>
       <property name="title">
        <string/>
       </property>
-      <widget class="QRadioButton" name="radioButton">
+      <widget class="QRadioButton" name="radioButton_1">
        <property name="geometry">
         <rect>
          <x>80</x>
@@ -233,6 +233,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -271,6 +280,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </inactive>
          <disabled>
           <colorrole role="Button">
@@ -306,6 +324,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -364,6 +391,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -402,6 +438,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </inactive>
          <disabled>
           <colorrole role="Button">
@@ -437,6 +482,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -495,6 +549,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -533,6 +596,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </inactive>
          <disabled>
           <colorrole role="Button">
@@ -568,6 +640,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -626,6 +707,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -664,6 +754,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </inactive>
          <disabled>
           <colorrole role="Button">
@@ -699,6 +798,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -802,7 +910,7 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
-          <colorrole role="Shadow">
+          <colorrole role="Accent">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
              <red>55</red>
@@ -849,7 +957,7 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
-          <colorrole role="Shadow">
+          <colorrole role="Accent">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
              <red>55</red>
@@ -896,7 +1004,7 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
-          <colorrole role="Shadow">
+          <colorrole role="Accent">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
              <red>55</red>
@@ -908,17 +1016,11 @@ border-radius: 5px;</string>
          </disabled>
         </palette>
        </property>
-       <property name="styleSheet">
-        <string notr="true">QRadioButton::indicator:checked {
-    background-color: #377ab7; // Change the color here
-     border: 1px solid #377ab7; // Optional: Add border when checked
-   }</string>
+       <property name="tabletTracking">
+        <bool>true</bool>
        </property>
        <property name="text">
-        <string>RadioButton</string>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
+        <string/>
        </property>
       </widget>
      </widget>
@@ -958,7 +1060,7 @@ border-radius: 5px;</string>
       <property name="title">
        <string/>
       </property>
-      <widget class="QRadioButton" name="radioButton_11">
+      <widget class="QRadioButton" name="radioButton_6">
        <property name="geometry">
         <rect>
          <x>80</x>
@@ -1006,6 +1108,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -1041,6 +1152,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -1082,6 +1202,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -1089,7 +1218,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_12">
+      <widget class="QRadioButton" name="radioButton_8">
        <property name="geometry">
         <rect>
          <x>160</x>
@@ -1137,6 +1266,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -1172,6 +1310,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -1213,6 +1360,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -1220,7 +1376,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_13">
+      <widget class="QRadioButton" name="radioButton_7">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -1268,134 +1424,12 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
-         </active>
-         <inactive>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
+          <colorrole role="Accent">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
              <red>55</red>
              <green>122</green>
              <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </inactive>
-         <disabled>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </disabled>
-        </palette>
-       </property>
-       <property name="text">
-        <string>RadioButton</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="radioButton_14">
-       <property name="geometry">
-        <rect>
-         <x>200</x>
-         <y>10</y>
-         <width>21</width>
-         <height>26</height>
-        </rect>
-       </property>
-       <property name="palette">
-        <palette>
-         <active>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
             </color>
            </brush>
           </colorrole>
@@ -1437,6 +1471,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </inactive>
          <disabled>
           <colorrole role="Button">
@@ -1475,17 +1518,23 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
        <property name="text">
         <string>RadioButton</string>
        </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_15">
+      <widget class="QRadioButton" name="radioButton_10">
        <property name="geometry">
         <rect>
          <x>240</x>
@@ -1533,6 +1582,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -1571,6 +1629,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </inactive>
          <disabled>
           <colorrole role="Button">
@@ -1606,6 +1673,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -1656,6 +1732,164 @@ border-radius: 5px;</string>
        </property>
        <property name="text">
         <string>Poor</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_9">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>10</y>
+         <width>21</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <property name="text">
+        <string>RadioButton</string>
        </property>
       </widget>
      </widget>
@@ -1721,7 +1955,7 @@ border-radius: 5px;</string>
       <property name="title">
        <string/>
       </property>
-      <widget class="QRadioButton" name="radioButton_16">
+      <widget class="QRadioButton" name="radioButton_11">
        <property name="geometry">
         <rect>
          <x>80</x>
@@ -1769,6 +2003,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -1804,6 +2047,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -1845,6 +2097,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -1852,7 +2113,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_17">
+      <widget class="QRadioButton" name="radioButton_13">
        <property name="geometry">
         <rect>
          <x>160</x>
@@ -1900,6 +2161,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -1935,6 +2205,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -1976,6 +2255,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -1983,7 +2271,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_18">
+      <widget class="QRadioButton" name="radioButton_12">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -2031,6 +2319,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -2066,6 +2363,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -2107,6 +2413,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -2114,7 +2429,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_19">
+      <widget class="QRadioButton" name="radioButton_14">
        <property name="geometry">
         <rect>
          <x>200</x>
@@ -2162,6 +2477,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -2197,6 +2521,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -2238,6 +2571,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -2245,7 +2587,49 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_20">
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>10</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Oustanding</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Poor</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_15">
        <property name="geometry">
         <rect>
          <x>240</x>
@@ -2293,6 +2677,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -2328,6 +2721,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -2369,56 +2771,20 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
        <property name="text">
-        <string>Oustanding</string>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_10">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>10</y>
-         <width>71</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>Oustanding</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_11">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>10</y>
-         <width>31</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>Poor</string>
+        <string>RadioButton</string>
        </property>
       </widget>
      </widget>
@@ -2484,7 +2850,49 @@ border-radius: 5px;</string>
       <property name="title">
        <string/>
       </property>
-      <widget class="QRadioButton" name="radioButton_6">
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>10</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Oustanding</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Poor</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_16">
        <property name="geometry">
         <rect>
          <x>80</x>
@@ -2532,134 +2940,12 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
-         </active>
-         <inactive>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
+          <colorrole role="Accent">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
              <red>55</red>
              <green>122</green>
              <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </inactive>
-         <disabled>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </disabled>
-        </palette>
-       </property>
-       <property name="text">
-        <string>RadioButton</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="radioButton_7">
-       <property name="geometry">
-        <rect>
-         <x>160</x>
-         <y>10</y>
-         <width>21</width>
-         <height>26</height>
-        </rect>
-       </property>
-       <property name="palette">
-        <palette>
-         <active>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
             </color>
            </brush>
           </colorrole>
@@ -2701,6 +2987,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </inactive>
          <disabled>
           <colorrole role="Button">
@@ -2739,6 +3034,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -2746,7 +3050,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_8">
+      <widget class="QRadioButton" name="radioButton_17">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -2794,6 +3098,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -2829,6 +3142,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -2870,6 +3192,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -2877,7 +3208,165 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_9">
+      <widget class="QRadioButton" name="radioButton_18">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>10</y>
+         <width>21</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <property name="text">
+        <string>RadioButton</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_19">
        <property name="geometry">
         <rect>
          <x>200</x>
@@ -2925,6 +3414,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -2960,6 +3458,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -3001,6 +3508,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -3008,7 +3524,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_10">
+      <widget class="QRadioButton" name="radioButton_20">
        <property name="geometry">
         <rect>
          <x>240</x>
@@ -3056,6 +3572,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -3091,6 +3616,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -3132,53 +3666,20 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
        <property name="text">
-        <string>Oustanding</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_5">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>10</y>
-         <width>71</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>Oustanding</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_6">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>10</y>
-         <width>31</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>Poor</string>
+        <string>RadioButton</string>
        </property>
       </widget>
      </widget>
@@ -3244,269 +3745,49 @@ border-radius: 5px;</string>
       <property name="title">
        <string/>
       </property>
-      <widget class="QRadioButton" name="radioButton_21">
+      <widget class="QLabel" name="label_14">
        <property name="geometry">
         <rect>
-         <x>80</x>
+         <x>280</x>
          <y>10</y>
-         <width>21</width>
-         <height>26</height>
+         <width>71</width>
+         <height>20</height>
         </rect>
        </property>
-       <property name="palette">
-        <palette>
-         <active>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </active>
-         <inactive>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </inactive>
-         <disabled>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </disabled>
-        </palette>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>RadioButton</string>
+        <string>Oustanding</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_22">
+      <widget class="QLabel" name="label_15">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>30</x>
          <y>10</y>
-         <width>21</width>
-         <height>26</height>
+         <width>31</width>
+         <height>20</height>
         </rect>
        </property>
-       <property name="palette">
-        <palette>
-         <active>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </active>
-         <inactive>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </inactive>
-         <disabled>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </disabled>
-        </palette>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>RadioButton</string>
+        <string>Poor</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_23">
+      <widget class="QRadioButton" name="radioButton_25">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -3554,134 +3835,12 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
-         </active>
-         <inactive>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
+          <colorrole role="Accent">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
              <red>55</red>
              <green>122</green>
              <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </inactive>
-         <disabled>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </disabled>
-        </palette>
-       </property>
-       <property name="text">
-        <string>RadioButton</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="radioButton_24">
-       <property name="geometry">
-        <rect>
-         <x>200</x>
-         <y>10</y>
-         <width>21</width>
-         <height>26</height>
-        </rect>
-       </property>
-       <property name="palette">
-        <palette>
-         <active>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Mid">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>55</red>
-             <green>122</green>
-             <blue>183</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
-            </color>
-           </brush>
-          </colorrole>
-          <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>190</red>
-             <green>190</green>
-             <blue>190</blue>
             </color>
            </brush>
           </colorrole>
@@ -3723,6 +3882,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </inactive>
          <disabled>
           <colorrole role="Button">
@@ -3761,6 +3929,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -3768,7 +3945,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_25">
+      <widget class="QRadioButton" name="radioButton_21">
        <property name="geometry">
         <rect>
          <x>240</x>
@@ -3816,6 +3993,15 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </active>
          <inactive>
           <colorrole role="Button">
@@ -3851,6 +4037,15 @@ border-radius: 5px;</string>
              <red>190</red>
              <green>190</green>
              <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
             </color>
            </brush>
           </colorrole>
@@ -3892,53 +4087,494 @@ border-radius: 5px;</string>
             </color>
            </brush>
           </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
        <property name="text">
-        <string>Oustanding</string>
+        <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_14">
+      <widget class="QRadioButton" name="radioButton_23">
        <property name="geometry">
         <rect>
-         <x>280</x>
+         <x>160</x>
          <y>10</y>
-         <width>71</width>
-         <height>20</height>
+         <width>21</width>
+         <height>26</height>
         </rect>
        </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);</string>
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
        </property>
        <property name="text">
-        <string>Oustanding</string>
+        <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_15">
+      <widget class="QRadioButton" name="radioButton_22">
        <property name="geometry">
         <rect>
-         <x>30</x>
+         <x>200</x>
          <y>10</y>
-         <width>31</width>
-         <height>20</height>
+         <width>21</width>
+         <height>26</height>
         </rect>
        </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);</string>
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
        </property>
        <property name="text">
-        <string>Poor</string>
+        <string>RadioButton</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_24">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>10</y>
+         <width>21</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Mid">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>190</red>
+             <green>190</green>
+             <blue>190</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Accent">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>55</red>
+             <green>122</green>
+             <blue>183</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <property name="text">
+        <string>RadioButton</string>
        </property>
       </widget>
      </widget>

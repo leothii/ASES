@@ -5,20 +5,29 @@
 #include "sdashb.h"
 
 Form1* Form1::instance = nullptr;
-
+QString tselection::studentNumber;
+QString tselection::teacher;
+QString tselection::subject;
 tselection::tselection(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::tselection)
 {
     ui->setupUi(this);
     studentNumber = Sdashb::sNum;
+    QString subject = ui->Coursebox->currentText();
+    QString teacher = ui->Teacherbox->currentText();
 
-    // Connect signals and slots only once
     // For backButton
-    QObject::connect(ui->backButton, SIGNAL(clicked()), this, SLOT(on_backButton_clicked()));
+    if (!QObject::connect(ui->backButton, SIGNAL(clicked()), this, SLOT(on_backButton_clicked()), Qt::UniqueConnection)) {
+        qDebug() << "Failed to connect backButton signal to on_backButton_clicked slot";
+    }
 
     // For nextButton
-    QObject::connect(ui->nextButton, SIGNAL(clicked()), this, SLOT(on_nextButton_clicked()));
+    if (!QObject::connect(ui->nextButton, SIGNAL(clicked()), this, SLOT(on_nextButton_clicked()), Qt::UniqueConnection)) {
+        qDebug() << "Failed to connect nextButton signal to on_nextButton_clicked slot";
+    }
+
+
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("sql6.freesqldatabase.com");
@@ -62,9 +71,8 @@ void tselection::on_nextButton_clicked()
     }
 
     // Get the selected values from Coursebox and Teacherbox
-    QString subject = ui->Coursebox->currentText();
-    QString teacher = ui->Teacherbox->currentText();
-
+    tselection::subject = ui->Coursebox->currentText();
+    tselection::teacher = ui->Teacherbox->currentText();
     // Prepare SQL query
     QSqlQuery query(db);
     query.prepare("INSERT INTO EVALUATIONDATA (STUDENTNUMBER, SUBJECT, TEACHER) VALUES (:studentNumber, :subject, :teacher)");
