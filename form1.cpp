@@ -2,6 +2,7 @@
 #include "ui_form1.h"
 #include <QtSql>
 #include "tselection.h"
+#include "form2.h"
 
 Form1::Form1(QWidget *parent)
     : QMainWindow(parent)
@@ -98,10 +99,10 @@ void Form1::on_nextButton_clicked()
     }
 
     // Proceed to the next window
-    if (Form1::instance == nullptr) {
-        Form1::instance = new Form1(this);
+    if (Form2::instance == nullptr) {
+        Form2::instance = new Form2(this);
     }
-    Form1::instance->show();
+    Form2::instance->show();
     this->hide();
 }
 
