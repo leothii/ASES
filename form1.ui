@@ -3787,7 +3787,7 @@ border-radius: 5px;</string>
         <string>Poor</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_25">
+      <widget class="QRadioButton" name="radioButton_22">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -3945,7 +3945,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_21">
+      <widget class="QRadioButton" name="radioButton_25">
        <property name="geometry">
         <rect>
          <x>240</x>
@@ -4261,7 +4261,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_22">
+      <widget class="QRadioButton" name="radioButton_24">
        <property name="geometry">
         <rect>
          <x>200</x>
@@ -4419,7 +4419,7 @@ border-radius: 5px;</string>
         <string>RadioButton</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_24">
+      <widget class="QRadioButton" name="radioButton_21">
        <property name="geometry">
         <rect>
          <x>80</x>

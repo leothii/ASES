@@ -2,6 +2,7 @@
 #include "ui_form2.h"
 #include <QtSql>
 #include "tselection.h"
+#include "form3.h"
 
 
 Form2*Form2::instance=nullptr;
@@ -100,10 +101,10 @@ void Form2::on_nextButton_clicked()
         qDebug() << "Database updated successfully with average value:" << average;
     }
     // Proceed to the next window
-    if (Form2::instance) {
-        Form2::instance = new Form2(this);
+    if (Form3::instance== nullptr) {
+        Form3::instance = new Form3(this);
     }
-    Form2::instance->show();
+    Form3::instance->show();
     this->hide();
 }
 

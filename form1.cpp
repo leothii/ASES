@@ -36,9 +36,9 @@ Form1::Form1(QWidget *parent)
     ui->radioButton_19->setProperty("value", 4);
     ui->radioButton_20->setProperty("value", 5);
     ui->radioButton_21->setProperty("value", 1);
-    ui->radioButton_22->setProperty("value", 2);
-    ui->radioButton_23->setProperty("value", 3);
-    ui->radioButton_24->setProperty("value", 4);
+    ui->radioButton_22->setProperty("value", 1);
+    ui->radioButton_23->setProperty("value", 2);
+    ui->radioButton_24->setProperty("value", 3);
     ui->radioButton_25->setProperty("value", 5);
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");

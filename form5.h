@@ -14,7 +14,7 @@ class Form5 : public QMainWindow
 public:
     explicit Form5(QWidget *parent = nullptr);
     ~Form5();
-
+     static Form5 *instance;
 private:
     Ui::Form5 *ui;
 };

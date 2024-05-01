@@ -76,11 +76,11 @@ public:
     QGroupBox *groupBox_5;
     QLabel *label_14;
     QLabel *label_15;
-    QRadioButton *radioButton_25;
-    QRadioButton *radioButton_21;
-    QRadioButton *radioButton_23;
     QRadioButton *radioButton_22;
+    QRadioButton *radioButton_25;
+    QRadioButton *radioButton_23;
     QRadioButton *radioButton_24;
+    QRadioButton *radioButton_21;
     QLabel *label_16;
     QStatusBar *statusbar;
     QMenuBar *menubar;
@@ -683,9 +683,9 @@ public:
         label_15->setGeometry(QRect(30, 10, 31, 20));
         label_15->setFont(font2);
         label_15->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        radioButton_25 = new QRadioButton(groupBox_5);
-        radioButton_25->setObjectName("radioButton_25");
-        radioButton_25->setGeometry(QRect(120, 10, 21, 26));
+        radioButton_22 = new QRadioButton(groupBox_5);
+        radioButton_22->setObjectName("radioButton_22");
+        radioButton_22->setGeometry(QRect(120, 10, 21, 26));
         QPalette palette20;
         palette20.setBrush(QPalette::Active, QPalette::Button, brush);
         palette20.setBrush(QPalette::Active, QPalette::Mid, brush1);
@@ -702,10 +702,10 @@ public:
         palette20.setBrush(QPalette::Disabled, QPalette::Base, brush);
         palette20.setBrush(QPalette::Disabled, QPalette::Window, brush);
         palette20.setBrush(QPalette::Disabled, QPalette::Accent, brush1);
-        radioButton_25->setPalette(palette20);
-        radioButton_21 = new QRadioButton(groupBox_5);
-        radioButton_21->setObjectName("radioButton_21");
-        radioButton_21->setGeometry(QRect(240, 10, 21, 26));
+        radioButton_22->setPalette(palette20);
+        radioButton_25 = new QRadioButton(groupBox_5);
+        radioButton_25->setObjectName("radioButton_25");
+        radioButton_25->setGeometry(QRect(240, 10, 21, 26));
         QPalette palette21;
         palette21.setBrush(QPalette::Active, QPalette::Button, brush);
         palette21.setBrush(QPalette::Active, QPalette::Mid, brush1);
@@ -722,7 +722,7 @@ public:
         palette21.setBrush(QPalette::Disabled, QPalette::Base, brush);
         palette21.setBrush(QPalette::Disabled, QPalette::Window, brush);
         palette21.setBrush(QPalette::Disabled, QPalette::Accent, brush1);
-        radioButton_21->setPalette(palette21);
+        radioButton_25->setPalette(palette21);
         radioButton_23 = new QRadioButton(groupBox_5);
         radioButton_23->setObjectName("radioButton_23");
         radioButton_23->setGeometry(QRect(160, 10, 21, 26));
@@ -743,9 +743,9 @@ public:
         palette22.setBrush(QPalette::Disabled, QPalette::Window, brush);
         palette22.setBrush(QPalette::Disabled, QPalette::Accent, brush1);
         radioButton_23->setPalette(palette22);
-        radioButton_22 = new QRadioButton(groupBox_5);
-        radioButton_22->setObjectName("radioButton_22");
-        radioButton_22->setGeometry(QRect(200, 10, 21, 26));
+        radioButton_24 = new QRadioButton(groupBox_5);
+        radioButton_24->setObjectName("radioButton_24");
+        radioButton_24->setGeometry(QRect(200, 10, 21, 26));
         QPalette palette23;
         palette23.setBrush(QPalette::Active, QPalette::Button, brush);
         palette23.setBrush(QPalette::Active, QPalette::Mid, brush1);
@@ -762,10 +762,10 @@ public:
         palette23.setBrush(QPalette::Disabled, QPalette::Base, brush);
         palette23.setBrush(QPalette::Disabled, QPalette::Window, brush);
         palette23.setBrush(QPalette::Disabled, QPalette::Accent, brush1);
-        radioButton_22->setPalette(palette23);
-        radioButton_24 = new QRadioButton(groupBox_5);
-        radioButton_24->setObjectName("radioButton_24");
-        radioButton_24->setGeometry(QRect(80, 10, 21, 26));
+        radioButton_24->setPalette(palette23);
+        radioButton_21 = new QRadioButton(groupBox_5);
+        radioButton_21->setObjectName("radioButton_21");
+        radioButton_21->setGeometry(QRect(80, 10, 21, 26));
         QPalette palette24;
         palette24.setBrush(QPalette::Active, QPalette::Button, brush);
         palette24.setBrush(QPalette::Active, QPalette::Mid, brush1);
@@ -782,7 +782,7 @@ public:
         palette24.setBrush(QPalette::Disabled, QPalette::Base, brush);
         palette24.setBrush(QPalette::Disabled, QPalette::Window, brush);
         palette24.setBrush(QPalette::Disabled, QPalette::Accent, brush1);
-        radioButton_24->setPalette(palette24);
+        radioButton_21->setPalette(palette24);
         label_16 = new QLabel(frame_7);
         label_16->setObjectName("label_16");
         label_16->setGeometry(QRect(20, 10, 351, 41));
@@ -848,11 +848,11 @@ public:
         groupBox_5->setTitle(QString());
         label_14->setText(QCoreApplication::translate("Form1", "Oustanding", nullptr));
         label_15->setText(QCoreApplication::translate("Form1", "Poor", nullptr));
-        radioButton_25->setText(QCoreApplication::translate("Form1", "RadioButton", nullptr));
-        radioButton_21->setText(QCoreApplication::translate("Form1", "RadioButton", nullptr));
-        radioButton_23->setText(QCoreApplication::translate("Form1", "RadioButton", nullptr));
         radioButton_22->setText(QCoreApplication::translate("Form1", "RadioButton", nullptr));
+        radioButton_25->setText(QCoreApplication::translate("Form1", "RadioButton", nullptr));
+        radioButton_23->setText(QCoreApplication::translate("Form1", "RadioButton", nullptr));
         radioButton_24->setText(QCoreApplication::translate("Form1", "RadioButton", nullptr));
+        radioButton_21->setText(QCoreApplication::translate("Form1", "RadioButton", nullptr));
         label_16->setText(QCoreApplication::translate("Form1", "<html><head/><body><p>5. Keeps accurate records of learners\342\200\231 performance and prompt submission of the same.</p></body></html>", nullptr));
     } // retranslateUi
 
