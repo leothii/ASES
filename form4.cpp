@@ -88,7 +88,7 @@ void Form4::on_nextButton_clicked()
     db.open();
 
     QSqlQuery query(db);
-    QString queryString = "UPDATE EVALUATIONDATA SET C = :average WHERE STUDENTNUMBER = :studentNumber AND TEACHER = :teacher AND SUBJECT = :subject";
+    QString queryString = "UPDATE EVALUATIONDATA SET D = :average WHERE STUDENTNUMBER = :studentNumber AND TEACHER = :teacher AND SUBJECT = :subject";
     query.prepare(queryString);
     query.bindValue(":average", average);
     query.bindValue(":studentNumber", studentnum);

@@ -73,19 +73,38 @@ void tselection::on_nextButton_clicked()
     // Get the selected values from Coursebox and Teacherbox
     tselection::subject = ui->Coursebox->currentText();
     tselection::teacher = ui->Teacherbox->currentText();
-    // Prepare SQL query
-    QSqlQuery query(db);
-    query.prepare("INSERT INTO EVALUATIONDATA (STUDENTNUMBER, SUBJECT, TEACHER) VALUES (:studentNumber, :subject, :teacher)");
-    query.bindValue(":studentNumber", studentNumber);
-    query.bindValue(":subject", subject);
-    query.bindValue(":teacher", teacher);
 
-    // Execute the query
-    if (!query.exec()) {
-        qDebug() << "Failed to insert data into database:" << query.lastError().text();
-        return;
+    QSqlQuery checkQuery(db);
+    checkQuery.prepare("SELECT * FROM EVALUATIONDATA WHERE STUDENTNUMBER = :studentNumber AND SUBJECT = :subject AND TEACHER = :teacher");
+    checkQuery.bindValue(":studentNumber", studentNumber);
+    checkQuery.bindValue(":subject", subject);
+    checkQuery.bindValue(":teacher", teacher);
+
+    if (checkQuery.exec() && checkQuery.next()) {
+        // Data already exists, update it
+        QSqlQuery updateQuery(db);
+        updateQuery.prepare("UPDATE EVALUATIONDATA SET SUBJECT = :subject, TEACHER = :teacher WHERE STUDENTNUMBER = :studentNumber");
+        updateQuery.bindValue(":subject", subject);
+        updateQuery.bindValue(":teacher", teacher);
+        updateQuery.bindValue(":studentNumber", studentNumber);
+
+        if (!updateQuery.exec()) {
+            qDebug() << "Failed to update data in database:" << updateQuery.lastError().text();
+            return;
+        }
+    } else {
+        // Data doesn't exist, insert it
+        QSqlQuery insertQuery(db);
+        insertQuery.prepare("INSERT INTO EVALUATIONDATA (STUDENTNUMBER, SUBJECT, TEACHER) VALUES (:studentNumber, :subject, :teacher)");
+        insertQuery.bindValue(":studentNumber", studentNumber);
+        insertQuery.bindValue(":subject", subject);
+        insertQuery.bindValue(":teacher", teacher);
+
+        if (!insertQuery.exec()) {
+            qDebug() << "Failed to insert data into database:" << insertQuery.lastError().text();
+            return;
+        }
     }
-
     // Redirect to the main login window
     if (Form1::instance == nullptr) {
         // Create a new instance of the main window if it doesn't already exist
