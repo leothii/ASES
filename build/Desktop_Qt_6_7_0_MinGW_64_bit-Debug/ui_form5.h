@@ -32,7 +32,7 @@ public:
     QFrame *frame_2;
     QLabel *label;
     QFrame *frame_7;
-    QTextEdit *textEdit;
+    QTextEdit *messageEdit;
     QLabel *label_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -96,10 +96,10 @@ public:
 "border-radius: 15px;"));
         frame_7->setFrameShape(QFrame::StyledPanel);
         frame_7->setFrameShadow(QFrame::Raised);
-        textEdit = new QTextEdit(frame_7);
-        textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(30, 20, 331, 241));
-        textEdit->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        messageEdit = new QTextEdit(frame_7);
+        messageEdit->setObjectName("messageEdit");
+        messageEdit->setGeometry(QRect(30, 20, 331, 241));
+        messageEdit->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_2 = new QLabel(frame);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(20, 100, 241, 41));
@@ -127,7 +127,7 @@ public:
         submitButton->setText(QCoreApplication::translate("Form5", "Submit", nullptr));
         backButton->setText(QCoreApplication::translate("Form5", "Back", nullptr));
         label->setText(QCoreApplication::translate("Form5", "FEEDBACK", nullptr));
-        textEdit->setPlaceholderText(QCoreApplication::translate("Form5", "Write a brief comment about your teacher...", nullptr));
+        messageEdit->setPlaceholderText(QCoreApplication::translate("Form5", "Write a brief comment about your teacher...", nullptr));
         label_2->setText(QCoreApplication::translate("Form5", "Remarks/Comments/Suggestions: ", nullptr));
     } // retranslateUi
 

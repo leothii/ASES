@@ -101,9 +101,8 @@ void Form4::on_nextButton_clicked()
         qDebug() << "Database updated successfully with average value:" << average;
     }
     // Proceed to the next window
-    if (Form5::instance== nullptr) {
-        Form5::instance = new Form5(this);
-    }
+    Form5::instance= nullptr;
+    Form5::instance = new Form5(this);
     Form5::instance->show();
     this->hide();
 }
