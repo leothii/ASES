@@ -58,14 +58,15 @@ void tselection::on_backButton_clicked()
 }
 
 void tselection::on_nextButton_clicked()
-{    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("sql6.freesqldatabase.com");
     db.setDatabaseName("sql6698709");
     db.setUserName("sql6698709");
     db.setPassword("wQpFvGwERi");
-    db.open();
+
     // Ensure the database is connected
-    if (!db.isOpen()) {
+    if (!db.open()) {
         qDebug() << "Database is not connected";
         return;
     }
@@ -74,29 +75,51 @@ void tselection::on_nextButton_clicked()
     tselection::subject = ui->Coursebox->currentText();
     tselection::teacher = ui->Teacherbox->currentText();
 
-    // Prepare SQL query
+    // Prepare SQL query to check if data exists
+    QSqlQuery checkQuery(db);
+    checkQuery.prepare("SELECT * FROM EVALUATIONDATA WHERE STUDENTNUMBER = :studentNumber AND SUBJECT = :subject AND TEACHER = :teacher");
+    checkQuery.bindValue(":studentNumber", studentNumber);
+    checkQuery.bindValue(":subject", subject);
+    checkQuery.bindValue(":teacher", teacher);
+
+    // Execute the query to check if data exists
+    if (!checkQuery.exec()) {
+        qDebug() << "Failed to execute query:" << checkQuery.lastError().text();
+        return;
+    }
+
+    // If data exists, show Form1 instance
+    if (checkQuery.next()) {
+        if (Form1::instance == nullptr) {
+            Form1::instance = new Form1(this);
+            Form1::instance->show();
+        }
+        this->hide();
+        return; // Exit the function as data exists
+    }
+
+    // Data doesn't exist, proceed with insertion
     QSqlQuery query(db);
     query.prepare("INSERT INTO EVALUATIONDATA (STUDENTNUMBER, SUBJECT, TEACHER) VALUES (:studentNumber, :subject, :teacher)");
     query.bindValue(":studentNumber", studentNumber);
     query.bindValue(":subject", subject);
     query.bindValue(":teacher", teacher);
 
-    // Execute the query
+    // Execute the query for insertion
     if (!query.exec()) {
         qDebug() << "Failed to insert data into database:" << query.lastError().text();
         return;
     }
 
-    // Redirect to the main login window
+    // Show Form1 instance after insertion
     if (Form1::instance == nullptr) {
-        // Create a new instance of the main window if it doesn't already exist
         Form1::instance = new Form1(this);
         Form1::instance->show();
     }
-
     this->hide();
 }
 
+// Destructor
 tselection::~tselection()
 {
     delete ui;

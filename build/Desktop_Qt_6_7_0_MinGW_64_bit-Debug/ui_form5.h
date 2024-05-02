@@ -27,7 +27,7 @@ class Ui_Form5
 public:
     QWidget *centralwidget;
     QFrame *frame;
-    QPushButton *nextButton;
+    QPushButton *submitButton;
     QPushButton *backButton;
     QFrame *frame_2;
     QLabel *label;
@@ -52,10 +52,10 @@ public:
 ""));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
-        nextButton = new QPushButton(frame);
-        nextButton->setObjectName("nextButton");
-        nextButton->setGeometry(QRect(330, 470, 71, 29));
-        nextButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        submitButton = new QPushButton(frame);
+        submitButton->setObjectName("submitButton");
+        submitButton->setGeometry(QRect(330, 470, 71, 29));
+        submitButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
 "	border-radius: 3px;\n"
@@ -99,6 +99,7 @@ public:
         textEdit = new QTextEdit(frame_7);
         textEdit->setObjectName("textEdit");
         textEdit->setGeometry(QRect(30, 20, 331, 241));
+        textEdit->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_2 = new QLabel(frame);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(20, 100, 241, 41));
@@ -123,7 +124,7 @@ public:
     void retranslateUi(QMainWindow *Form5)
     {
         Form5->setWindowTitle(QCoreApplication::translate("Form5", "MainWindow", nullptr));
-        nextButton->setText(QCoreApplication::translate("Form5", "Submit", nullptr));
+        submitButton->setText(QCoreApplication::translate("Form5", "Submit", nullptr));
         backButton->setText(QCoreApplication::translate("Form5", "Back", nullptr));
         label->setText(QCoreApplication::translate("Form5", "FEEDBACK", nullptr));
         textEdit->setPlaceholderText(QCoreApplication::translate("Form5", "Write a brief comment about your teacher...", nullptr));

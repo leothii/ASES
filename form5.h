@@ -2,6 +2,11 @@
 #define FORM5_H
 
 #include <QMainWindow>
+#include <QSql>
+#include <QSqlQuery>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QSqlQuery>
 
 namespace Ui {
 class Form5;
@@ -15,6 +20,10 @@ public:
     explicit Form5(QWidget *parent = nullptr);
     ~Form5();
      static Form5 *instance;
+
+public slots:
+    void on_submitButton_clicked();
+
 private:
     Ui::Form5 *ui;
 };

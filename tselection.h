@@ -6,6 +6,7 @@
 #include <QSqlQuery>
 #include <QSqlDatabase>
 #include <QSqlError>
+#include <QSqlQuery>
 
 namespace Ui {
 class tselection;

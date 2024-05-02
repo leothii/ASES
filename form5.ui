@@ -34,7 +34,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="nextButton">
+    <widget class="QPushButton" name="submitButton">
      <property name="geometry">
       <rect>
        <x>330</x>
@@ -151,6 +151,9 @@ border-radius: 15px;</string>
         <width>331</width>
         <height>241</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="placeholderText">
        <string>Write a brief comment about your teacher...</string>
