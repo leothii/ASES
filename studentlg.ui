@@ -320,6 +320,31 @@ QPushButton:hover{
       <string>Student Number</string>
      </property>
     </widget>
+    <widget class="QLabel" name="Emessage">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>30</y>
+       <width>191</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 0, 0)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
    <zorder>frame</zorder>
    <zorder>lineEdit_1</zorder>

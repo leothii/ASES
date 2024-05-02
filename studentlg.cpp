@@ -91,14 +91,14 @@ void StudentLg::on_loginButton_clicked() {
 
     // Check if any of the fields are empty
     if (email.isEmpty() || password.isEmpty() || studentNumber.isEmpty()) {
-        QMessageBox::warning(this, "Error", "Please fill in all fields.");
+        ui->Emessage->setText("Please fill out all fields");
         return;
     }
 
     // Open the database and retrieve user credentials
     QSqlDatabase db = QSqlDatabase::database();
     if (!db.open()) {
-        QMessageBox::warning(this, "Error", "Database connection failed!");
+       ui->Emessage->setText("Connection Failed");
         return;
     }
 
@@ -109,7 +109,7 @@ void StudentLg::on_loginButton_clicked() {
     queryLogin.bindValue(":studentNumber", studentNumber);
 
     if (!queryLogin.exec()) {
-        QMessageBox::warning(this, "Error", "Login failed!");
+        ui->Emessage->setText("Log in failed");
         db.close();
         return;
     }
@@ -157,10 +157,10 @@ void StudentLg::on_loginButton_clicked() {
             this->hide();
 
         } else {
-            QMessageBox::warning(this, "Error", "Invalid credentials!");
+            ui->Emessage->setText("Invalid credential");
         }
     } else {
-        QMessageBox::warning(this, "Error", "No matching record found!");
+       ui->Emessage->setText("No matching record found");
     }
 
     db.close();

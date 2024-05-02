@@ -1456,7 +1456,7 @@ QPushButton:hover{
      <property name="geometry">
       <rect>
        <x>80</x>
-       <y>30</y>
+       <y>40</y>
        <width>211</width>
        <height>61</height>
       </rect>
@@ -1465,9 +1465,9 @@ QPushButton:hover{
       <font>
        <family>Microsoft Sans Serif</family>
        <pointsize>39</pointsize>
-       <bold>true</bold>
        <strikeout>false</strikeout>
        <kerning>true</kerning>
+       <fontweight>DemiBold</fontweight>
       </font>
      </property>
      <property name="tabletTracking">
@@ -1487,8 +1487,8 @@ border-color: rgb(255, 255, 255);</string>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>90</y>
+       <x>40</x>
+       <y>100</y>
        <width>421</width>
        <height>20</height>
       </rect>
@@ -1694,7 +1694,7 @@ border-color: rgb(255, 255, 255);</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>9</pointsize>
+       <pointsize>10</pointsize>
        <italic>true</italic>
        <bold>false</bold>
       </font>
@@ -1704,6 +1704,32 @@ border-color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Automated Semestral Evaluation System</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>300</y>
+       <width>171</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 0);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>

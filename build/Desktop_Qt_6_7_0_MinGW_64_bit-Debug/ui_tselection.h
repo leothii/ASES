@@ -29,12 +29,12 @@ public:
     QFrame *frame;
     QPushButton *backButton;
     QComboBox *Coursebox;
-    QLabel *label_5;
     QLabel *label_7;
-    QComboBox *Teacherbox;
     QPushButton *nextButton;
     QFrame *frame_2;
     QLabel *label;
+    QLabel *label_5;
+    QComboBox *Teacherbox;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -106,7 +106,7 @@ public:
         Coursebox->addItem(QString());
         Coursebox->addItem(QString());
         Coursebox->setObjectName("Coursebox");
-        Coursebox->setGeometry(QRect(40, 150, 91, 21));
+        Coursebox->setGeometry(QRect(40, 80, 91, 21));
         QPalette palette1;
         QBrush brush3(QColor(0, 0, 0, 255));
         brush3.setStyle(Qt::SolidPattern);
@@ -209,69 +209,126 @@ public:
 "    color: white; /* White text color */\n"
 "}\n"
 ""));
-        label_5 = new QLabel(frame);
-        label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(40, 70, 171, 21));
+        label_7 = new QLabel(frame);
+        label_7->setObjectName("label_7");
+        label_7->setGeometry(QRect(40, 60, 171, 16));
         QFont font;
         font.setFamilies({QString::fromUtf8("Product Sans")});
         font.setPointSize(9);
+        font.setBold(true);
         font.setKerning(true);
-        label_5->setFont(font);
-        label_5->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        label_5->setWordWrap(true);
-        label_7 = new QLabel(frame);
-        label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(40, 130, 171, 16));
         label_7->setFont(font);
         label_7->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_7->setWordWrap(true);
+        nextButton = new QPushButton(frame);
+        nextButton->setObjectName("nextButton");
+        nextButton->setGeometry(QRect(210, 210, 71, 31));
+        QPalette palette2;
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette2.setBrush(QPalette::Active, QPalette::Window, brush1);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette2.setBrush(QPalette::Active, QPalette::PlaceholderText, brush2);
+#endif
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette2.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush2);
+#endif
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette2.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush2);
+#endif
+        nextButton->setPalette(palette2);
+        nextButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #337ab7;  /* Button background color (blue) */\n"
+"    color: #ffffff;             /* Text color (white) */\n"
+"	border-radius: 3px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #285e8e;\n"
+"}"));
+        frame_2 = new QFrame(frame);
+        frame_2->setObjectName("frame_2");
+        frame_2->setGeometry(QRect(-10, 0, 321, 31));
+        frame_2->setStyleSheet(QString::fromUtf8("background-color: rgb(55, 122, 183);\n"
+"border-radius: 8px;"));
+        frame_2->setFrameShape(QFrame::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Raised);
+        label = new QLabel(frame_2);
+        label->setObjectName("label");
+        label->setGeometry(QRect(20, 10, 141, 16));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Product Sans Black")});
+        font1.setPointSize(11);
+        label->setFont(font1);
+        label->setTabletTracking(false);
+        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        label_5 = new QLabel(frame);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(40, 120, 171, 21));
+        label_5->setFont(font);
+        label_5->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        label_5->setWordWrap(true);
         Teacherbox = new QComboBox(frame);
         Teacherbox->addItem(QString());
         Teacherbox->addItem(QString());
         Teacherbox->addItem(QString());
         Teacherbox->addItem(QString());
         Teacherbox->setObjectName("Teacherbox");
-        Teacherbox->setGeometry(QRect(40, 90, 221, 21));
-        QPalette palette2;
-        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush3);
-        palette2.setBrush(QPalette::Active, QPalette::Button, brush4);
-        palette2.setBrush(QPalette::Active, QPalette::Light, brush3);
-        palette2.setBrush(QPalette::Active, QPalette::Text, brush3);
-        palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush3);
-        palette2.setBrush(QPalette::Active, QPalette::Base, brush4);
-        palette2.setBrush(QPalette::Active, QPalette::Window, brush4);
-        palette2.setBrush(QPalette::Active, QPalette::Highlight, brush5);
-        palette2.setBrush(QPalette::Active, QPalette::HighlightedText, brush6);
-        palette2.setBrush(QPalette::Active, QPalette::ToolTipText, brush3);
+        Teacherbox->setGeometry(QRect(40, 140, 221, 21));
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush3);
+        palette3.setBrush(QPalette::Active, QPalette::Button, brush4);
+        palette3.setBrush(QPalette::Active, QPalette::Light, brush3);
+        palette3.setBrush(QPalette::Active, QPalette::Text, brush3);
+        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush3);
+        palette3.setBrush(QPalette::Active, QPalette::Base, brush4);
+        palette3.setBrush(QPalette::Active, QPalette::Window, brush4);
+        palette3.setBrush(QPalette::Active, QPalette::Highlight, brush5);
+        palette3.setBrush(QPalette::Active, QPalette::HighlightedText, brush6);
+        palette3.setBrush(QPalette::Active, QPalette::ToolTipText, brush3);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette2.setBrush(QPalette::Active, QPalette::PlaceholderText, brush7);
+        palette3.setBrush(QPalette::Active, QPalette::PlaceholderText, brush7);
 #endif
-        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush3);
-        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush4);
-        palette2.setBrush(QPalette::Inactive, QPalette::Light, brush3);
-        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush3);
-        palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush3);
-        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush4);
-        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush4);
-        palette2.setBrush(QPalette::Inactive, QPalette::Highlight, brush5);
-        palette2.setBrush(QPalette::Inactive, QPalette::HighlightedText, brush6);
-        palette2.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush3);
+        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush3);
+        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush4);
+        palette3.setBrush(QPalette::Inactive, QPalette::Light, brush3);
+        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush3);
+        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush3);
+        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush4);
+        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush4);
+        palette3.setBrush(QPalette::Inactive, QPalette::Highlight, brush5);
+        palette3.setBrush(QPalette::Inactive, QPalette::HighlightedText, brush6);
+        palette3.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush3);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette2.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush7);
+        palette3.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush7);
 #endif
-        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
-        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush4);
-        palette2.setBrush(QPalette::Disabled, QPalette::Light, brush3);
-        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush3);
-        palette2.setBrush(QPalette::Disabled, QPalette::ButtonText, brush3);
-        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush4);
-        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush4);
-        palette2.setBrush(QPalette::Disabled, QPalette::HighlightedText, brush6);
-        palette2.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush3);
+        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush4);
+        palette3.setBrush(QPalette::Disabled, QPalette::Light, brush3);
+        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush3);
+        palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush3);
+        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush4);
+        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush4);
+        palette3.setBrush(QPalette::Disabled, QPalette::HighlightedText, brush6);
+        palette3.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush3);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette2.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush7);
+        palette3.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush7);
 #endif
-        Teacherbox->setPalette(palette2);
+        Teacherbox->setPalette(palette3);
         Teacherbox->setTabletTracking(false);
         Teacherbox->setStyleSheet(QString::fromUtf8("/* QComboBox base style */\n"
 "QComboBox {\n"
@@ -327,62 +384,6 @@ public:
 "}\n"
 ""));
         Teacherbox->setFrame(true);
-        nextButton = new QPushButton(frame);
-        nextButton->setObjectName("nextButton");
-        nextButton->setGeometry(QRect(210, 210, 71, 31));
-        QPalette palette3;
-        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette3.setBrush(QPalette::Active, QPalette::Button, brush1);
-        palette3.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette3.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette3.setBrush(QPalette::Active, QPalette::Window, brush1);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette3.setBrush(QPalette::Active, QPalette::PlaceholderText, brush2);
-#endif
-        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush1);
-        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette3.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush2);
-#endif
-        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
-        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush);
-        palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
-        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush1);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette3.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush2);
-#endif
-        nextButton->setPalette(palette3);
-        nextButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: #337ab7;  /* Button background color (blue) */\n"
-"    color: #ffffff;             /* Text color (white) */\n"
-"	border-radius: 3px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"	background-color: #285e8e;\n"
-"}"));
-        frame_2 = new QFrame(frame);
-        frame_2->setObjectName("frame_2");
-        frame_2->setGeometry(QRect(0, 0, 301, 31));
-        frame_2->setStyleSheet(QString::fromUtf8("background-color: rgb(55, 122, 183);\n"
-"border-radius: 8px;"));
-        frame_2->setFrameShape(QFrame::StyledPanel);
-        frame_2->setFrameShadow(QFrame::Raised);
-        label = new QLabel(frame_2);
-        label->setObjectName("label");
-        label->setGeometry(QRect(20, 10, 141, 16));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Product Sans Black")});
-        font1.setPointSize(11);
-        label->setFont(font1);
-        label->setTabletTracking(false);
-        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         tselection->setCentralWidget(centralwidget);
         menubar = new QMenuBar(tselection);
         menubar->setObjectName("menubar");
@@ -411,8 +412,10 @@ public:
         Coursebox->setAccessibleName(QCoreApplication::translate("tselection", "Select", nullptr));
 #endif // QT_CONFIG(accessibility)
         Coursebox->setPlaceholderText(QCoreApplication::translate("tselection", "<Select>", nullptr));
-        label_5->setText(QCoreApplication::translate("tselection", "<html><head/><body><p>Teacher/Instructor</p></body></html>", nullptr));
         label_7->setText(QCoreApplication::translate("tselection", "<html><head/><body><p>Course/Subject</p></body></html>", nullptr));
+        nextButton->setText(QCoreApplication::translate("tselection", "Next", nullptr));
+        label->setText(QCoreApplication::translate("tselection", "TO RATE", nullptr));
+        label_5->setText(QCoreApplication::translate("tselection", "<html><head/><body><p>Teacher/Instructor</p></body></html>", nullptr));
         Teacherbox->setItemText(0, QCoreApplication::translate("tselection", "                 <Select>", nullptr));
         Teacherbox->setItemText(1, QCoreApplication::translate("tselection", "John Christopher Mateo", nullptr));
         Teacherbox->setItemText(2, QCoreApplication::translate("tselection", "Ma. Luche Sabayle", nullptr));
@@ -422,8 +425,6 @@ public:
         Teacherbox->setAccessibleName(QCoreApplication::translate("tselection", "Select", nullptr));
 #endif // QT_CONFIG(accessibility)
         Teacherbox->setPlaceholderText(QString());
-        nextButton->setText(QCoreApplication::translate("tselection", "Next", nullptr));
-        label->setText(QCoreApplication::translate("tselection", "TO RATE", nullptr));
     } // retranslateUi
 
 };

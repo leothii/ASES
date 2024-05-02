@@ -38,7 +38,6 @@ void Sdashb::on_logoutButton_clicked()
         MainWindow::instance = new MainWindow(this);
     }
     MainWindow::instance->show();
-    QMessageBox::information(this, "Logged Out", "You have been logged out successfully.");
     this->hide();
 }
 

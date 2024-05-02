@@ -52,8 +52,7 @@ void MainWindow::on_NextButton_clicked() {
         // Hide the main window
         this->hide();
     }
-    if (ui->RoleBox->currentText() == ""
-                                      "         Admin") {
+    if (ui->RoleBox->currentText() ==  "         Admin") {
         // If an instance of StudentLg already exists, bring it to focus
         if (AdminLg::instance) {
             AdminLg::instance->show();
@@ -66,8 +65,12 @@ void MainWindow::on_NextButton_clicked() {
         }
         // Hide the main window
         this->hide();
+
+    }else
+     ui->label->setText("Invalid user selection");
+
     }
-}
+
 
 MainWindow::~MainWindow()
 {

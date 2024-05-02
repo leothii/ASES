@@ -40,6 +40,7 @@ public:
     QPushButton *backButton;
     QLabel *label_1;
     QLabel *label_2;
+    QLabel *Emessage;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -196,6 +197,15 @@ public:
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(60, 140, 161, 21));
         label_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        Emessage = new QLabel(frame);
+        Emessage->setObjectName("Emessage");
+        Emessage->setGeometry(QRect(60, 30, 191, 21));
+        QFont font2;
+        font2.setPointSize(9);
+        font2.setItalic(true);
+        Emessage->setFont(font2);
+        Emessage->setStyleSheet(QString::fromUtf8("color:rgb(255, 0, 0)"));
+        Emessage->setAlignment(Qt::AlignCenter);
         StudentLg->setCentralWidget(centralwidget);
         frame->raise();
         lineEdit_1->raise();
@@ -227,6 +237,7 @@ public:
         backButton->setText(QCoreApplication::translate("StudentLg", "Back", nullptr));
         label_1->setText(QCoreApplication::translate("StudentLg", "Email", nullptr));
         label_2->setText(QCoreApplication::translate("StudentLg", "Student Number", nullptr));
+        Emessage->setText(QString());
     } // retranslateUi
 
 };

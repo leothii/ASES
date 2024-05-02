@@ -356,11 +356,11 @@ public:
 "}"));
         label_3 = new QLabel(frame);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(80, 30, 211, 61));
+        label_3->setGeometry(QRect(80, 40, 211, 61));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("Microsoft Sans Serif")});
         font2.setPointSize(39);
-        font2.setBold(true);
+        font2.setWeight(QFont::DemiBold);
         font2.setStrikeOut(false);
         font2.setKerning(true);
         label_3->setFont(font2);
@@ -370,7 +370,7 @@ public:
         label_3->setFrameShadow(QFrame::Plain);
         label_6 = new QLabel(frame);
         label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(50, 90, 421, 20));
+        label_6->setGeometry(QRect(40, 100, 421, 20));
         QPalette palette7;
         palette7.setBrush(QPalette::Active, QPalette::WindowText, brush4);
         palette7.setBrush(QPalette::Active, QPalette::Button, brush2);
@@ -401,7 +401,7 @@ public:
 #endif
         label_6->setPalette(palette7);
         QFont font3;
-        font3.setPointSize(9);
+        font3.setPointSize(10);
         font3.setBold(false);
         font3.setItalic(true);
         label_6->setFont(font3);

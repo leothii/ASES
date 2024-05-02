@@ -147,7 +147,7 @@ public:
         progressBar->setStyleSheet(QString::fromUtf8("QProgressBar {\n"
 "    border-radius: 3px;               /* Border radius to match the other elements */\n"
 "    text-align: center;               /* Center align the text */\n"
-"    color: #ffffff;                   /* Text color (white) */\n"
+"    color: rgb(0, 0, 0);                   /* Text color (white) */\n"
 "    background-color: #d4d4d4;        /* Background color of the QProgressBar (neutral gray) */\n"
 "}\n"
 "\n"
