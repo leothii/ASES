@@ -1,3 +1,4 @@
+debug/adashb.o
 debug/adminlg.o
 debug/edit.o
 debug/form1.o
@@ -18,6 +19,7 @@ debug/teacherlg.o
 debug/tselection.o
 debug/qrc_Images.o
 debug/qrc_Resource.o
+debug/moc_adashb.o
 debug/moc_adminlg.o
 debug/moc_edit.o
 debug/moc_form1.o

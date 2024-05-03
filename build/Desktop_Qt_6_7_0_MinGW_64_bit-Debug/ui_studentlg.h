@@ -98,14 +98,14 @@ public:
         frame->setFrameShadow(QFrame::Raised);
         label = new QLabel(frame);
         label->setObjectName("label");
-        label->setGeometry(QRect(170, 350, 111, 31));
+        label->setGeometry(QRect(110, 340, 101, 31));
         QFont font;
         font.setPointSize(8);
         label->setFont(font);
         label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         signupButton = new QPushButton(frame);
         signupButton->setObjectName("signupButton");
-        signupButton->setGeometry(QRect(170, 380, 83, 29));
+        signupButton->setGeometry(QRect(110, 370, 83, 29));
         signupButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
@@ -158,9 +158,9 @@ public:
         checkBox->setChecked(true);
         label_4 = new QLabel(frame);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(60, 300, 111, 16));
+        label_4->setGeometry(QRect(180, 210, 71, 16));
         QFont font1;
-        font1.setPointSize(7);
+        font1.setPointSize(6);
         font1.setItalic(true);
         label_4->setFont(font1);
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(55, 122, 183);\n"
@@ -180,7 +180,7 @@ public:
 "}"));
         backButton = new QPushButton(frame);
         backButton->setObjectName("backButton");
-        backButton->setGeometry(QRect(60, 380, 83, 29));
+        backButton->setGeometry(QRect(60, 300, 83, 29));
         backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"

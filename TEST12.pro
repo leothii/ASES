@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    adashb.cpp \
     adminlg.cpp \
     edit.cpp \
     form1.cpp \
@@ -29,6 +30,7 @@ SOURCES += \
     tselection.cpp
 
 HEADERS += \
+    adashb.h \
     adminlg.h \
     edit.h \
     form1.h \
@@ -48,6 +50,7 @@ HEADERS += \
     tselection.h
 
 FORMS += \
+    adashb.ui \
     adminlg.ui \
     edit.ui \
     form1.ui \

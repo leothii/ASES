@@ -1,3 +1,4 @@
+release/adashb.o
 release/adminlg.o
 release/edit.o
 release/form1.o
@@ -18,6 +19,7 @@ release/teacherlg.o
 release/tselection.o
 release/qrc_Images.o
 release/qrc_Resource.o
+release/moc_adashb.o
 release/moc_adminlg.o
 release/moc_edit.o
 release/moc_form1.o

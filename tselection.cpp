@@ -14,8 +14,8 @@ tselection::tselection(QWidget *parent)
 {
     ui->setupUi(this);
     studentNumber = Sdashb::sNum;
-    QString subject = ui->Coursebox->currentText();
-    QString teacher = ui->Teacherbox->currentText();
+    populateTeacherBox();
+    populateCourseBox();
 
     // For backButton
     if (!QObject::connect(ui->backButton, SIGNAL(clicked()), this, SLOT(on_backButton_clicked()), Qt::UniqueConnection)) {
@@ -43,7 +43,53 @@ tselection::tselection(QWidget *parent)
         qDebug() << "Database is not connected";
     }
 }
+void tselection::populateTeacherBox() {
+    // Clear existing items from the QComboBox
+    ui->Teacherbox->clear();
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("sql6.freesqldatabase.com");
+    db.setDatabaseName("sql6698709");
+    db.setUserName("sql6698709");
+    db.setPassword("wQpFvGwERi");
+    db.open();
+    // Execute a query to retrieve data from the desired column
+    QSqlQuery query("SELECT NAME FROM FACULTY");
 
+    // Check if the query executed successfully
+    if (query.exec()) {
+        // Iterate through the results and add each item to the QComboBox
+        while (query.next()) {
+            QString item = query.value(0).toString(); // Assuming the column is the first one
+            ui->Teacherbox->addItem(item);
+        }
+    } else {
+        qDebug() << "Error executing query:" << query.lastError().text();
+    }
+}
+
+void tselection::populateCourseBox() {
+    // Clear existing items from the QComboBox
+    ui->Coursebox->clear();
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("sql6.freesqldatabase.com");
+    db.setDatabaseName("sql6698709");
+    db.setUserName("sql6698709");
+    db.setPassword("wQpFvGwERi");
+    db.open();
+    // Execute a query to retrieve data from the desired column
+    QSqlQuery query("SELECT SUBJECT FROM FACULTY");
+
+    // Check if the query executed successfully
+    if (query.exec()) {
+        // Iterate through the results and add each item to the QComboBox
+        while (query.next()) {
+            QString item = query.value(0).toString(); // Assuming the column is the first one
+            ui->Coursebox->addItem(item);
+        }
+    } else {
+        qDebug() << "Error executing query:" << query.lastError().text();
+    }
+}
 void tselection::on_backButton_clicked()
 {
     qDebug() << studentNumber;

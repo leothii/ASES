@@ -7,6 +7,8 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
+#include <QSqlRecord>
+#include <QComboBox>
 
 namespace Ui {
 class tselection;
@@ -23,6 +25,8 @@ public:
     static QString studentNumber;
     static QString subject;
     static QString teacher;
+    void populateTeacherBox();
+    void populateCourseBox();
 
 private slots:
     void on_backButton_clicked();

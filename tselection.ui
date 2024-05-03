@@ -627,26 +627,6 @@ QComboBox QAbstractItemView::item:selected {
        <string>&lt;Select&gt;</string>
       </property>
      </item>
-     <item>
-      <property name="text">
-       <string comment="Select Role">CC202</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>CC203</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>CCS221</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>CCS222</string>
-      </property>
-     </item>
     </widget>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
@@ -1337,7 +1317,7 @@ QComboBox QAbstractItemView::item:selected {
 </string>
      </property>
      <property name="placeholderText">
-      <string/>
+      <string>                 &lt;Select&gt;</string>
      </property>
      <property name="frame">
       <bool>true</bool>
@@ -1345,21 +1325,6 @@ QComboBox QAbstractItemView::item:selected {
      <item>
       <property name="text">
        <string>                 &lt;Select&gt;</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>John Christopher Mateo</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Ma. Luche Sabayle</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Evan Sumido</string>
       </property>
      </item>
     </widget>

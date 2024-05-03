@@ -101,10 +101,6 @@ public:
 "}"));
         Coursebox = new QComboBox(frame);
         Coursebox->addItem(QString());
-        Coursebox->addItem(QString());
-        Coursebox->addItem(QString());
-        Coursebox->addItem(QString());
-        Coursebox->addItem(QString());
         Coursebox->setObjectName("Coursebox");
         Coursebox->setGeometry(QRect(40, 80, 91, 21));
         QPalette palette1;
@@ -284,9 +280,6 @@ public:
         label_5->setWordWrap(true);
         Teacherbox = new QComboBox(frame);
         Teacherbox->addItem(QString());
-        Teacherbox->addItem(QString());
-        Teacherbox->addItem(QString());
-        Teacherbox->addItem(QString());
         Teacherbox->setObjectName("Teacherbox");
         Teacherbox->setGeometry(QRect(40, 140, 221, 21));
         QPalette palette3;
@@ -403,10 +396,6 @@ public:
         tselection->setWindowTitle(QCoreApplication::translate("tselection", "MainWindow", nullptr));
         backButton->setText(QCoreApplication::translate("tselection", "Back", nullptr));
         Coursebox->setItemText(0, QCoreApplication::translate("tselection", "<Select>", nullptr));
-        Coursebox->setItemText(1, QCoreApplication::translate("tselection", "CC202", "Select Role"));
-        Coursebox->setItemText(2, QCoreApplication::translate("tselection", "CC203", nullptr));
-        Coursebox->setItemText(3, QCoreApplication::translate("tselection", "CCS221", nullptr));
-        Coursebox->setItemText(4, QCoreApplication::translate("tselection", "CCS222", nullptr));
 
 #if QT_CONFIG(accessibility)
         Coursebox->setAccessibleName(QCoreApplication::translate("tselection", "Select", nullptr));
@@ -417,14 +406,11 @@ public:
         label->setText(QCoreApplication::translate("tselection", "TO RATE", nullptr));
         label_5->setText(QCoreApplication::translate("tselection", "<html><head/><body><p>Teacher/Instructor</p></body></html>", nullptr));
         Teacherbox->setItemText(0, QCoreApplication::translate("tselection", "                 <Select>", nullptr));
-        Teacherbox->setItemText(1, QCoreApplication::translate("tselection", "John Christopher Mateo", nullptr));
-        Teacherbox->setItemText(2, QCoreApplication::translate("tselection", "Ma. Luche Sabayle", nullptr));
-        Teacherbox->setItemText(3, QCoreApplication::translate("tselection", "Evan Sumido", nullptr));
 
 #if QT_CONFIG(accessibility)
         Teacherbox->setAccessibleName(QCoreApplication::translate("tselection", "Select", nullptr));
 #endif // QT_CONFIG(accessibility)
-        Teacherbox->setPlaceholderText(QString());
+        Teacherbox->setPlaceholderText(QCoreApplication::translate("tselection", "                 <Select>", nullptr));
     } // retranslateUi
 
 };

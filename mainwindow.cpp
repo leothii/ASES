@@ -2,12 +2,12 @@
 #include "ui_mainwindow.h"
 #include "studentlg.h"
 #include "teacherlg.h"
-#include "adminlg.h"
+#include "adashb.h"
 
 // Initialize the static pointer
 MainWindow* MainWindow::instance = nullptr;
 TeacherLg* TeacherLg::instance = nullptr;
-AdminLg* AdminLg::instance = nullptr;
+Adashb* Adashb::instance = nullptr;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -54,14 +54,14 @@ void MainWindow::on_NextButton_clicked() {
     }
     if (ui->RoleBox->currentText() ==  "         Admin") {
         // If an instance of StudentLg already exists, bring it to focus
-        if (AdminLg::instance) {
-            AdminLg::instance->show();
-            AdminLg::instance->raise();
-            AdminLg::instance->activateWindow();
+        if (Adashb::instance) {
+            Adashb::instance->show();
+            Adashb::instance->raise();
+            Adashb::instance->activateWindow();
         } else {
             // Create a new instance of StudentLg
-            AdminLg::instance = new AdminLg(this);
-            AdminLg::instance->show();
+            Adashb::instance = new Adashb(this);
+            Adashb::instance->show();
         }
         // Hide the main window
         this->hide();
