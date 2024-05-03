@@ -53,7 +53,7 @@ void tselection::populateTeacherBox() {
     db.setPassword("wQpFvGwERi");
     db.open();
     // Execute a query to retrieve data from the desired column
-    QSqlQuery query("SELECT NAME FROM FACULTY");
+    QSqlQuery query("SELECT NAME FROM TEACHERLIST");
 
     // Check if the query executed successfully
     if (query.exec()) {
@@ -77,7 +77,7 @@ void tselection::populateCourseBox() {
     db.setPassword("wQpFvGwERi");
     db.open();
     // Execute a query to retrieve data from the desired column
-    QSqlQuery query("SELECT SUBJECT FROM FACULTY");
+    QSqlQuery query("SELECT SUBJECT FROM COURSELIST");
 
     // Check if the query executed successfully
     if (query.exec()) {

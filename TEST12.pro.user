@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 13.0.0, 2024-05-02T21:11:33. -->
+<!-- Written by QtCreator 13.0.0, 2024-05-03T10:39:37. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -463,7 +463,7 @@
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
     <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph &quot;dwarf,4096&quot; -F 250</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">TEST12</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:C:/Users/USER/Documents/COMPROG2/TEST12/TEST12.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/USER/Documents/COMPROG2/TEST12/TEST12.pro</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">true</value>

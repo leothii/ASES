@@ -41,6 +41,7 @@ public:
     QPushButton *saddButton;
     QPushButton *taddButton;
     QPushButton *viewrButton;
+    QPushButton *viewrButton_2;
     QGroupBox *groupBox;
     QLabel *AcadYear_2;
     QLabel *AcadYear;
@@ -173,8 +174,20 @@ public:
 ""));
         viewrButton = new QPushButton(groupBox_2);
         viewrButton->setObjectName("viewrButton");
-        viewrButton->setGeometry(QRect(10, 290, 121, 41));
+        viewrButton->setGeometry(QRect(20, 290, 121, 41));
         viewrButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: rgb(0, 175, 0);  /* Button background color (blue) */\n"
+"    color: #ffffff;             /* Text color (white) */\n"
+"	border-radius: 3px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #285e8e;\n"
+"}\n"
+""));
+        viewrButton_2 = new QPushButton(groupBox_2);
+        viewrButton_2->setObjectName("viewrButton_2");
+        viewrButton_2->setGeometry(QRect(10, 220, 121, 31));
+        viewrButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgb(0, 175, 0);  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
 "	border-radius: 3px;\n"
@@ -375,6 +388,7 @@ public:
         saddButton->setText(QCoreApplication::translate("Adashb", "Add", nullptr));
         taddButton->setText(QCoreApplication::translate("Adashb", "Add", nullptr));
         viewrButton->setText(QCoreApplication::translate("Adashb", "View Ratings", nullptr));
+        viewrButton_2->setText(QCoreApplication::translate("Adashb", "View Curent List", nullptr));
         groupBox->setTitle(QString());
         AcadYear_2->setText(QCoreApplication::translate("Adashb", "<html><head/><body><p>Second Semester</p></body></html>", nullptr));
         AcadYear->setText(QCoreApplication::translate("Adashb", "<html><head/><body><p>Academic Year: 2024-2025<br/></p></body></html>", nullptr));

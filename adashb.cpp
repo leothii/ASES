@@ -15,8 +15,9 @@ Adashb::Adashb(QWidget *parent)
      connect(ui->backButton, &QPushButton::clicked, this, &Adashb::on_backButton_clicked);
 }
 
-void Adashb::on_taddButton_clicked(){
-
+// For the taddButton (for adding teachers)
+// For the taddButton (for adding teachers)
+void Adashb::on_taddButton_clicked() {
     // Retrieve form data
     teacher = ui->taddEdit->text();
     // Check for empty fields
@@ -40,49 +41,45 @@ void Adashb::on_taddButton_clicked(){
     }
 
     QSqlQuery queryCheckAccount(db);
-    queryCheckAccount.prepare("SELECT COUNT(*) FROM FACULTY WHERE NAME = :teacher");
-    queryCheckAccount.bindValue(":NAME", teacher);
-
+    queryCheckAccount.prepare("SELECT COUNT(*) FROM TEACHERLIST WHERE NAME = :teacher");
+    queryCheckAccount.bindValue(":teacher", teacher);
 
     if (queryCheckAccount.exec()) {
-        queryCheckAccount.next(); // Move to the first (and only) record
-        int count = queryCheckAccount.value(0).toInt(); // Retrieve the count
+        queryCheckAccount.next();
+        int count = queryCheckAccount.value(0).toInt();
 
         if (count > 0) {
-            QMessageBox::warning(this, "Error", "An account with this email or student number already exists.");
+            QMessageBox::warning(this, "Error", "A teacher with this name already exists.");
             db.close();
-            return; // Exit the function if an account already exists
+            return;
         }
     } else {
-        QMessageBox::warning(this, "Error", "Failed to check for existing account: " + queryCheckAccount.lastError().text());
+        QMessageBox::warning(this, "Error", "Failed to check for existing teacher: " + queryCheckAccount.lastError().text());
         db.close();
-        return; // Exit the function if the check for existing account failed
+        return;
     }
 
-
+    // Prepare query to insert both teacher and subject
     QSqlQuery queryInsertData(db);
-    queryInsertData.prepare("INSERT INTO FACULTY(NAME) VALUES(:NAME)");
-    queryInsertData.bindValue(":NAME", teacher);
+    queryInsertData.prepare("INSERT INTO TEACHERLIST(NAME) VALUES(:teacher)");
+    queryInsertData.bindValue(":teacher", teacher);
 
-    // Display confirmation message before executing the query
     if (QMessageBox::information(this, "Confirmation", "Are you sure you want to add the teacher?", QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes) {
         if (!queryInsertData.exec()) {
-            QMessageBox::warning(this, "Error", "Failed to create account: " + queryInsertData.lastError().text());
+            QMessageBox::warning(this, "Error", "Failed to add teacher: " + queryInsertData.lastError().text());
             db.rollback();
             db.close();
             return;
         }
         db.commit();
-        QMessageBox::information(this, "Success", "Account created successfully!");
-
+        QMessageBox::information(this, "Success", "Teacher added successfully!");
     }
 
     db.close();
-
 }
 
-void Adashb::on_saddButton_clicked(){
-
+// For the saddButton (for adding subjects)
+void Adashb::on_saddButton_clicked() {
     // Retrieve form data
     subject = ui->saddEdit->text();
     // Check for empty fields
@@ -106,46 +103,43 @@ void Adashb::on_saddButton_clicked(){
     }
 
     QSqlQuery queryCheckAccount(db);
-    queryCheckAccount.prepare("SELECT COUNT(*) FROM FACULTY WHERE SUBJECT = :subject");
-    queryCheckAccount.bindValue(":SUBJECT", subject);
-
+    queryCheckAccount.prepare("SELECT COUNT(*) FROM COURSELIST WHERE SUBJECT = :subject");
+    queryCheckAccount.bindValue(":subject", subject);
 
     if (queryCheckAccount.exec()) {
-        queryCheckAccount.next(); // Move to the first (and only) record
-        int count = queryCheckAccount.value(0).toInt(); // Retrieve the count
+        queryCheckAccount.next();
+        int count = queryCheckAccount.value(0).toInt();
 
         if (count > 0) {
-            QMessageBox::warning(this, "Error", "An account with this email or student number already exists.");
+            QMessageBox::warning(this, "Error", "A subject with this name already exists.");
             db.close();
-            return; // Exit the function if an account already exists
+            return;
         }
     } else {
-        QMessageBox::warning(this, "Error", "Failed to check for existing account: " + queryCheckAccount.lastError().text());
+        QMessageBox::warning(this, "Error", "Failed to check for existing subject: " + queryCheckAccount.lastError().text());
         db.close();
-        return; // Exit the function if the check for existing account failed
+        return;
     }
-
-
+    // Prepare query to insert both teacher and subject
     QSqlQuery queryInsertData(db);
-    queryInsertData.prepare("INSERT INTO FACULTY(SUBJECT) VALUES(:SUBJECT)");
-    queryInsertData.bindValue(":SUBJECT", subject);
+    queryInsertData.prepare("INSERT INTO COURSELIST(SUBJECT) VALUES(:subject)");
+    queryInsertData.bindValue(":subject", subject);
 
-    // Display confirmation message before executing the query
     if (QMessageBox::information(this, "Confirmation", "Are you sure you want to add the subject?", QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes) {
         if (!queryInsertData.exec()) {
-            QMessageBox::warning(this, "Error", "Failed to create account: " + queryInsertData.lastError().text());
+            QMessageBox::warning(this, "Error", "Failed to add subject: " + queryInsertData.lastError().text());
             db.rollback();
             db.close();
             return;
         }
         db.commit();
-        QMessageBox::information(this, "Success", "Account created successfully!");
-
+        QMessageBox::information(this, "Success", "Subject added successfully!");
     }
 
     db.close();
-
 }
+
+
 
 void Adashb::on_backButton_clicked() {
 
