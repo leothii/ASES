@@ -34,6 +34,7 @@ public:
     QPushButton *backButton;
     QLabel *label_1;
     QLabel *label_2;
+    QLabel *Emessage;
     QLineEdit *lineEdit_1;
     QLineEdit *lineEdit_2;
     QMenuBar *menubar;
@@ -130,12 +131,16 @@ public:
 "}"));
         label_1 = new QLabel(frame);
         label_1->setObjectName("label_1");
-        label_1->setGeometry(QRect(60, 70, 63, 20));
+        label_1->setGeometry(QRect(60, 70, 81, 20));
         label_1->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_2 = new QLabel(frame);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(60, 130, 161, 31));
         label_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        Emessage = new QLabel(frame);
+        Emessage->setObjectName("Emessage");
+        Emessage->setGeometry(QRect(120, 40, 63, 20));
+        Emessage->setStyleSheet(QString::fromUtf8("color: red;"));
         lineEdit_1 = new QLineEdit(centralwidget);
         lineEdit_1->setObjectName("lineEdit_1");
         lineEdit_1->setGeometry(QRect(120, 310, 191, 31));
@@ -179,8 +184,9 @@ public:
         label_4->setText(QCoreApplication::translate("TeacherLg", "Forgot Password", nullptr));
         loginButton->setText(QCoreApplication::translate("TeacherLg", "Log in", nullptr));
         backButton->setText(QCoreApplication::translate("TeacherLg", "Back", nullptr));
-        label_1->setText(QCoreApplication::translate("TeacherLg", "Username", nullptr));
+        label_1->setText(QCoreApplication::translate("TeacherLg", "Email", nullptr));
         label_2->setText(QCoreApplication::translate("TeacherLg", "Password", nullptr));
+        Emessage->setText(QString());
     } // retranslateUi
 
 };

@@ -5,6 +5,8 @@
 
 QString Adashb::teacher;
 QString Adashb::subject;
+QString Adashb::email;
+QString Adashb::password;
 Adashb::Adashb(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Adashb)
@@ -20,8 +22,11 @@ Adashb::Adashb(QWidget *parent)
 void Adashb::on_taddButton_clicked() {
     // Retrieve form data
     teacher = ui->taddEdit->text();
+    email = ui->taddEdit_2->text();
+    password = ui->taddEdit_3->text();
+
     // Check for empty fields
-    if (teacher.isEmpty()) {
+    if (teacher.isEmpty() || email.isEmpty() || password.isEmpty()) {
         QMessageBox::warning(this, "Error", "All fields must be filled out.");
         return;
     }
@@ -61,8 +66,10 @@ void Adashb::on_taddButton_clicked() {
 
     // Prepare query to insert both teacher and subject
     QSqlQuery queryInsertData(db);
-    queryInsertData.prepare("INSERT INTO TEACHERLIST(NAME) VALUES(:teacher)");
+    queryInsertData.prepare("INSERT INTO TEACHERLIST(NAME, EMAIL, PASSWORD) VALUES(:teacher, :email, :password)");
     queryInsertData.bindValue(":teacher", teacher);
+    queryInsertData.bindValue(":email", email);
+    queryInsertData.bindValue(":password", password);
 
     if (QMessageBox::information(this, "Confirmation", "Are you sure you want to add the teacher?", QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes) {
         if (!queryInsertData.exec()) {

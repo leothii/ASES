@@ -17,6 +17,7 @@ tselection::tselection(QWidget *parent)
     populateTeacherBox();
     populateCourseBox();
 
+
     // For backButton
     if (!QObject::connect(ui->backButton, SIGNAL(clicked()), this, SLOT(on_backButton_clicked()), Qt::UniqueConnection)) {
         qDebug() << "Failed to connect backButton signal to on_backButton_clicked slot";

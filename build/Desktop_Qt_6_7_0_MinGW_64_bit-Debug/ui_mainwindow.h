@@ -409,7 +409,7 @@ public:
         label_6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label = new QLabel(frame);
         label->setObjectName("label");
-        label->setGeometry(QRect(70, 300, 171, 16));
+        label->setGeometry(QRect(80, 300, 141, 20));
         QFont font4;
         font4.setPointSize(8);
         font4.setItalic(true);

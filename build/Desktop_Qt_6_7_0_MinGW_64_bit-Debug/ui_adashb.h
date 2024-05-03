@@ -40,8 +40,13 @@ public:
     QLabel *label_14;
     QPushButton *saddButton;
     QPushButton *taddButton;
-    QPushButton *viewrButton;
     QPushButton *viewrButton_2;
+    QFrame *line_5;
+    QFrame *line_6;
+    QLabel *label_2;
+    QLineEdit *taddEdit_2;
+    QLineEdit *taddEdit_3;
+    QLabel *label_10;
     QGroupBox *groupBox;
     QLabel *AcadYear_2;
     QLabel *AcadYear;
@@ -98,13 +103,13 @@ public:
         frame->setFrameShadow(QFrame::Raised);
         groupBox_2 = new QGroupBox(frame);
         groupBox_2->setObjectName("groupBox_2");
-        groupBox_2->setGeometry(QRect(10, 280, 401, 341));
+        groupBox_2->setGeometry(QRect(10, 280, 401, 381));
         groupBox_2->setTabletTracking(false);
         groupBox_2->setStyleSheet(QString::fromUtf8("background-color: rgb(218, 218, 218);\n"
 "border-radius: 10px;"));
         saddEdit = new QLineEdit(groupBox_2);
         saddEdit->setObjectName("saddEdit");
-        saddEdit->setGeometry(QRect(40, 170, 331, 31));
+        saddEdit->setGeometry(QRect(40, 220, 211, 31));
         saddEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Background color: white */\n"
 "    color: #000000;            /* Text color: black */\n"
@@ -115,7 +120,7 @@ public:
 ""));
         label_13 = new QLabel(groupBox_2);
         label_13->setObjectName("label_13");
-        label_13->setGeometry(QRect(40, 150, 161, 16));
+        label_13->setGeometry(QRect(40, 200, 161, 16));
         label_13->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_1 = new QLabel(groupBox_2);
         label_1->setObjectName("label_1");
@@ -123,7 +128,7 @@ public:
         label_1->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         taddEdit = new QLineEdit(groupBox_2);
         taddEdit->setObjectName("taddEdit");
-        taddEdit->setGeometry(QRect(40, 70, 331, 31));
+        taddEdit->setGeometry(QRect(40, 70, 211, 31));
         taddEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Background color: white */\n"
 "    color: #000000;            /* Text color: black */\n"
@@ -150,7 +155,7 @@ public:
         label_14->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         saddButton = new QPushButton(groupBox_2);
         saddButton->setObjectName("saddButton");
-        saddButton->setGeometry(QRect(280, 210, 83, 29));
+        saddButton->setGeometry(QRect(270, 220, 83, 29));
         saddButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
@@ -162,7 +167,7 @@ public:
 ""));
         taddButton = new QPushButton(groupBox_2);
         taddButton->setObjectName("taddButton");
-        taddButton->setGeometry(QRect(280, 120, 83, 29));
+        taddButton->setGeometry(QRect(280, 130, 83, 29));
         taddButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
@@ -172,21 +177,9 @@ public:
 "	background-color: #285e8e;\n"
 "}\n"
 ""));
-        viewrButton = new QPushButton(groupBox_2);
-        viewrButton->setObjectName("viewrButton");
-        viewrButton->setGeometry(QRect(20, 290, 121, 41));
-        viewrButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: rgb(0, 175, 0);  /* Button background color (blue) */\n"
-"    color: #ffffff;             /* Text color (white) */\n"
-"	border-radius: 3px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"	background-color: #285e8e;\n"
-"}\n"
-""));
         viewrButton_2 = new QPushButton(groupBox_2);
         viewrButton_2->setObjectName("viewrButton_2");
-        viewrButton_2->setGeometry(QRect(10, 220, 121, 31));
+        viewrButton_2->setGeometry(QRect(130, 260, 121, 31));
         viewrButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgb(0, 175, 0);  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
@@ -196,6 +189,47 @@ public:
 "	background-color: #285e8e;\n"
 "}\n"
 ""));
+        line_5 = new QFrame(groupBox_2);
+        line_5->setObjectName("line_5");
+        line_5->setGeometry(QRect(160, 310, 3, 61));
+        line_5->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        line_5->setFrameShape(QFrame::Shape::VLine);
+        line_5->setFrameShadow(QFrame::Shadow::Sunken);
+        line_6 = new QFrame(groupBox_2);
+        line_6->setObjectName("line_6");
+        line_6->setGeometry(QRect(120, 290, 3, 61));
+        line_6->setFrameShape(QFrame::Shape::VLine);
+        line_6->setFrameShadow(QFrame::Shadow::Sunken);
+        label_2 = new QLabel(groupBox_2);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(40, 110, 63, 20));
+        label_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        taddEdit_2 = new QLineEdit(groupBox_2);
+        taddEdit_2->setObjectName("taddEdit_2");
+        taddEdit_2->setGeometry(QRect(40, 130, 211, 31));
+        taddEdit_2->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    background-color: #ffffff; /* Background color: white */\n"
+"    color: #000000;            /* Text color: black */\n"
+"    border: 1px solid #337ab7; /* Border color: same blue as QPushButton */\n"
+"    border-radius: 4px;        /* Optional: round the corners */\n"
+"    padding: 4px;              /* Optional: add some padding */\n"
+"}\n"
+""));
+        taddEdit_3 = new QLineEdit(groupBox_2);
+        taddEdit_3->setObjectName("taddEdit_3");
+        taddEdit_3->setGeometry(QRect(270, 70, 101, 31));
+        taddEdit_3->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    background-color: #ffffff; /* Background color: white */\n"
+"    color: #000000;            /* Text color: black */\n"
+"    border: 1px solid #337ab7; /* Border color: same blue as QPushButton */\n"
+"    border-radius: 4px;        /* Optional: round the corners */\n"
+"    padding: 4px;              /* Optional: add some padding */\n"
+"}\n"
+""));
+        label_10 = new QLabel(groupBox_2);
+        label_10->setObjectName("label_10");
+        label_10->setGeometry(QRect(270, 50, 63, 20));
+        label_10->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         groupBox = new QGroupBox(frame);
         groupBox->setObjectName("groupBox");
         groupBox->setGeometry(QRect(10, 70, 401, 191));
@@ -357,7 +391,7 @@ public:
         progressBar->setValue(15);
         line_4 = new QFrame(frame);
         line_4->setObjectName("line_4");
-        line_4->setGeometry(QRect(10, 540, 401, 20));
+        line_4->setGeometry(QRect(10, 580, 401, 20));
         line_4->setFrameShape(QFrame::Shape::HLine);
         line_4->setFrameShadow(QFrame::Shadow::Sunken);
         Adashb->setCentralWidget(centralwidget);
@@ -382,13 +416,17 @@ public:
         groupBox_2->setTitle(QString());
         saddEdit->setPlaceholderText(QCoreApplication::translate("Adashb", "Eg. MTH101", nullptr));
         label_13->setText(QCoreApplication::translate("Adashb", "Subject", nullptr));
-        label_1->setText(QCoreApplication::translate("Adashb", "Teacher", nullptr));
-        taddEdit->setPlaceholderText(QCoreApplication::translate("Adashb", "Eg. Juan Dela Cruz", nullptr));
+        label_1->setText(QCoreApplication::translate("Adashb", "Email", nullptr));
+        taddEdit->setText(QString());
+        taddEdit->setPlaceholderText(QCoreApplication::translate("Adashb", "*****@wvsu.edu.ph", nullptr));
         label_14->setText(QCoreApplication::translate("Adashb", "ADD FACULTY", nullptr));
         saddButton->setText(QCoreApplication::translate("Adashb", "Add", nullptr));
         taddButton->setText(QCoreApplication::translate("Adashb", "Add", nullptr));
-        viewrButton->setText(QCoreApplication::translate("Adashb", "View Ratings", nullptr));
         viewrButton_2->setText(QCoreApplication::translate("Adashb", "View Curent List", nullptr));
+        label_2->setText(QCoreApplication::translate("Adashb", "Name", nullptr));
+        taddEdit_2->setPlaceholderText(QCoreApplication::translate("Adashb", "Eg. Juan Dela Cruz", nullptr));
+        taddEdit_3->setPlaceholderText(QString());
+        label_10->setText(QCoreApplication::translate("Adashb", "Password", nullptr));
         groupBox->setTitle(QString());
         AcadYear_2->setText(QCoreApplication::translate("Adashb", "<html><head/><body><p>Second Semester</p></body></html>", nullptr));
         AcadYear->setText(QCoreApplication::translate("Adashb", "<html><head/><body><p>Academic Year: 2024-2025<br/></p></body></html>", nullptr));

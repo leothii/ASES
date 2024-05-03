@@ -52,6 +52,8 @@ public:
     QLabel *label_5;
     QFrame *line_2;
     QFrame *line_3;
+    QLabel *Welcome_2;
+    QLabel *wName;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -89,7 +91,7 @@ public:
         frame->setFrameShadow(QFrame::Raised);
         groupBox_2 = new QGroupBox(frame);
         groupBox_2->setObjectName("groupBox_2");
-        groupBox_2->setGeometry(QRect(10, 210, 401, 171));
+        groupBox_2->setGeometry(QRect(10, 250, 401, 171));
         groupBox_2->setTabletTracking(false);
         groupBox_2->setStyleSheet(QString::fromUtf8("background-color: rgb(218, 218, 218);\n"
 "border-radius: 10px;"));
@@ -167,7 +169,7 @@ public:
         label_3->setStyleSheet(QString::fromUtf8("color: red;"));
         groupBox = new QGroupBox(frame);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(10, 70, 401, 121));
+        groupBox->setGeometry(QRect(10, 110, 401, 121));
         groupBox->setTabletTracking(false);
         groupBox->setStyleSheet(QString::fromUtf8("background-color: rgb(218, 218, 218);\n"
 "border-radius: 10px;"));
@@ -221,7 +223,7 @@ public:
         label_11->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         line = new QFrame(frame);
         line->setObjectName("line");
-        line->setGeometry(QRect(10, 190, 401, 20));
+        line->setGeometry(QRect(10, 230, 401, 20));
         line->setFrameShape(QFrame::Shape::HLine);
         line->setFrameShadow(QFrame::Shadow::Sunken);
         logoutButton = new QPushButton(frame);
@@ -303,6 +305,18 @@ public:
         line_2->raise();
         line_3->raise();
         label_5->raise();
+        Welcome_2 = new QLabel(frame);
+        Welcome_2->setObjectName("Welcome_2");
+        Welcome_2->setGeometry(QRect(20, 70, 111, 33));
+        Welcome_2->setSizeIncrement(QSize(6, 5));
+        Welcome_2->setBaseSize(QSize(9, 10));
+        Welcome_2->setFont(font1);
+        Welcome_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        wName = new QLabel(frame);
+        wName->setObjectName("wName");
+        wName->setGeometry(QRect(110, 70, 231, 33));
+        wName->setFont(font);
+        wName->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         Tdashb->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Tdashb);
         menubar->setObjectName("menubar");
@@ -333,13 +347,15 @@ public:
         groupBox->setTitle(QString());
         label_2->setText(QString());
         label_10->setText(QCoreApplication::translate("Tdashb", "Name:", nullptr));
-        label_11->setText(QCoreApplication::translate("Tdashb", "ID #:", nullptr));
+        label_11->setText(QCoreApplication::translate("Tdashb", "Email:", nullptr));
         logoutButton->setText(QCoreApplication::translate("Tdashb", "Log Out", nullptr));
         label_7->setText(QString());
         label_8->setText(QCoreApplication::translate("Tdashb", "WEST VISAYAS STATE UNIVERSITY\n"
 "MAIN CAMPUS", nullptr));
         label_9->setText(QCoreApplication::translate("Tdashb", "Lapaz, Iloilo CIty", nullptr));
         label_5->setText(QCoreApplication::translate("Tdashb", "DASHBOARD", nullptr));
+        Welcome_2->setText(QCoreApplication::translate("Tdashb", "Welcome,", nullptr));
+        wName->setText(QCoreApplication::translate("Tdashb", "Name", nullptr));
     } // retranslateUi
 
 };

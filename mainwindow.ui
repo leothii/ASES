@@ -1709,10 +1709,10 @@ border-color: rgb(255, 255, 255);</string>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>80</x>
        <y>300</y>
-       <width>171</width>
-       <height>16</height>
+       <width>141</width>
+       <height>20</height>
       </rect>
      </property>
      <property name="font">

@@ -17,6 +17,8 @@ public:
 
     static TeacherLg *instance;
     void on_backButton_clicked();
+    void on_loginButton_clicked();
+    static QString email, password;
 
 private:
     Ui::TeacherLg *ui;

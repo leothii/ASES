@@ -164,7 +164,7 @@ QPushButton:hover{
       <rect>
        <x>60</x>
        <y>70</y>
-       <width>63</width>
+       <width>81</width>
        <height>20</height>
       </rect>
      </property>
@@ -172,7 +172,7 @@ QPushButton:hover{
       <string notr="true">color: rgb(0, 0, 0);</string>
      </property>
      <property name="text">
-      <string>Username</string>
+      <string>Email</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
@@ -189,6 +189,22 @@ QPushButton:hover{
      </property>
      <property name="text">
       <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Emessage">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>40</y>
+       <width>63</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: red;</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>

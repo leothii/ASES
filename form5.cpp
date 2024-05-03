@@ -2,6 +2,7 @@
 #include "ui_form5.h"
 #include "tselection.h"
 #include "sdashb.h"
+#include "studentlg.h"
 
 Form5 * Form5::instance=nullptr;
 Form5::Form5(QWidget *parent)
@@ -87,10 +88,6 @@ void Form5::on_submitButton_clicked(){
     } else {
         qDebug() << "MESSAGE column updated successfully with message:" << message;
     }
-
-    // Proceed to the next window
-    Sdashb::instance= nullptr;
-    Sdashb::instance = new Sdashb(this);
     Sdashb::instance->show();
     this->hide();
 }

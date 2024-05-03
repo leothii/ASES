@@ -23,6 +23,8 @@ public:
     static Adashb*instance;
     static QString teacher;
     static QString subject;
+    static QString email;
+    static QString password;
 
     void on_taddButton_clicked();
     void on_saddButton_clicked();
