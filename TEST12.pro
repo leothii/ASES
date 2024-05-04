@@ -25,6 +25,7 @@ SOURCES += \
     sdashb.cpp \
     signup.cpp \
     studentlg.cpp \
+    tclist.cpp \
     tdashb.cpp \
     teacherlg.cpp \
     tselection.cpp
@@ -45,6 +46,7 @@ HEADERS += \
     sdashb.h \
     signup.h \
     studentlg.h \
+    tclist.h \
     tdashb.h \
     teacherlg.h \
     tselection.h
@@ -65,6 +67,7 @@ FORMS += \
     sdashb.ui \
     signup.ui \
     studentlg.ui \
+    tclist.ui \
     tdashb.ui \
     teacherlg.ui \
     tselection.ui

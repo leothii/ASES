@@ -1,7 +1,7 @@
 #ifndef STUDENTLG_H
 #define STUDENTLG_H
 
-#include <QMainWindow>
+
 #include <QMainWindow>
 #include <QSqlDatabase>
 #include <QDebug>

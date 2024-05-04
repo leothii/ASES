@@ -14,6 +14,7 @@ debug/mainwindow.o
 debug/sdashb.o
 debug/signup.o
 debug/studentlg.o
+debug/tclist.o
 debug/tdashb.o
 debug/teacherlg.o
 debug/tselection.o
@@ -34,6 +35,7 @@ debug/moc_mainwindow.o
 debug/moc_sdashb.o
 debug/moc_signup.o
 debug/moc_studentlg.o
+debug/moc_tclist.o
 debug/moc_tdashb.o
 debug/moc_teacherlg.o
 debug/moc_tselection.o

@@ -14,6 +14,7 @@ release/mainwindow.o
 release/sdashb.o
 release/signup.o
 release/studentlg.o
+release/tclist.o
 release/tdashb.o
 release/teacherlg.o
 release/tselection.o
@@ -34,6 +35,7 @@ release/moc_mainwindow.o
 release/moc_sdashb.o
 release/moc_signup.o
 release/moc_studentlg.o
+release/moc_tclist.o
 release/moc_tdashb.o
 release/moc_teacherlg.o
 release/moc_tselection.o

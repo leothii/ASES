@@ -40,7 +40,7 @@ public:
     QLabel *label_14;
     QPushButton *saddButton;
     QPushButton *taddButton;
-    QPushButton *viewrButton_2;
+    QPushButton *viewButton;
     QFrame *line_5;
     QFrame *line_6;
     QLabel *label_2;
@@ -177,10 +177,10 @@ public:
 "	background-color: #285e8e;\n"
 "}\n"
 ""));
-        viewrButton_2 = new QPushButton(groupBox_2);
-        viewrButton_2->setObjectName("viewrButton_2");
-        viewrButton_2->setGeometry(QRect(130, 260, 121, 31));
-        viewrButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        viewButton = new QPushButton(groupBox_2);
+        viewButton->setObjectName("viewButton");
+        viewButton->setGeometry(QRect(130, 260, 121, 31));
+        viewButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgb(0, 175, 0);  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
 "	border-radius: 3px;\n"
@@ -422,7 +422,7 @@ public:
         label_14->setText(QCoreApplication::translate("Adashb", "ADD FACULTY", nullptr));
         saddButton->setText(QCoreApplication::translate("Adashb", "Add", nullptr));
         taddButton->setText(QCoreApplication::translate("Adashb", "Add", nullptr));
-        viewrButton_2->setText(QCoreApplication::translate("Adashb", "View Curent List", nullptr));
+        viewButton->setText(QCoreApplication::translate("Adashb", "View Curent List", nullptr));
         label_2->setText(QCoreApplication::translate("Adashb", "Name", nullptr));
         taddEdit_2->setPlaceholderText(QCoreApplication::translate("Adashb", "Eg. Juan Dela Cruz", nullptr));
         taddEdit_3->setPlaceholderText(QString());

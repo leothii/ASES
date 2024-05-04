@@ -12,7 +12,7 @@ Tdashb::Tdashb(QWidget *parent) :
     QString email = TeacherLg::email;
 
     // Call the function to get the name using the email
-    QString name = getName(email) + "!";
+    QString name = "Name: " +getName(email);
 
     // Set the retrieved name in the UI
     ui->wName->setText(name);

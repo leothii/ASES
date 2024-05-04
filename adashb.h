@@ -29,6 +29,7 @@ public:
     void on_taddButton_clicked();
     void on_saddButton_clicked();
     void on_backButton_clicked();
+    void on_viewButton_clicked();
 
 private:
     Ui::Adashb *ui;

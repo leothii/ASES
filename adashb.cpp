@@ -1,12 +1,16 @@
 #include "adashb.h"
 #include "ui_adashb.h"
 #include "mainwindow.h"
-
+#include "tclist.h"
 
 QString Adashb::teacher;
 QString Adashb::subject;
 QString Adashb::email;
 QString Adashb::password;
+
+tclist* tclist::instance = nullptr;
+
+
 Adashb::Adashb(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Adashb)
@@ -15,14 +19,15 @@ Adashb::Adashb(QWidget *parent)
      connect(ui->taddButton, &QPushButton::clicked, this, &Adashb::on_taddButton_clicked);
      connect(ui->saddButton, &QPushButton::clicked, this, &Adashb::on_saddButton_clicked);
      connect(ui->backButton, &QPushButton::clicked, this, &Adashb::on_backButton_clicked);
+     connect(ui->viewButton, &QPushButton::clicked, this, &Adashb::on_viewButton_clicked);
 }
 
 // For the taddButton (for adding teachers)
 // For the taddButton (for adding teachers)
 void Adashb::on_taddButton_clicked() {
     // Retrieve form data
-    teacher = ui->taddEdit->text();
-    email = ui->taddEdit_2->text();
+    email = ui->taddEdit->text();
+    teacher = ui->taddEdit_2->text();
     password = ui->taddEdit_3->text();
 
     // Check for empty fields
@@ -161,6 +166,18 @@ void Adashb::on_backButton_clicked() {
         MainWindow::instance = new MainWindow(this);
         MainWindow::instance->show();
     }}
+
+
+
+
+void Adashb::on_viewButton_clicked() {
+    if (tclist::instance == nullptr){
+    tclist::instance = new tclist(this);
+    tclist::instance->show();
+    this->hide();
+    }
+
+}
 
 Adashb::~Adashb()
 {

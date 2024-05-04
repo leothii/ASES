@@ -282,7 +282,7 @@ QPushButton:hover{
        <string>Add</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="viewrButton_2">
+     <widget class="QPushButton" name="viewButton">
       <property name="geometry">
        <rect>
         <x>130</x>
