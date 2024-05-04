@@ -1,21 +1,31 @@
 #include "tclist.h"
 #include "ui_tclist.h"
 
-tclist::tclist(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::tclist)
+tclist::tclist(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::tclist)
 {
     ui->setupUi(this);
 
     QStringList teacherNames = getTeacherNames();
     ui->teacherListWidget->addItems(teacherNames);
 
+    // Set the size hint for each item in the teacher list
+    for (int i = 0; i < ui->teacherListWidget->count(); ++i) {
+        QListWidgetItem* item = ui->teacherListWidget->item(i);
+        item->setSizeHint(QSize(item->sizeHint().width(), 40)); // Adjust the height as needed
+    }
+
     // Get course subjects and display
     QStringList courseSubjects = getCourseSubjects();
     ui->courseListWidget->addItems(courseSubjects);
 
+    // Set the size hint for each item in the course list
+    for (int i = 0; i < ui->courseListWidget->count(); ++i) {
+        QListWidgetItem* item = ui->courseListWidget->item(i);
+        item->setSizeHint(QSize(item->sizeHint().width(), 40)); // Adjust the height as needed
+    }
 }
-
 
 QStringList tclist::getTeacherNames() {
     QStringList teacherNames;
@@ -48,64 +58,6 @@ QStringList tclist::getTeacherNames() {
 void tclist::showEvent(QShowEvent *event)
 {
     QMainWindow::showEvent(event);
-
-    // Load data when the window is shown
-    loadData();
-}
-void tclist::loadData()
-{
-    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName("sql6.freesqldatabase.com");
-    db.setDatabaseName("sql6698709");
-    db.setUserName("sql6698709");
-    db.setPassword("wQpFvGwERi");
-    db.open();
-    if (!db.open()) {
-        qDebug() << "Database connection failed: " << db.lastError().text();
-        return;
-    }
-
-    // Clear existing data in the table widget
-    ui->tableWidget->clearContents();
-
-    // Clear table widget and set column count
-    ui->tableWidget->setRowCount(0);
-    ui->tableWidget->setColumnCount(2);
-
-    // Execute query to fetch data from TEACHERLIST table
-    QSqlQuery teacherQuery("SELECT NAME FROM TEACHERLIST");
-    if (!teacherQuery.exec()) {
-        qDebug() << "Query execution failed for TEACHERLIST: " << teacherQuery.lastError().text();
-        db.close();
-        return;
-    }
-
-    // Execute query to fetch data from COURSELIST table
-    QSqlQuery courseQuery("SELECT SUBJECT FROM COURSELIST");
-    if (!courseQuery.exec()) {
-        qDebug() << "Query execution failed for COURSELIST: " << courseQuery.lastError().text();
-        db.close();
-        return;
-    }
-
-    int row = 0;
-    while (teacherQuery.next() || courseQuery.next()) {
-        // Add teacher name to the first column
-        ui->tableWidget->insertRow(row);
-        if (teacherQuery.isValid()) {
-            ui->tableWidget->setItem(row, 0, new QTableWidgetItem(teacherQuery.value("NAME").toString()));
-        }
-
-        // Add subject to the second column
-        if (courseQuery.isValid()) {
-            ui->tableWidget->setItem(row, 1, new QTableWidgetItem(courseQuery.value("SUBJECT").toString()));
-        }
-
-        row++;
-    }
-
-    // Close the database connection
-    db.close();
 }
 
 QStringList tclist::getCourseSubjects() {
@@ -136,6 +88,7 @@ QStringList tclist::getCourseSubjects() {
 
     return courseSubjects;
 }
+
 tclist::~tclist()
 {
     delete ui;

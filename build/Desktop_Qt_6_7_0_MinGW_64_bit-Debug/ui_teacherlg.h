@@ -98,6 +98,7 @@ public:
 "    left: 4px; /* Positioning adjustment */\n"
 "}\n"
 ""));
+        checkBox->setChecked(true);
         label_4 = new QLabel(frame);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(60, 230, 111, 16));

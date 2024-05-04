@@ -26,6 +26,11 @@ public:
     static QString name;
 
     QString getName(const QString& email);
+    QMap<QString, double>  calculateAverageRatings(const QString& teacherName);
+    double calculateAverageRating(const QString& teacherName);
+
+private slots:
+    void on_logoutButton_clicked();
 
 private:
     Ui::Tdashb *ui;
