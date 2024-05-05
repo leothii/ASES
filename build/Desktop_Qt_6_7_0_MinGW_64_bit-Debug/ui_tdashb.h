@@ -60,9 +60,8 @@ public:
     QLabel *label_22;
     QLabel *label_19;
     QLabel *label_24;
-    QLabel *label_20;
+    QLabel *description;
     QGroupBox *groupBox_4;
-    QPushButton *viewButton;
     QLabel *wName_7;
     QLabel *wName_8;
     QLabel *wName_9;
@@ -73,6 +72,7 @@ public:
     QLabel *cB;
     QLabel *cC;
     QLabel *cD;
+    QPushButton *viewButton;
     QFrame *line;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -318,7 +318,7 @@ public:
         AcadYear->setWordWrap(true);
         label = new QLabel(groupBox_2);
         label->setObjectName("label");
-        label->setGeometry(QRect(200, 90, 111, 41));
+        label->setGeometry(QRect(200, 90, 101, 41));
         QFont font13;
         font13.setFamilies({QString::fromUtf8("Product Sans")});
         font13.setPointSize(12);
@@ -335,7 +335,7 @@ public:
         StatusBar->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_4 = new QLabel(groupBox_2);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(290, 90, 16, 41));
+        label_4->setGeometry(QRect(300, 90, 16, 41));
         label_4->setFont(font13);
         label_4->setStyleSheet(QString::fromUtf8("color: BLACK;"));
         label_3 = new QLabel(groupBox_2);
@@ -418,27 +418,15 @@ public:
         label_24->setGeometry(QRect(210, 60, 91, 41));
         label_24->setFont(font15);
         label_24->setStyleSheet(QString::fromUtf8("color: #000;"));
-        label_20 = new QLabel(groupBox_3);
-        label_20->setObjectName("label_20");
-        label_20->setGeometry(QRect(250, 110, 171, 16));
-        label_20->setFont(font3);
-        label_20->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        description = new QLabel(groupBox_3);
+        description->setObjectName("description");
+        description->setGeometry(QRect(230, 110, 171, 16));
+        description->setFont(font6);
+        description->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         groupBox_4 = new QGroupBox(groupBox_3);
         groupBox_4->setObjectName("groupBox_4");
-        groupBox_4->setGeometry(QRect(20, 140, 231, 121));
+        groupBox_4->setGeometry(QRect(20, 140, 231, 71));
         groupBox_4->setStyleSheet(QString::fromUtf8("background-color: rgb(175, 175, 175);"));
-        viewButton = new QPushButton(groupBox_4);
-        viewButton->setObjectName("viewButton");
-        viewButton->setGeometry(QRect(70, 80, 121, 31));
-        viewButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    background-color: rgb(0, 138, 0);  /* Button background color (blue) */\n"
-"    color: #ffffff;             /* Text color (white) */\n"
-"	border-radius: 3px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"	background-color: #285e8e;\n"
-"}\n"
-""));
         wName_7 = new QLabel(groupBox_4);
         wName_7->setObjectName("wName_7");
         wName_7->setGeometry(QRect(10, 10, 71, 16));
@@ -503,13 +491,26 @@ public:
         cD->setFont(font17);
         cD->setStyleSheet(QString::fromUtf8("color: black;"));
         cD->setAlignment(Qt::AlignCenter);
+        viewButton = new QPushButton(groupBox_3);
+        viewButton->setObjectName("viewButton");
+        viewButton->setGeometry(QRect(80, 230, 121, 31));
+        viewButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: rgb(0, 138, 0);  /* Button background color (blue) */\n"
+"    color: #ffffff;             /* Text color (white) */\n"
+"	border-radius: 3px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #285e8e;\n"
+"}\n"
+""));
         wName_6->raise();
         frame_2->raise();
         label_19->raise();
         rate->raise();
         label_24->raise();
-        label_20->raise();
+        description->raise();
         groupBox_4->raise();
+        viewButton->raise();
         line = new QFrame(frame);
         line->setObjectName("line");
         line->setGeometry(QRect(10, 340, 401, 20));
@@ -560,9 +561,8 @@ public:
         label_22->setText(QCoreApplication::translate("Tdashb", "EVALUATION DATA", nullptr));
         label_19->setText(QString());
         label_24->setText(QCoreApplication::translate("Tdashb", "/ 5", nullptr));
-        label_20->setText(QCoreApplication::translate("Tdashb", "OUSTANDING", nullptr));
+        description->setText(QCoreApplication::translate("Tdashb", "OUTSTANDING", nullptr));
         groupBox_4->setTitle(QString());
-        viewButton->setText(QCoreApplication::translate("Tdashb", "View Messages", nullptr));
         wName_7->setText(QCoreApplication::translate("Tdashb", "CATEGORY", nullptr));
         wName_8->setText(QCoreApplication::translate("Tdashb", "RATING", nullptr));
         wName_9->setText(QCoreApplication::translate("Tdashb", "A", nullptr));
@@ -573,6 +573,7 @@ public:
         cB->setText(QCoreApplication::translate("Tdashb", "A", nullptr));
         cC->setText(QCoreApplication::translate("Tdashb", "A", nullptr));
         cD->setText(QCoreApplication::translate("Tdashb", "A", nullptr));
+        viewButton->setText(QCoreApplication::translate("Tdashb", "View Messages", nullptr));
     } // retranslateUi
 
 };

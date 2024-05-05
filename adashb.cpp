@@ -8,6 +8,7 @@ QString Adashb::subject;
 QString Adashb::email;
 QString Adashb::password;
 
+
 tclist* tclist::instance = nullptr;
 
 

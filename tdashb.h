@@ -31,6 +31,7 @@ public:
 
 private slots:
     void on_logoutButton_clicked();
+    void on_viewButton_clicked();
 
 private:
     Ui::Tdashb *ui;

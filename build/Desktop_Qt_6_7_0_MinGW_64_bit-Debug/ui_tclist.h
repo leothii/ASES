@@ -31,7 +31,7 @@ public:
     QLabel *label_2;
     QListWidget *teacherListWidget;
     QListWidget *courseListWidget;
-    QPushButton *logoutButton;
+    QPushButton *backButton;
     QLabel *label_3;
     QLabel *label_4;
     QMenuBar *menubar;
@@ -122,10 +122,10 @@ public:
         courseListWidget->setUniformItemSizes(true);
         courseListWidget->setWordWrap(true);
         courseListWidget->setSortingEnabled(true);
-        logoutButton = new QPushButton(centralwidget);
-        logoutButton->setObjectName("logoutButton");
-        logoutButton->setGeometry(QRect(40, 660, 83, 29));
-        logoutButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        backButton = new QPushButton(centralwidget);
+        backButton->setObjectName("backButton");
+        backButton->setGeometry(QRect(40, 660, 83, 29));
+        backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
 "	border-radius: 3px;\n"
@@ -168,7 +168,7 @@ public:
         label->setText(QCoreApplication::translate("tclist", "WEST VISAYAS STATE UNIVERSITY\n"
 "MAIN CAMPUS", nullptr));
         label_2->setText(QString());
-        logoutButton->setText(QCoreApplication::translate("tclist", "Back", nullptr));
+        backButton->setText(QCoreApplication::translate("tclist", "Back", nullptr));
         label_3->setText(QCoreApplication::translate("tclist", "Teacher", nullptr));
         label_4->setText(QCoreApplication::translate("tclist", "Course", nullptr));
     } // retranslateUi

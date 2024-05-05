@@ -163,7 +163,7 @@ border-radius: 15px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;5. Keeps accurate records of learners’ performance and prompt submission of the same.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;5. Demonstrates up-to-date knowledge and/or awareness on current trends and issues of the subject.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -1058,7 +1058,7 @@ border-radius: 5px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;4. Regularly attends to class on time as scheduled, is always well–prepared, and well-groomed and completes assigned responsibilities.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;4. Connects the relevance of present topics to the previous lessons, and relates the subject matter to relevant current issues and/or daily life activities.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -1089,8 +1089,8 @@ border-radius: 15px;</string>
        <rect>
         <x>20</x>
         <y>10</y>
-        <width>351</width>
-        <height>41</height>
+        <width>381</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
@@ -1104,7 +1104,7 @@ border-radius: 15px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1. Demonstrates sensitivity to learners’ ability to attend and absorb content information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1. Demonstrates mastery of the subject matter (manifests comprehensive content knowledge, learning tasks, and varied assessment strategies from various references).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -2854,7 +2854,7 @@ border-radius: 5px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3. Makes self available to learners beyond official time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3. Integrates subject to practical circumstances and learning intents/purposes of students.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -3749,7 +3749,7 @@ border-radius: 5px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2. Integrates sensitively his/her learning objectives with those of the learners in a collaborative process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2. Draws and shares information on updated theory and good practice.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>

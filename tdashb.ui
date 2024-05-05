@@ -683,7 +683,7 @@ QProgressBar::chunk:hover {
        <rect>
         <x>200</x>
         <y>90</y>
-        <width>111</width>
+        <width>101</width>
         <height>41</height>
        </rect>
       </property>
@@ -726,7 +726,7 @@ QProgressBar::chunk:hover {
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>300</x>
         <y>90</y>
         <width>16</width>
         <height>41</height>
@@ -1059,10 +1059,10 @@ background-color: rgba(0, 0, 0, 0);
        <string>/ 5</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_20">
+     <widget class="QLabel" name="description">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>230</x>
         <y>110</y>
         <width>171</width>
         <height>16</height>
@@ -1072,13 +1072,14 @@ background-color: rgba(0, 0, 0, 0);
        <font>
         <family>Product Sans</family>
         <pointsize>10</pointsize>
+        <bold>true</bold>
        </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>OUSTANDING</string>
+       <string>OUTSTANDING</string>
       </property>
      </widget>
      <widget class="QGroupBox" name="groupBox_4">
@@ -1087,7 +1088,7 @@ background-color: rgba(0, 0, 0, 0);
         <x>20</x>
         <y>140</y>
         <width>231</width>
-        <height>121</height>
+        <height>71</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1096,30 +1097,6 @@ background-color: rgba(0, 0, 0, 0);
       <property name="title">
        <string/>
       </property>
-      <widget class="QPushButton" name="viewButton">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>80</y>
-         <width>121</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
-    background-color: rgb(0, 138, 0);  /* Button background color (blue) */
-    color: #ffffff;             /* Text color (white) */
-	border-radius: 3px;
-}
-QPushButton:hover{
-	background-color: #285e8e;
-}
-</string>
-       </property>
-       <property name="text">
-        <string>View Messages</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="wName_7">
        <property name="geometry">
         <rect>
@@ -1373,13 +1350,38 @@ QPushButton:hover{
        </property>
       </widget>
      </widget>
+     <widget class="QPushButton" name="viewButton">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>230</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgb(0, 138, 0);  /* Button background color (blue) */
+    color: #ffffff;             /* Text color (white) */
+	border-radius: 3px;
+}
+QPushButton:hover{
+	background-color: #285e8e;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>View Messages</string>
+      </property>
+     </widget>
      <zorder>wName_6</zorder>
      <zorder>frame_2</zorder>
      <zorder>label_19</zorder>
      <zorder>rate</zorder>
      <zorder>label_24</zorder>
-     <zorder>label_20</zorder>
+     <zorder>description</zorder>
      <zorder>groupBox_4</zorder>
+     <zorder>viewButton</zorder>
     </widget>
     <widget class="Line" name="line">
      <property name="geometry">

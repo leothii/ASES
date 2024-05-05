@@ -35,12 +35,12 @@ public:
     QLabel *label;
     QPushButton *signupButton;
     QCheckBox *checkBox;
-    QLabel *label_4;
     QPushButton *loginButton;
     QPushButton *backButton;
     QLabel *label_1;
     QLabel *label_2;
     QLabel *Emessage;
+    QPushButton *PassButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -156,17 +156,6 @@ public:
 "}\n"
 ""));
         checkBox->setChecked(true);
-        label_4 = new QLabel(frame);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(180, 210, 71, 16));
-        QFont font1;
-        font1.setPointSize(6);
-        font1.setItalic(true);
-        label_4->setFont(font1);
-        label_4->setStyleSheet(QString::fromUtf8("color: rgb(55, 122, 183);\n"
-""));
-        label_4->setWordWrap(true);
-        label_4->setOpenExternalLinks(true);
         loginButton = new QPushButton(frame);
         loginButton->setObjectName("loginButton");
         loginButton->setGeometry(QRect(170, 300, 83, 29));
@@ -200,12 +189,22 @@ public:
         Emessage = new QLabel(frame);
         Emessage->setObjectName("Emessage");
         Emessage->setGeometry(QRect(60, 30, 191, 21));
-        QFont font2;
-        font2.setPointSize(9);
-        font2.setItalic(true);
-        Emessage->setFont(font2);
+        QFont font1;
+        font1.setPointSize(9);
+        font1.setItalic(true);
+        Emessage->setFont(font1);
         Emessage->setStyleSheet(QString::fromUtf8("color:rgb(255, 0, 0)"));
         Emessage->setAlignment(Qt::AlignCenter);
+        PassButton = new QPushButton(frame);
+        PassButton->setObjectName("PassButton");
+        PassButton->setGeometry(QRect(150, 210, 111, 21));
+        QFont font2;
+        font2.setPointSize(8);
+        font2.setItalic(true);
+        PassButton->setFont(font2);
+        PassButton->setStyleSheet(QString::fromUtf8("color:#377ab7;\n"
+"border: none; \n"
+"background-color: transparent; "));
         StudentLg->setCentralWidget(centralwidget);
         frame->raise();
         lineEdit_1->raise();
@@ -232,12 +231,12 @@ public:
         label->setText(QCoreApplication::translate("StudentLg", "No Account Yet?", nullptr));
         signupButton->setText(QCoreApplication::translate("StudentLg", "Sign Up", nullptr));
         checkBox->setText(QCoreApplication::translate("StudentLg", "Remember me", nullptr));
-        label_4->setText(QCoreApplication::translate("StudentLg", "Forgot Password", nullptr));
         loginButton->setText(QCoreApplication::translate("StudentLg", "Log in", nullptr));
         backButton->setText(QCoreApplication::translate("StudentLg", "Back", nullptr));
         label_1->setText(QCoreApplication::translate("StudentLg", "Email", nullptr));
         label_2->setText(QCoreApplication::translate("StudentLg", "Student Number", nullptr));
         Emessage->setText(QString());
+        PassButton->setText(QCoreApplication::translate("StudentLg", "Forgot Password", nullptr));
     } // retranslateUi
 
 };

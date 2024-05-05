@@ -9,6 +9,8 @@ Edit::Edit(QWidget *parent)
     , ui(new Ui::Edit)
 {
     ui->setupUi(this);
+
+    QString Snum =  Sdashb::sNum;;
     connect(ui->UpdateButton, &QPushButton::clicked, this, &Edit::on_updateButton_clicked);
     connect(ui->CancelButton, &QPushButton::clicked, this, &Edit::on_cancelButton_clicked);
 
@@ -23,6 +25,23 @@ Edit::Edit(QWidget *parent)
     if(db.open())
     {
         qDebug() << "Database is connected";
+        QSqlQuery query(db);
+        query.prepare("SELECT STUDENTNUMBER, EMAIL, LASTNAME, FIRSTNAME, MIDDLENAME, PROGRAM, YEARLEVEL, ACADEMICLEVEL, SECTION FROM STUDENTINFORMATION WHERE STUDENTNUMBER = :Snum");
+        query.bindValue(":Snum", Snum);
+        // Replace <your condition> with appropriate WHERE clause to select the desired data.
+        if (query.exec() && query.first()) {
+            ui->StudentNo->setPlaceholderText(query.value(0).toString());
+            ui->Email->setPlaceholderText(query.value(1).toString());
+            ui->Lastname->setPlaceholderText(query.value(2).toString());
+            ui->Firstname->setPlaceholderText(query.value(3).toString());
+            ui->Middlename->setPlaceholderText(query.value(4).toString());
+            ui->Program->setPlaceholderText(query.value(5).toString());
+            ui->YLbox->setPlaceholderText(query.value(6).toString());
+            ui->ALbox->setPlaceholderText(query.value(7).toString());
+            ui->Sbox->setPlaceholderText(query.value(8).toString());
+        } else {
+            qDebug() << "Failed to fetch data from the database.";
+        }
     }
     else
     {
@@ -32,19 +51,17 @@ Edit::Edit(QWidget *parent)
 
 
 
-
-void Edit::on_updateButton_clicked(){
-    // Retrieve form data
-    QString studentNumber = ui->StudentNo->text();
-    QString email = ui->Email->text();
-    QString firstName = ui->Firstname->text();
-    QString lastName = ui->Lastname->text();
-    QString middlename = ui->Middlename->text();
-    QString Program = ui->Program->text();
-    QString Yearlevel = ui->YLbox->currentText();
-    QString Academiclevel = ui->ALbox->currentText();
-    QString Section = ui->Sbox->currentText();
-    QString password = ui->Password->text();
+void Edit::on_updateButton_clicked() {
+    QString Snum =  Sdashb::sNum;
+    QString email = ui->Email->text().trimmed();
+    QString firstName = ui->Firstname->text().trimmed();
+    QString lastName = ui->Lastname->text().trimmed();
+    QString middlename = ui->Middlename->text().trimmed();
+    QString Program = ui->Program->text().trimmed();
+    QString Yearlevel = ui->YLbox->currentText().trimmed();
+    QString Academiclevel = ui->ALbox->currentText().trimmed();
+    QString Section = ui->Sbox->currentText().trimmed();
+    QString password = ui->Password->text().trimmed();
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("sql6.freesqldatabase.com");
@@ -53,22 +70,73 @@ void Edit::on_updateButton_clicked(){
     db.setPassword("wQpFvGwERi");
     db.open();
 
-    QSqlQuery queryInsertData(db);
-    queryInsertData.prepare("INSERT INTO STUDENTINFORMATION(STUDENTNUMBER,EMAIL,LASTNAME,FIRSTNAME,MIDDLENAME,ACADEMICLEVEL,PROGRAM,YEARLEVEL,SECTION,PASSWORD) VALUES(:STUDENTNUMBER, :EMAIL, :LASTNAME, :FIRSTNAME, :MIDDLENAME, :ACADEMICLEVEL, :PROGRAM, :YEARLEVEL, :SECTION :PASSWORD)");
-    queryInsertData.bindValue(":EMAIL", email);
-    queryInsertData.bindValue(":STUDENTNUMBER", studentNumber);
-    queryInsertData.bindValue(":LASTNAME", lastName);
-    queryInsertData.bindValue(":FIRSTNAME", firstName);
-    queryInsertData.bindValue(":MIDDLENAME", middlename);
-    queryInsertData.bindValue(":ACADEMICLEVEL", Academiclevel);
-    queryInsertData.bindValue(":PROGRAM", Program);
-    queryInsertData.bindValue(":YEARLEVEL", Yearlevel);
-    queryInsertData.bindValue(":SECTION", Section);
-    queryInsertData.bindValue(":PASSWORD", password);
+    // Check password
+    QSqlQuery queryCheckPassword(db);
+    queryCheckPassword.prepare("SELECT PASSWORD FROM STUDENTINFORMATION WHERE STUDENTNUMBER = :STUDENTNUMBER");
+    queryCheckPassword.bindValue(":STUDENTNUMBER", Snum);
+    if (!queryCheckPassword.exec() || !queryCheckPassword.next()) {
+        QMessageBox::warning(this, "Error", "Failed to retrieve password: " + queryCheckPassword.lastError().text());
+        db.close();
+        return;
+    }
+    QString dbPassword = queryCheckPassword.value(0).toString().trimmed();
+
+    if (dbPassword != password) {
+        QMessageBox::warning(this, "Error", "Incorrect password!");
+        db.close();
+        return;
+    }
+
+    // Update data
+    QString updateQuery = "UPDATE STUDENTINFORMATION SET";
+    QStringList updateColumns;
+
+    if (!email.isEmpty())
+        updateColumns.append(" EMAIL = :EMAIL ");
+    if (!firstName.isEmpty())
+        updateColumns.append(" FIRSTNAME = :FIRSTNAME ");
+    if (!lastName.isEmpty())
+        updateColumns.append(" LASTNAME = :LASTNAME ");
+    if (!middlename.isEmpty())
+        updateColumns.append(" MIDDLENAME = :MIDDLENAME ");
+    if (!Academiclevel.isEmpty())
+        updateColumns.append(" ACADEMICLEVEL = :ACADEMICLEVEL ");
+    if (!Program.isEmpty())
+        updateColumns.append(" PROGRAM = :PROGRAM ");
+    if (!Yearlevel.isEmpty())
+        updateColumns.append(" YEARLEVEL = :YEARLEVEL ");
+    if (!Section.isEmpty())
+        updateColumns.append(" SECTION = :SECTION ");
+
+    // Construct the update query
+    updateQuery += updateColumns.join(", ") + " WHERE STUDENTNUMBER = :STUDENTNUMBER";
+
+    QSqlQuery queryUpdateData(db);
+    queryUpdateData.prepare(updateQuery);
+
+    // Bind values for update
+    if (!email.isEmpty())
+        queryUpdateData.bindValue(":EMAIL", email);
+    if (!firstName.isEmpty())
+        queryUpdateData.bindValue(":FIRSTNAME", firstName);
+    if (!lastName.isEmpty())
+        queryUpdateData.bindValue(":LASTNAME", lastName);
+    if (!middlename.isEmpty())
+        queryUpdateData.bindValue(":MIDDLENAME", middlename);
+    if (!Academiclevel.isEmpty())
+        queryUpdateData.bindValue(":ACADEMICLEVEL", Academiclevel);
+    if (!Program.isEmpty())
+        queryUpdateData.bindValue(":PROGRAM", Program);
+    if (!Yearlevel.isEmpty())
+        queryUpdateData.bindValue(":YEARLEVEL", Yearlevel);
+    if (!Section.isEmpty())
+        queryUpdateData.bindValue(":SECTION", Section);
+
+    queryUpdateData.bindValue(":STUDENTNUMBER", Snum);
 
     if (QMessageBox::information(this, "Confirmation", "Are you sure you want to update your account?", QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes) {
-        if (!queryInsertData.exec()) {
-            QMessageBox::warning(this, "Error", "Failed to update account: " + queryInsertData.lastError().text());
+        if (!queryUpdateData.exec()) {
+            QMessageBox::warning(this, "Error", "Failed to update account: " + queryUpdateData.lastError().text());
             db.rollback();
             db.close();
             return;
@@ -91,6 +159,7 @@ void Edit::on_updateButton_clicked(){
 
     db.close();
 }
+
 
 
 void Edit::on_cancelButton_clicked(){

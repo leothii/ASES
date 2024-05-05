@@ -27,7 +27,8 @@ public:
     // Function to retrieve data from COURSELIST table
     QStringList getCourseSubjects();
     void loadData();
-
+private slots:
+   void on_backButton_clicked();
 private:
     Ui::tclist *ui;
 

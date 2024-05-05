@@ -1013,7 +1013,7 @@ border-radius: 5px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2. Integrates sensitively his/her learning objectives with those of the learners in a collaborative process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2. Enhances students’ self-esteem and/or gives due recognition to student’s performance/potentials.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -1893,14 +1893,14 @@ border-radius: 5px;</string>
        <rect>
         <x>20</x>
         <y>10</y>
-        <width>351</width>
+        <width>371</width>
         <height>51</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Product Sans</family>
-        <pointsize>9</pointsize>
+        <pointsize>8</pointsize>
         <kerning>true</kerning>
        </font>
       </property>
@@ -1908,7 +1908,7 @@ border-radius: 5px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;4. Regularly attends to class on time as scheduled, is always well–prepared, and well-groomed and completes assigned responsibilities.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;4. Allows students to think independently and make their own decisions and holds them accountable for their performance based largely on their success in executing decisions.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -1937,16 +1937,16 @@ border-radius: 15px;</string>
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>10</y>
-        <width>351</width>
-        <height>41</height>
+        <x>10</x>
+        <y>-10</y>
+        <width>391</width>
+        <height>81</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Product Sans</family>
-        <pointsize>9</pointsize>
+        <pointsize>7</pointsize>
         <kerning>true</kerning>
        </font>
       </property>
@@ -1954,7 +1954,7 @@ border-radius: 15px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1. Demonstrates sensitivity to learners’ ability to attend and absorb content information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1. Creates teaching strategies that allow students to practice using concepts they need to understand(interactive discussion either face to face or online through engagement activities that facilitate learning using synchronous and asynchronous sessions in appropriate digital platforms)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -2841,7 +2841,7 @@ border-radius: 15px;</string>
         <x>20</x>
         <y>10</y>
         <width>351</width>
-        <height>41</height>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
@@ -2855,7 +2855,7 @@ border-radius: 15px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;5. Keeps accurate records of learners’ performance and prompt submission of the same.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;5. Encourages students to learn beyond what is required and helps/guides the students how to apply the concepts they learned.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -3735,8 +3735,8 @@ border-radius: 5px;</string>
        <rect>
         <x>20</x>
         <y>10</y>
-        <width>351</width>
-        <height>41</height>
+        <width>381</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
@@ -3750,7 +3750,7 @@ border-radius: 5px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3. Makes self available to learners beyond official time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3. Guides learners to fully understand course direction and learning outcomes, realistically defined student-professor roles in establishing an engaging learning environment.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>

@@ -511,6 +511,7 @@ public:
 ""));
         StudentNo = new QLineEdit(frame);
         StudentNo->setObjectName("StudentNo");
+        StudentNo->setEnabled(true);
         StudentNo->setGeometry(QRect(200, 160, 131, 31));
         StudentNo->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Background color: white */\n"
@@ -520,12 +521,14 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
+        StudentNo->setReadOnly(true);
         label_13 = new QLabel(frame);
         label_13->setObjectName("label_13");
         label_13->setGeometry(QRect(200, 140, 131, 16));
         label_13->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         Email = new QLineEdit(frame);
         Email->setObjectName("Email");
+        Email->setEnabled(true);
         Email->setGeometry(QRect(30, 220, 301, 31));
         Email->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Background color: white */\n"
@@ -535,6 +538,7 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
+        Email->setReadOnly(true);
         label_14 = new QLabel(frame);
         label_14->setObjectName("label_14");
         label_14->setGeometry(QRect(30, 200, 111, 16));

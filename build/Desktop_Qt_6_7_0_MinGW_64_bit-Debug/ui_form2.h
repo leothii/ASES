@@ -297,7 +297,7 @@ public:
         frame_3->setFrameShadow(QFrame::Raised);
         label_4 = new QLabel(frame_3);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(20, 10, 351, 41));
+        label_4->setGeometry(QRect(20, 10, 381, 51));
         label_4->setFont(font1);
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_4->setWordWrap(true);
@@ -809,7 +809,7 @@ public:
         nextButton->setText(QCoreApplication::translate("Form2", "Next", nullptr));
         cancelButton->setText(QCoreApplication::translate("Form2", "Cancel", nullptr));
         label->setText(QCoreApplication::translate("Form2", "B. Knowledge of Subject - 25%", nullptr));
-        label_16->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>5. Keeps accurate records of learners\342\200\231 performance and prompt submission of the same.</p></body></html>", nullptr));
+        label_16->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>5. Demonstrates up-to-date knowledge and/or awareness on current trends and issues of the subject.</p></body></html>", nullptr));
         groupBox_4->setTitle(QString());
         label_5->setText(QCoreApplication::translate("Form2", "Oustanding", nullptr));
         label_6->setText(QCoreApplication::translate("Form2", "Poor", nullptr));
@@ -818,8 +818,8 @@ public:
         radioButton_18->setText(QCoreApplication::translate("Form2", "RadioButton", nullptr));
         radioButton_19->setText(QCoreApplication::translate("Form2", "RadioButton", nullptr));
         radioButton_20->setText(QCoreApplication::translate("Form2", "RadioButton", nullptr));
-        label_13->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>4. Regularly attends to class on time as scheduled, is always well\342\200\223prepared, and well-groomed and completes assigned responsibilities.</p></body></html>", nullptr));
-        label_4->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>1. Demonstrates sensitivity to learners\342\200\231 ability to attend and absorb content information.</p></body></html>", nullptr));
+        label_13->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>4. Connects the relevance of present topics to the previous lessons, and relates the subject matter to relevant current issues and/or daily life activities.</p></body></html>", nullptr));
+        label_4->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>1. Demonstrates mastery of the subject matter (manifests comprehensive content knowledge, learning tasks, and varied assessment strategies from various references).</p></body></html>", nullptr));
         groupBox_1->setTitle(QString());
         radioButton_1->setText(QCoreApplication::translate("Form2", "RadioButton", nullptr));
         radioButton_2->setText(QCoreApplication::translate("Form2", "RadioButton", nullptr));
@@ -836,7 +836,7 @@ public:
         label_10->setText(QCoreApplication::translate("Form2", "Oustanding", nullptr));
         label_11->setText(QCoreApplication::translate("Form2", "Poor", nullptr));
         radioButton_15->setText(QCoreApplication::translate("Form2", "RadioButton", nullptr));
-        label_12->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>3. Makes self available to learners beyond official time.</p></body></html>", nullptr));
+        label_12->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>3. Integrates subject to practical circumstances and learning intents/purposes of students.</p></body></html>", nullptr));
         groupBox_2->setTitle(QString());
         radioButton_6->setText(QCoreApplication::translate("Form2", "RadioButton", nullptr));
         radioButton_8->setText(QCoreApplication::translate("Form2", "RadioButton", nullptr));
@@ -845,7 +845,7 @@ public:
         label_7->setText(QCoreApplication::translate("Form2", "Oustanding", nullptr));
         label_8->setText(QCoreApplication::translate("Form2", "Poor", nullptr));
         radioButton_9->setText(QCoreApplication::translate("Form2", "RadioButton", nullptr));
-        label_9->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>2. Integrates sensitively his/her learning objectives with those of the learners in a collaborative process.</p></body></html>", nullptr));
+        label_9->setText(QCoreApplication::translate("Form2", "<html><head/><body><p>2. Draws and shares information on updated theory and good practice.</p></body></html>", nullptr));
         groupBox_5->setTitle(QString());
         label_14->setText(QCoreApplication::translate("Form2", "Oustanding", nullptr));
         label_15->setText(QCoreApplication::translate("Form2", "Poor", nullptr));

@@ -146,10 +146,10 @@ public:
         frame_7->setFrameShadow(QFrame::Raised);
         label_16 = new QLabel(frame_7);
         label_16->setObjectName("label_16");
-        label_16->setGeometry(QRect(20, 10, 351, 41));
+        label_16->setGeometry(QRect(20, 0, 381, 61));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Product Sans")});
-        font1.setPointSize(9);
+        font1.setPointSize(7);
         font1.setKerning(true);
         label_16->setFont(font1);
         label_16->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
@@ -284,8 +284,12 @@ public:
         radioButton_9->setPalette(palette4);
         label_9 = new QLabel(frame_4);
         label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(20, 10, 351, 41));
-        label_9->setFont(font1);
+        label_9->setGeometry(QRect(10, 0, 391, 71));
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Product Sans")});
+        font3.setPointSize(8);
+        font3.setKerning(true);
+        label_9->setFont(font3);
         label_9->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_9->setWordWrap(true);
         frame_6 = new QFrame(frame);
@@ -413,7 +417,11 @@ public:
         label_13 = new QLabel(frame_6);
         label_13->setObjectName("label_13");
         label_13->setGeometry(QRect(20, 10, 351, 51));
-        label_13->setFont(font1);
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Product Sans")});
+        font4.setPointSize(9);
+        font4.setKerning(true);
+        label_13->setFont(font4);
         label_13->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_13->setWordWrap(true);
         frame_5 = new QFrame(frame);
@@ -540,8 +548,8 @@ public:
         radioButton_15->setPalette(palette14);
         label_12 = new QLabel(frame_5);
         label_12->setObjectName("label_12");
-        label_12->setGeometry(QRect(20, 10, 351, 41));
-        label_12->setFont(font1);
+        label_12->setGeometry(QRect(20, 10, 351, 51));
+        label_12->setFont(font4);
         label_12->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_12->setWordWrap(true);
         frame_3 = new QFrame(frame);
@@ -553,7 +561,7 @@ public:
         frame_3->setFrameShadow(QFrame::Raised);
         label_4 = new QLabel(frame_3);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(20, 10, 351, 41));
+        label_4->setGeometry(QRect(10, 0, 391, 71));
         label_4->setFont(font1);
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_4->setWordWrap(true);
@@ -674,6 +682,8 @@ public:
         palette19.setBrush(QPalette::Disabled, QPalette::Accent, brush1);
         radioButton_5->setPalette(palette19);
         radioButton_5->setTabletTracking(true);
+        groupBox_1->raise();
+        label_4->raise();
         groupBox_5 = new QGroupBox(centralwidget);
         groupBox_5->setObjectName("groupBox_5");
         groupBox_5->setGeometry(QRect(30, 650, 361, 41));
@@ -809,7 +819,7 @@ public:
         nextButton->setText(QCoreApplication::translate("Form4", "Next", nullptr));
         backButton->setText(QCoreApplication::translate("Form4", "Back", nullptr));
         label->setText(QCoreApplication::translate("Form4", "D. Management of Learning - 25%", nullptr));
-        label_16->setText(QCoreApplication::translate("Form4", "<html><head/><body><p>5. Keeps accurate records of learners\342\200\231 performance and prompt submission of the same.</p></body></html>", nullptr));
+        label_16->setText(QCoreApplication::translate("Form4", "<html><head/><body><p>5. Uses varied Instructional Materials (audio/video materials, infographics, powerpoint presentations, virtual field trips, film showing, other computer aided instruction, OERs among others to reinforce learning processes.</p></body></html>", nullptr));
         groupBox_2->setTitle(QString());
         radioButton_6->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));
         radioButton_8->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));
@@ -818,7 +828,7 @@ public:
         label_7->setText(QCoreApplication::translate("Form4", "Oustanding", nullptr));
         label_8->setText(QCoreApplication::translate("Form4", "Poor", nullptr));
         radioButton_9->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));
-        label_9->setText(QCoreApplication::translate("Form4", "<html><head/><body><p>2. Integrates sensitively his/her learning objectives with those of the learners in a collaborative process.</p></body></html>", nullptr));
+        label_9->setText(QCoreApplication::translate("Form4", "<html><head/><body><p>2. Assumes roles as facilitator, resource person, coach, inquisitor, integrator, referee in drawing students to contribute to knowledge and understanding of the concepts at hand.</p></body></html>", nullptr));
         groupBox_4->setTitle(QString());
         label_5->setText(QCoreApplication::translate("Form4", "Oustanding", nullptr));
         label_6->setText(QCoreApplication::translate("Form4", "Poor", nullptr));
@@ -827,7 +837,7 @@ public:
         radioButton_18->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));
         radioButton_19->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));
         radioButton_20->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));
-        label_13->setText(QCoreApplication::translate("Form4", "<html><head/><body><p>4. Regularly attends to class on time as scheduled, is always well\342\200\223prepared, and well-groomed and completes assigned responsibilities.</p></body></html>", nullptr));
+        label_13->setText(QCoreApplication::translate("Form4", "<html><head/><body><p>4. Structures/re-structures teaching-learning context to enhance attainment of desired learning competencies.</p></body></html>", nullptr));
         groupBox_3->setTitle(QString());
         radioButton_11->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));
         radioButton_13->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));
@@ -836,8 +846,8 @@ public:
         label_10->setText(QCoreApplication::translate("Form4", "Oustanding", nullptr));
         label_11->setText(QCoreApplication::translate("Form4", "Poor", nullptr));
         radioButton_15->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));
-        label_12->setText(QCoreApplication::translate("Form4", "<html><head/><body><p>3. Makes self available to learners beyond official time.</p></body></html>", nullptr));
-        label_4->setText(QCoreApplication::translate("Form4", "<html><head/><body><p>1. Demonstrates sensitivity to learners\342\200\231 ability to attend and absorb content information.</p></body></html>", nullptr));
+        label_12->setText(QCoreApplication::translate("Form4", "<html><head/><body><p>3. Designs and implements learning conditions and experiences that promote healthy exchange of ideas and opinions.</p></body></html>", nullptr));
+        label_4->setText(QCoreApplication::translate("Form4", "<html><head/><body><p>1. Creates opportunities in building community for students and for their intensive and/or extensive contribution in the class activities. (e.g. breaks class into dyads, triads or buzz/task groups to interact/perform activities either face to face or through online using appropriate digital application).</p></body></html>", nullptr));
         groupBox_1->setTitle(QString());
         radioButton_1->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));
         radioButton_2->setText(QCoreApplication::translate("Form4", "RadioButton", nullptr));

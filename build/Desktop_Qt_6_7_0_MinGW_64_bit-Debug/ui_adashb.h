@@ -42,11 +42,14 @@ public:
     QPushButton *taddButton;
     QPushButton *viewButton;
     QFrame *line_5;
-    QFrame *line_6;
     QLabel *label_2;
     QLineEdit *taddEdit_2;
     QLineEdit *taddEdit_3;
     QLabel *label_10;
+    QLabel *label_11;
+    QLabel *label_12;
+    QPushButton *viewButton_2;
+    QLabel *label_15;
     QGroupBox *groupBox;
     QLabel *AcadYear_2;
     QLabel *AcadYear;
@@ -146,7 +149,7 @@ public:
         frame_2->setFrameShadow(QFrame::Raised);
         label_14 = new QLabel(frame_2);
         label_14->setObjectName("label_14");
-        label_14->setGeometry(QRect(20, 10, 141, 16));
+        label_14->setGeometry(QRect(140, 10, 141, 16));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("Product Sans Black")});
         font2.setPointSize(11);
@@ -179,7 +182,7 @@ public:
 ""));
         viewButton = new QPushButton(groupBox_2);
         viewButton->setObjectName("viewButton");
-        viewButton->setGeometry(QRect(130, 260, 121, 31));
+        viewButton->setGeometry(QRect(10, 270, 121, 31));
         viewButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgb(0, 175, 0);  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
@@ -195,11 +198,6 @@ public:
         line_5->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         line_5->setFrameShape(QFrame::Shape::VLine);
         line_5->setFrameShadow(QFrame::Shadow::Sunken);
-        line_6 = new QFrame(groupBox_2);
-        line_6->setObjectName("line_6");
-        line_6->setGeometry(QRect(120, 290, 3, 61));
-        line_6->setFrameShape(QFrame::Shape::VLine);
-        line_6->setFrameShadow(QFrame::Shadow::Sunken);
         label_2 = new QLabel(groupBox_2);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(40, 110, 63, 20));
@@ -230,6 +228,35 @@ public:
         label_10->setObjectName("label_10");
         label_10->setGeometry(QRect(270, 50, 63, 20));
         label_10->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        label_11 = new QLabel(groupBox_2);
+        label_11->setObjectName("label_11");
+        label_11->setGeometry(QRect(82, 350, 151, 16));
+        label_11->setStyleSheet(QString::fromUtf8("color: #377ab7;"));
+        label_12 = new QLabel(groupBox_2);
+        label_12->setObjectName("label_12");
+        label_12->setGeometry(QRect(230, 350, 63, 16));
+        QFont font3;
+        font3.setBold(true);
+        label_12->setFont(font3);
+        label_12->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        viewButton_2 = new QPushButton(groupBox_2);
+        viewButton_2->setObjectName("viewButton_2");
+        viewButton_2->setGeometry(QRect(280, 340, 61, 31));
+        viewButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: rgb(0, 175, 0);  /* Button background color (blue) */\n"
+"    color: #ffffff;             /* Text color (white) */\n"
+"	border-radius: 3px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #285e8e;\n"
+"}\n"
+""));
+        label_15 = new QLabel(groupBox_2);
+        label_15->setObjectName("label_15");
+        label_15->setGeometry(QRect(10, 330, 51, 51));
+        label_15->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/pngegg.png")));
+        label_15->setScaledContents(true);
+        label_15->setWordWrap(true);
         groupBox = new QGroupBox(frame);
         groupBox->setObjectName("groupBox");
         groupBox->setGeometry(QRect(10, 70, 401, 191));
@@ -239,52 +266,52 @@ public:
         AcadYear_2 = new QLabel(groupBox);
         AcadYear_2->setObjectName("AcadYear_2");
         AcadYear_2->setGeometry(QRect(10, 10, 231, 31));
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("Product Sans Light")});
-        font3.setPointSize(18);
-        font3.setBold(false);
-        AcadYear_2->setFont(font3);
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Product Sans Light")});
+        font4.setPointSize(18);
+        font4.setBold(false);
+        AcadYear_2->setFont(font4);
         AcadYear_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         AcadYear_2->setWordWrap(true);
         AcadYear = new QLabel(groupBox);
         AcadYear->setObjectName("AcadYear");
         AcadYear->setGeometry(QRect(10, 40, 361, 31));
-        AcadYear->setFont(font3);
+        AcadYear->setFont(font4);
         AcadYear->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         AcadYear->setWordWrap(true);
         StatusBar = new QLabel(groupBox);
         StatusBar->setObjectName("StatusBar");
         StatusBar->setGeometry(QRect(10, 100, 191, 16));
-        QFont font4;
-        font4.setFamilies({QString::fromUtf8("Product Sans")});
-        font4.setPointSize(13);
-        font4.setBold(true);
-        StatusBar->setFont(font4);
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("Product Sans")});
+        font5.setPointSize(13);
+        font5.setBold(true);
+        StatusBar->setFont(font5);
         StatusBar->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_3 = new QLabel(groupBox);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(290, 90, 121, 41));
-        QFont font5;
-        font5.setFamilies({QString::fromUtf8("Product Sans")});
-        font5.setPointSize(12);
-        label_3->setFont(font5);
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("Product Sans")});
+        font6.setPointSize(12);
+        label_3->setFont(font6);
         label_3->setStyleSheet(QString::fromUtf8("color: red;"));
         label = new QLabel(groupBox);
         label->setObjectName("label");
         label->setGeometry(QRect(180, 90, 121, 41));
-        label->setFont(font5);
+        label->setFont(font6);
         label->setStyleSheet(QString::fromUtf8("color: green;"));
         label_4 = new QLabel(groupBox);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(280, 90, 16, 41));
-        label_4->setFont(font5);
+        label_4->setFont(font6);
         label_4->setStyleSheet(QString::fromUtf8("color: BLACK;"));
         label_6 = new QLabel(groupBox);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(10, 150, 111, 20));
-        QFont font6;
-        font6.setFamilies({QString::fromUtf8("Coolvetica")});
-        label_6->setFont(font6);
+        QFont font7;
+        font7.setFamilies({QString::fromUtf8("Coolvetica")});
+        label_6->setFont(font7);
         label_6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         line = new QFrame(frame);
         line->setObjectName("line");
@@ -312,19 +339,19 @@ public:
         label_7 = new QLabel(frame_3);
         label_7->setObjectName("label_7");
         label_7->setGeometry(QRect(390, 0, 61, 61));
-        QFont font7;
-        font7.setPointSize(1);
-        label_7->setFont(font7);
+        QFont font8;
+        font8.setPointSize(1);
+        label_7->setFont(font8);
         label_7->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/wvsu_logo.png")));
         label_7->setScaledContents(true);
         label_8 = new QLabel(frame_3);
         label_8->setObjectName("label_8");
         label_8->setGeometry(QRect(170, 10, 211, 31));
-        QFont font8;
-        font8.setFamilies({QString::fromUtf8("Times New Roman")});
-        font8.setPointSize(8);
-        font8.setBold(false);
-        label_8->setFont(font8);
+        QFont font9;
+        font9.setFamilies({QString::fromUtf8("Times New Roman")});
+        font9.setPointSize(8);
+        font9.setBold(false);
+        label_8->setFont(font9);
         label_8->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label_8->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_8->setWordWrap(true);
@@ -332,12 +359,12 @@ public:
         label_9 = new QLabel(frame_3);
         label_9->setObjectName("label_9");
         label_9->setGeometry(QRect(290, 40, 101, 16));
-        QFont font9;
-        font9.setFamilies({QString::fromUtf8("Times New Roman")});
-        font9.setPointSize(8);
-        font9.setBold(false);
-        font9.setItalic(true);
-        label_9->setFont(font9);
+        QFont font10;
+        font10.setFamilies({QString::fromUtf8("Times New Roman")});
+        font10.setPointSize(8);
+        font10.setBold(false);
+        font10.setItalic(true);
+        label_9->setFont(font10);
         label_9->setAcceptDrops(false);
         label_9->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label_9->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
@@ -370,7 +397,7 @@ public:
         progressBar = new QProgressBar(frame);
         progressBar->setObjectName("progressBar");
         progressBar->setGeometry(QRect(140, 220, 231, 21));
-        progressBar->setFont(font6);
+        progressBar->setFont(font7);
         progressBar->setStyleSheet(QString::fromUtf8("QProgressBar {\n"
 "    border-radius: 3px;               /* Border radius to match the other elements */\n"
 "    text-align: center;               /* Center align the text */\n"
@@ -391,7 +418,7 @@ public:
         progressBar->setValue(15);
         line_4 = new QFrame(frame);
         line_4->setObjectName("line_4");
-        line_4->setGeometry(QRect(10, 580, 401, 20));
+        line_4->setGeometry(QRect(10, 590, 401, 16));
         line_4->setFrameShape(QFrame::Shape::HLine);
         line_4->setFrameShadow(QFrame::Shadow::Sunken);
         Adashb->setCentralWidget(centralwidget);
@@ -427,6 +454,10 @@ public:
         taddEdit_2->setPlaceholderText(QCoreApplication::translate("Adashb", "Eg. Juan Dela Cruz", nullptr));
         taddEdit_3->setPlaceholderText(QString());
         label_10->setText(QCoreApplication::translate("Adashb", "Password", nullptr));
+        label_11->setText(QCoreApplication::translate("Adashb", "Total No. of Students:", nullptr));
+        label_12->setText(QCoreApplication::translate("Adashb", "1098", nullptr));
+        viewButton_2->setText(QCoreApplication::translate("Adashb", "View ", nullptr));
+        label_15->setText(QString());
         groupBox->setTitle(QString());
         AcadYear_2->setText(QCoreApplication::translate("Adashb", "<html><head/><body><p>Second Semester</p></body></html>", nullptr));
         AcadYear->setText(QCoreApplication::translate("Adashb", "<html><head/><body><p>Academic Year: 2024-2025<br/></p></body></html>", nullptr));

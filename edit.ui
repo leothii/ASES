@@ -1528,6 +1528,9 @@ QComboBox QAbstractItemView::item:selected {
      </property>
     </widget>
     <widget class="QLineEdit" name="StudentNo">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>200</x>
@@ -1545,6 +1548,9 @@ QComboBox QAbstractItemView::item:selected {
     padding: 4px;              /* Optional: add some padding */
 }
 </string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QLabel" name="label_13">
@@ -1564,6 +1570,9 @@ QComboBox QAbstractItemView::item:selected {
      </property>
     </widget>
     <widget class="QLineEdit" name="Email">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -1581,6 +1590,9 @@ QComboBox QAbstractItemView::item:selected {
     padding: 4px;              /* Optional: add some padding */
 }
 </string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">

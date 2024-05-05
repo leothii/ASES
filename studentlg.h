@@ -34,7 +34,8 @@ signals:
 
 private slots:
     void on_loginButton_clicked();
-    void on_signUpButton_clicked(); // Slot to open sign up window
+    void on_signUpButton_clicked();
+    void on_passButton_clicked();
 
 
 private:

@@ -29,12 +29,12 @@ public:
     QWidget *centralwidget;
     QFrame *frame;
     QCheckBox *checkBox;
-    QLabel *label_4;
     QPushButton *loginButton;
     QPushButton *backButton;
     QLabel *label_1;
     QLabel *label_2;
     QLabel *Emessage;
+    QPushButton *PassButton;
     QLineEdit *lineEdit_1;
     QLineEdit *lineEdit_2;
     QMenuBar *menubar;
@@ -99,15 +99,6 @@ public:
 "}\n"
 ""));
         checkBox->setChecked(true);
-        label_4 = new QLabel(frame);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(60, 230, 111, 16));
-        QFont font1;
-        font1.setPointSize(7);
-        font1.setItalic(true);
-        label_4->setFont(font1);
-        label_4->setStyleSheet(QString::fromUtf8("color: rgb(55, 122, 183);\n"
-""));
         loginButton = new QPushButton(frame);
         loginButton->setObjectName("loginButton");
         loginButton->setGeometry(QRect(160, 260, 83, 29));
@@ -136,12 +127,22 @@ public:
         label_1->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_2 = new QLabel(frame);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(60, 130, 161, 31));
+        label_2->setGeometry(QRect(60, 140, 161, 21));
         label_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         Emessage = new QLabel(frame);
         Emessage->setObjectName("Emessage");
         Emessage->setGeometry(QRect(120, 40, 63, 20));
         Emessage->setStyleSheet(QString::fromUtf8("color: red;"));
+        PassButton = new QPushButton(frame);
+        PassButton->setObjectName("PassButton");
+        PassButton->setGeometry(QRect(150, 140, 111, 21));
+        QFont font1;
+        font1.setPointSize(8);
+        font1.setItalic(true);
+        PassButton->setFont(font1);
+        PassButton->setStyleSheet(QString::fromUtf8("color:#377ab7;\n"
+"border: none; \n"
+"background-color: transparent; "));
         lineEdit_1 = new QLineEdit(centralwidget);
         lineEdit_1->setObjectName("lineEdit_1");
         lineEdit_1->setGeometry(QRect(120, 310, 191, 31));
@@ -182,12 +183,12 @@ public:
     {
         TeacherLg->setWindowTitle(QCoreApplication::translate("TeacherLg", "MainWindow", nullptr));
         checkBox->setText(QCoreApplication::translate("TeacherLg", "Remember me", nullptr));
-        label_4->setText(QCoreApplication::translate("TeacherLg", "Forgot Password", nullptr));
         loginButton->setText(QCoreApplication::translate("TeacherLg", "Log in", nullptr));
         backButton->setText(QCoreApplication::translate("TeacherLg", "Back", nullptr));
         label_1->setText(QCoreApplication::translate("TeacherLg", "Email", nullptr));
         label_2->setText(QCoreApplication::translate("TeacherLg", "Password", nullptr));
         Emessage->setText(QString());
+        PassButton->setText(QCoreApplication::translate("TeacherLg", "Forgot Password", nullptr));
     } // retranslateUi
 
 };

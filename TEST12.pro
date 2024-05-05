@@ -22,12 +22,15 @@ SOURCES += \
     instruction.cpp \
     main.cpp \
     mainwindow.cpp \
+    messagelist.cpp \
     sdashb.cpp \
     signup.cpp \
     studentlg.cpp \
+    studentpass.cpp \
     tclist.cpp \
     tdashb.cpp \
     teacherlg.cpp \
+    teacherpass.cpp \
     tselection.cpp
 
 HEADERS += \
@@ -43,12 +46,15 @@ HEADERS += \
     index.h \
     instruction.h \
     mainwindow.h \
+    messagelist.h \
     sdashb.h \
     signup.h \
     studentlg.h \
+    studentpass.h \
     tclist.h \
     tdashb.h \
     teacherlg.h \
+    teacherpass.h \
     tselection.h
 
 FORMS += \
@@ -64,12 +70,15 @@ FORMS += \
     index.ui \
     instruction.ui \
     mainwindow.ui \
+    messagelist.ui \
     sdashb.ui \
     signup.ui \
     studentlg.ui \
+    studentpass.ui \
     tclist.ui \
     tdashb.ui \
     teacherlg.ui \
+    teacherpass.ui \
     tselection.ui
 
 # Default rules for deployment.

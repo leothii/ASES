@@ -2,7 +2,9 @@
 #include "ui_tdashb.h"
 #include "teacherlg.h"
 #include "mainwindow.h"
+#include "messagelist.h"
 
+QString Tdashb::name;
 Tdashb::Tdashb(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Tdashb)
@@ -13,7 +15,7 @@ Tdashb::Tdashb(QWidget *parent) :
     QString email = TeacherLg::email;
 
     // Call the function to get the name using the email
-    QString name = getName(email);
+    Tdashb::name = getName(email);
 
     // Set the retrieved name in the UI
     ui->pname->setText(name);
@@ -30,7 +32,23 @@ Tdashb::Tdashb(QWidget *parent) :
     double overallAverageRating = calculateAverageRating(name);
     ui->rate->setText(QString::number(overallAverageRating));
 
+    // Set description based on overall average rating
+    QString description;
+    if (overallAverageRating >= 0 && overallAverageRating < 1.5) {
+        description = "POOR";
+    } else if (overallAverageRating < 2.5) {
+        description = "FAIR";
+    } else if (overallAverageRating < 3.5) {
+        description = "SATISFACTORY";
+    } else if (overallAverageRating < 4.5) {
+        description = "VERY SATISFACTORY";
+    } else {
+        description = "OUTSTANDING";
+    }
+    ui->description->setText(description);
+
     connect(ui->logoutButton, &QPushButton::clicked, this, &Tdashb::on_logoutButton_clicked);
+    connect(ui->viewButton, &QPushButton::clicked, this, &Tdashb::on_viewButton_clicked);
 }
 
 QString Tdashb::getName(const QString& email) {
@@ -160,6 +178,18 @@ void Tdashb::on_logoutButton_clicked()
     MainWindow::instance->show();
     this->hide();
 }
+
+void Tdashb::on_viewButton_clicked()
+{
+    // Redirect to the main login window
+    if (Messagelist::instance == nullptr) {
+        // Create a new instance of the main window if it doesn't already exist
+        Messagelist::instance = new Messagelist(this);
+    }
+    Messagelist::instance->show();
+    this->hide();
+}
+
 
 Tdashb::~Tdashb()
 {

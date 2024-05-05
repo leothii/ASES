@@ -1,11 +1,14 @@
 #include "tclist.h"
 #include "ui_tclist.h"
+#include "adashb.h"
 
 tclist::tclist(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::tclist)
 {
     ui->setupUi(this);
+
+    connect(ui->backButton, &QPushButton::clicked, this, &tclist::on_backButton_clicked);
 
     QStringList teacherNames = getTeacherNames();
     ui->teacherListWidget->addItems(teacherNames);
@@ -88,6 +91,18 @@ QStringList tclist::getCourseSubjects() {
 
     return courseSubjects;
 }
+
+void tclist::on_backButton_clicked()
+{
+    // Redirect to the main login window
+    if (Adashb::instance == nullptr) {
+        // Create a new instance of the main window if it doesn't already exist
+        Adashb::instance = new Adashb(this);
+    }
+    Adashb::instance->show();
+    this->hide();
+}
+
 
 tclist::~tclist()
 {

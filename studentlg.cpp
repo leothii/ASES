@@ -5,6 +5,7 @@
 #include <QKeyEvent>
 #include "mainwindow.h"
 #include "ui_sdashb.h"
+#include "studentpass.h"
 
 StudentLg* StudentLg::instance = nullptr;
 Sdashb* Sdashb::instance = nullptr;
@@ -30,6 +31,7 @@ StudentLg::StudentLg(QWidget *parent)
     connect(ui->loginButton, &QPushButton::clicked, this, &StudentLg::on_loginButton_clicked);
     connect(ui->backButton, &QPushButton::clicked, this, &StudentLg::on_backButton_clicked);
     connect(ui->signupButton, &QPushButton::clicked, this, &StudentLg::on_signUpButton_clicked);
+    connect(ui->PassButton, &QPushButton::clicked, this, &StudentLg::on_passButton_clicked);
 
     QSettings settings;
     bool rememberMe = settings.value("rememberMe", false).toBool();
@@ -53,6 +55,7 @@ StudentLg::StudentLg(QWidget *parent)
         // Handle connection failure gracefully (e.g., disable login button)
         return;
     }
+
 }
 
 bool StudentLg::connectToDatabase() {
@@ -182,6 +185,23 @@ void StudentLg::on_signUpButton_clicked() {
     this->hide();
 }
 
+void StudentLg::on_passButton_clicked() {
+
+
+
+    if (Studentpass::instance) {
+        Studentpass::instance->show();
+        Studentpass::instance->raise();\
+            Studentpass::instance->activateWindow();
+    } else {
+        // Create a new instance of Sdashb
+        Studentpass::instance = new Studentpass(this);
+        Studentpass::instance->show();
+    }
+    this->hide();
+}
+
+
 void StudentLg::on_backButton_clicked() {
 
     this->hide();
@@ -197,9 +217,14 @@ void StudentLg::on_backButton_clicked() {
     }}
 
 
+
 StudentLg::~StudentLg() {
     delete ui;
     if (signupWindow) {
         delete signupWindow; // Clean up the signupWindow when StudentLg is destroyed
     }
 }
+
+
+
+

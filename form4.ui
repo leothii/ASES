@@ -147,15 +147,15 @@ border-radius: 15px;</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>10</y>
-        <width>351</width>
-        <height>41</height>
+        <y>0</y>
+        <width>381</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Product Sans</family>
-        <pointsize>9</pointsize>
+        <pointsize>7</pointsize>
         <kerning>true</kerning>
        </font>
       </property>
@@ -163,7 +163,7 @@ border-radius: 15px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;5. Keeps accurate records of learners’ performance and prompt submission of the same.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;5. Uses varied Instructional Materials (audio/video materials, infographics, powerpoint presentations, virtual field trips, film showing, other computer aided instruction, OERs among others to reinforce learning processes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -1041,16 +1041,16 @@ border-radius: 5px;</string>
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>10</y>
-        <width>351</width>
-        <height>41</height>
+        <x>10</x>
+        <y>0</y>
+        <width>391</width>
+        <height>71</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Product Sans</family>
-        <pointsize>9</pointsize>
+        <pointsize>8</pointsize>
         <kerning>true</kerning>
        </font>
       </property>
@@ -1058,7 +1058,7 @@ border-radius: 5px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2. Integrates sensitively his/her learning objectives with those of the learners in a collaborative process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2. Assumes roles as facilitator, resource person, coach, inquisitor, integrator, referee in drawing students to contribute to knowledge and understanding of the concepts at hand.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -1953,7 +1953,7 @@ border-radius: 5px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;4. Regularly attends to class on time as scheduled, is always well–prepared, and well-groomed and completes assigned responsibilities.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;4. Structures/re-structures teaching-learning context to enhance attainment of desired learning competencies.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -2834,7 +2834,7 @@ border-radius: 5px;</string>
         <x>20</x>
         <y>10</y>
         <width>351</width>
-        <height>41</height>
+        <height>51</height>
        </rect>
       </property>
       <property name="font">
@@ -2848,7 +2848,7 @@ border-radius: 5px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3. Makes self available to learners beyond official time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3. Designs and implements learning conditions and experiences that promote healthy exchange of ideas and opinions.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -2877,16 +2877,16 @@ border-radius: 15px;</string>
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>10</y>
-        <width>351</width>
-        <height>41</height>
+        <x>10</x>
+        <y>0</y>
+        <width>391</width>
+        <height>71</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Product Sans</family>
-        <pointsize>9</pointsize>
+        <pointsize>7</pointsize>
         <kerning>true</kerning>
        </font>
       </property>
@@ -2894,7 +2894,7 @@ border-radius: 15px;</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1. Demonstrates sensitivity to learners’ ability to attend and absorb content information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1. Creates opportunities in building community for students and for their intensive and/or extensive contribution in the class activities. (e.g. breaks class into dyads, triads or buzz/task groups to interact/perform activities either face to face or through online using appropriate digital application).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -3755,6 +3755,8 @@ border-radius: 5px;</string>
        </property>
       </widget>
      </widget>
+     <zorder>groupBox_1</zorder>
+     <zorder>label_4</zorder>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_5">
