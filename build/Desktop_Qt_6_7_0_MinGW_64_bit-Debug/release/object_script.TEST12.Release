@@ -15,6 +15,7 @@ release/messagelist.o
 release/sdashb.o
 release/signup.o
 release/studentlg.o
+release/studentlist.o
 release/studentpass.o
 release/tclist.o
 release/tdashb.o
@@ -39,6 +40,7 @@ release/moc_messagelist.o
 release/moc_sdashb.o
 release/moc_signup.o
 release/moc_studentlg.o
+release/moc_studentlist.o
 release/moc_studentpass.o
 release/moc_tclist.o
 release/moc_tdashb.o

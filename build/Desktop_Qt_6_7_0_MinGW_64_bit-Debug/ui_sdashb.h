@@ -48,6 +48,8 @@ public:
     QLabel *AcadYear_2;
     QLabel *label_3;
     QLabel *label_4;
+    QLabel *Emessage;
+    QPushButton *HistoryButton;
     QFrame *line;
     QPushButton *logoutButton;
     QFrame *frame_3;
@@ -243,6 +245,28 @@ public:
         label_4->setGeometry(QRect(290, 90, 16, 41));
         label_4->setFont(font8);
         label_4->setStyleSheet(QString::fromUtf8("color: BLACK;"));
+        Emessage = new QLabel(groupBox);
+        Emessage->setObjectName("Emessage");
+        Emessage->setGeometry(QRect(130, 170, 141, 20));
+        QFont font9;
+        font9.setPointSize(8);
+        font9.setItalic(true);
+        Emessage->setFont(font9);
+        Emessage->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
+""));
+        Emessage->setAlignment(Qt::AlignCenter);
+        HistoryButton = new QPushButton(groupBox);
+        HistoryButton->setObjectName("HistoryButton");
+        HistoryButton->setGeometry(QRect(280, 140, 101, 31));
+        HistoryButton->setFont(font5);
+        HistoryButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #337ab7;  /* Button background color (blue) */\n"
+"    color: #ffffff;             /* Text color (white) */\n"
+"	border-radius: 3px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #285e8e;\n"
+"}"));
         line = new QFrame(frame);
         line->setObjectName("line");
         line->setGeometry(QRect(20, 310, 391, 20));
@@ -269,19 +293,19 @@ public:
         label_7 = new QLabel(frame_3);
         label_7->setObjectName("label_7");
         label_7->setGeometry(QRect(390, 0, 61, 61));
-        QFont font9;
-        font9.setPointSize(1);
-        label_7->setFont(font9);
+        QFont font10;
+        font10.setPointSize(1);
+        label_7->setFont(font10);
         label_7->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/wvsu_logo.png")));
         label_7->setScaledContents(true);
         label_8 = new QLabel(frame_3);
         label_8->setObjectName("label_8");
         label_8->setGeometry(QRect(170, 10, 211, 31));
-        QFont font10;
-        font10.setFamilies({QString::fromUtf8("Times New Roman")});
-        font10.setPointSize(8);
-        font10.setBold(false);
-        label_8->setFont(font10);
+        QFont font11;
+        font11.setFamilies({QString::fromUtf8("Times New Roman")});
+        font11.setPointSize(8);
+        font11.setBold(false);
+        label_8->setFont(font11);
         label_8->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label_8->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_8->setWordWrap(true);
@@ -289,12 +313,12 @@ public:
         label_9 = new QLabel(frame_3);
         label_9->setObjectName("label_9");
         label_9->setGeometry(QRect(290, 40, 101, 16));
-        QFont font11;
-        font11.setFamilies({QString::fromUtf8("Times New Roman")});
-        font11.setPointSize(8);
-        font11.setBold(false);
-        font11.setItalic(true);
-        label_9->setFont(font11);
+        QFont font12;
+        font12.setFamilies({QString::fromUtf8("Times New Roman")});
+        font12.setPointSize(8);
+        font12.setBold(false);
+        font12.setItalic(true);
+        label_9->setFont(font12);
         label_9->setAcceptDrops(false);
         label_9->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label_9->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
@@ -303,10 +327,10 @@ public:
         label_5 = new QLabel(frame_3);
         label_5->setObjectName("label_5");
         label_5->setGeometry(QRect(40, 20, 121, 20));
-        QFont font12;
-        font12.setFamilies({QString::fromUtf8("Product Sans Black")});
-        font12.setPointSize(11);
-        label_5->setFont(font12);
+        QFont font13;
+        font13.setFamilies({QString::fromUtf8("Product Sans Black")});
+        font13.setPointSize(11);
+        label_5->setFont(font13);
         label_5->setTabletTracking(false);
         label_5->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         line_2 = new QFrame(frame_3);
@@ -360,6 +384,8 @@ public:
         AcadYear_2->setText(QCoreApplication::translate("Sdashb", "<html><head/><body><p>Second Semester</p></body></html>", nullptr));
         label_3->setText(QCoreApplication::translate("Sdashb", "ENDED", nullptr));
         label_4->setText(QCoreApplication::translate("Sdashb", "/", nullptr));
+        Emessage->setText(QCoreApplication::translate("Sdashb", "Error", nullptr));
+        HistoryButton->setText(QCoreApplication::translate("Sdashb", "History", nullptr));
         logoutButton->setText(QCoreApplication::translate("Sdashb", "Log Out", nullptr));
         label_7->setText(QString());
         label_8->setText(QCoreApplication::translate("Sdashb", "WEST VISAYAS STATE UNIVERSITY\n"

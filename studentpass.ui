@@ -164,7 +164,7 @@ QPushButton:hover{
       <string>Confirm New Password</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <widget class="QLineEdit" name="passwordedit2">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -258,7 +258,7 @@ QPushButton:hover{
       <string>Resend OTP</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_5">
+    <widget class="QLineEdit" name="emailedit">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -279,7 +279,7 @@ QPushButton:hover{
      </property>
     </widget>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="passwordedit">
     <property name="geometry">
      <rect>
       <x>120</x>

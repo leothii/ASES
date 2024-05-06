@@ -15,6 +15,7 @@ debug/messagelist.o
 debug/sdashb.o
 debug/signup.o
 debug/studentlg.o
+debug/studentlist.o
 debug/studentpass.o
 debug/tclist.o
 debug/tdashb.o
@@ -39,6 +40,7 @@ debug/moc_messagelist.o
 debug/moc_sdashb.o
 debug/moc_signup.o
 debug/moc_studentlg.o
+debug/moc_studentlist.o
 debug/moc_studentpass.o
 debug/moc_tclist.o
 debug/moc_tdashb.o

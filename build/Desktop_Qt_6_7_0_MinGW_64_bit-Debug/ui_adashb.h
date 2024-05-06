@@ -47,7 +47,7 @@ public:
     QLineEdit *taddEdit_3;
     QLabel *label_10;
     QLabel *label_11;
-    QLabel *label_12;
+    QLabel *Studentno;
     QPushButton *viewButton_2;
     QLabel *label_15;
     QGroupBox *groupBox;
@@ -232,16 +232,16 @@ public:
         label_11->setObjectName("label_11");
         label_11->setGeometry(QRect(82, 350, 151, 16));
         label_11->setStyleSheet(QString::fromUtf8("color: #377ab7;"));
-        label_12 = new QLabel(groupBox_2);
-        label_12->setObjectName("label_12");
-        label_12->setGeometry(QRect(230, 350, 63, 16));
+        Studentno = new QLabel(groupBox_2);
+        Studentno->setObjectName("Studentno");
+        Studentno->setGeometry(QRect(200, 350, 41, 16));
         QFont font3;
         font3.setBold(true);
-        label_12->setFont(font3);
-        label_12->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        Studentno->setFont(font3);
+        Studentno->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         viewButton_2 = new QPushButton(groupBox_2);
         viewButton_2->setObjectName("viewButton_2");
-        viewButton_2->setGeometry(QRect(280, 340, 61, 31));
+        viewButton_2->setGeometry(QRect(220, 340, 61, 31));
         viewButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgb(0, 175, 0);  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
@@ -455,7 +455,7 @@ public:
         taddEdit_3->setPlaceholderText(QString());
         label_10->setText(QCoreApplication::translate("Adashb", "Password", nullptr));
         label_11->setText(QCoreApplication::translate("Adashb", "Total No. of Students:", nullptr));
-        label_12->setText(QCoreApplication::translate("Adashb", "1098", nullptr));
+        Studentno->setText(QCoreApplication::translate("Adashb", "1098", nullptr));
         viewButton_2->setText(QCoreApplication::translate("Adashb", "View ", nullptr));
         label_15->setText(QString());
         groupBox->setTitle(QString());

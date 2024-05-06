@@ -3,6 +3,14 @@
 
 #include <QMainWindow>
 #include <QLabel>
+#include <QSqlDatabase>
+#include <QDebug>
+#include <QtCore>
+#include <QtSql>
+#include <QSqlQuery>
+#include <QtWidgets/QMessageBox>
+#include <QSettings>
+#include <signup.h>
 #include <QString>
 
 namespace Ui {

@@ -34,13 +34,13 @@ public:
     QLabel *label_6;
     QLabel *Emessage_2;
     QLabel *label_7;
-    QLineEdit *lineEdit_3;
+    QLineEdit *passwordedit2;
     QLabel *label_5;
     QLineEdit *lineEdit_4;
     QLabel *label_8;
     QLabel *label_9;
-    QLineEdit *lineEdit_5;
-    QLineEdit *lineEdit_2;
+    QLineEdit *emailedit;
+    QLineEdit *passwordedit;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -108,10 +108,10 @@ public:
         label_7->setObjectName("label_7");
         label_7->setGeometry(QRect(60, 250, 161, 21));
         label_7->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        lineEdit_3 = new QLineEdit(frame);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setGeometry(QRect(60, 270, 191, 31));
-        lineEdit_3->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        passwordedit2 = new QLineEdit(frame);
+        passwordedit2->setObjectName("passwordedit2");
+        passwordedit2->setGeometry(QRect(60, 270, 191, 31));
+        passwordedit2->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Background color: white */\n"
 "    color: #000000;            /* Text color: black */\n"
 "    border: 1px solid #337ab7; /* Border color: same blue as QPushButton */\n"
@@ -146,10 +146,10 @@ public:
         font.setItalic(true);
         label_9->setFont(font);
         label_9->setStyleSheet(QString::fromUtf8("color: #377ab7;"));
-        lineEdit_5 = new QLineEdit(frame);
-        lineEdit_5->setObjectName("lineEdit_5");
-        lineEdit_5->setGeometry(QRect(60, 90, 191, 31));
-        lineEdit_5->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        emailedit = new QLineEdit(frame);
+        emailedit->setObjectName("emailedit");
+        emailedit->setGeometry(QRect(60, 90, 191, 31));
+        emailedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Background color: white */\n"
 "    color: #000000;            /* Text color: black */\n"
 "    border: 1px solid #337ab7; /* Border color: same blue as QPushButton */\n"
@@ -157,10 +157,10 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
-        lineEdit_2 = new QLineEdit(centralwidget);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(120, 350, 191, 31));
-        lineEdit_2->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        passwordedit = new QLineEdit(centralwidget);
+        passwordedit->setObjectName("passwordedit");
+        passwordedit->setGeometry(QRect(120, 350, 191, 31));
+        passwordedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Background color: white */\n"
 "    color: #000000;            /* Text color: black */\n"
 "    border: 1px solid #337ab7; /* Border color: same blue as QPushButton */\n"

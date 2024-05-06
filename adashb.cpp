@@ -21,6 +21,42 @@ Adashb::Adashb(QWidget *parent)
      connect(ui->saddButton, &QPushButton::clicked, this, &Adashb::on_saddButton_clicked);
      connect(ui->backButton, &QPushButton::clicked, this, &Adashb::on_backButton_clicked);
      connect(ui->viewButton, &QPushButton::clicked, this, &Adashb::on_viewButton_clicked);
+     updateStudentCountLabel();
+}
+
+void Adashb::updateStudentCountLabel() {
+    // Database connection and query preparation
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("sql6.freesqldatabase.com");
+    db.setDatabaseName("sql6698709");
+    db.setUserName("sql6698709");
+    db.setPassword("wQpFvGwERi");
+
+    if (!db.open()) {
+        qDebug() << "Database connection failed";
+        QMessageBox::warning(this, "Error", "Database connection failed!");
+        return; // Exit the function if the database connection fails
+    }
+
+    QSqlQuery queryCount(db);
+    queryCount.prepare("SELECT COUNT(*) FROM STUDENTINFORMATION");
+
+    if (!queryCount.exec()) {
+        qDebug() << "Failed to execute query to count students:" << queryCount.lastError().text();
+        QMessageBox::warning(this, "Error", "Failed to count students: " + queryCount.lastError().text());
+        db.close();
+        return;
+    }
+
+    if (queryCount.next()) {
+        int studentCount = queryCount.value(0).toInt();
+        ui->Studentno->setText(QString::number(studentCount));
+    } else {
+        qDebug() << "No records found in STUDENTINFORMATION table.";
+        QMessageBox::warning(this, "Error", "No records found in STUDENTINFORMATION table.");
+    }
+
+    db.close();
 }
 
 // For the taddButton (for adding teachers)

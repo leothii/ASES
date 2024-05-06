@@ -20,6 +20,13 @@ Sdashb::Sdashb(QWidget *parent)
     connect(ui->logoutButton, &QPushButton::clicked, this, &Sdashb::on_logoutButton_clicked);
     connect(ui->EvaluateButton, &QPushButton::clicked, this, &Sdashb::on_EvaluateButton_clicked);
     connect(ui->EditButton, &QPushButton::clicked, this, &Sdashb::on_EditButton_clicked);
+
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("sql6.freesqldatabase.com");
+    db.setDatabaseName("sql6698709");
+    db.setUserName("sql6698709");
+    db.setPassword("wQpFvGwERi");
+    db.open();
 }
 
 void Sdashb::setStudentInformation(const QString& fullName, const QString& studentNumber, const QString& email) {
@@ -41,19 +48,43 @@ void Sdashb::on_logoutButton_clicked()
     this->hide();
 }
 
-void Sdashb::on_EvaluateButton_clicked()
-{
+void Sdashb::on_EvaluateButton_clicked() {
+    // Check if student information is complete
+    QSqlQuery query(QSqlDatabase::database());
+    query.prepare("SELECT MIDDLENAME, ACADEMICLEVEL, PROGRAM, YEARLEVEL, SECTION FROM STUDENTINFORMATION WHERE STUDENTNUMBER = :studentNumber");
+    query.bindValue(":studentNumber", sNum);
 
-    qDebug()<<sNum;
-    // Redirect to the main login window
+    if (!query.exec()) {
+        qDebug() << "Error executing query:" << query.lastError().text();
+        return;
+    }
+
+    if (query.next()) {
+        QString middleName = query.value("MIDDLENAME").toString();
+        QString academicLevel = query.value("ACADEMICLEVEL").toString();
+        QString program = query.value("PROGRAM").toString();
+        QString yearLevel = query.value("YEARLEVEL").toString();
+        QString section = query.value("SECTION").toString();
+
+        // Check if any specified column is empty
+        if (middleName.isEmpty() || academicLevel.isEmpty() || program.isEmpty() || yearLevel.isEmpty() || section.isEmpty()) {
+            ui->Emessage->setText("Edit your profile first!");
+            return;
+        }
+    } else {
+        qDebug() << "No student found with student number:" << sNum;
+        return;
+    }
+
+    // Redirect to the evaluation window
     if (Index::instance == nullptr) {
-        // Create a new instance of the main window if it doesn't already exist
+        // Create a new instance of the evaluation window if it doesn't already exist
         Index::instance = new Index(this);
-
     }
     Index::instance->show();
     this->hide();
 }
+
 
 void Sdashb::on_EditButton_clicked()
 {

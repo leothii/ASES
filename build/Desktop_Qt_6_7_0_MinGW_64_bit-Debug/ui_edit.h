@@ -479,6 +479,7 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
+        Lastname->setReadOnly(true);
         label_12 = new QLabel(frame);
         label_12->setObjectName("label_12");
         label_12->setGeometry(QRect(30, 140, 111, 16));

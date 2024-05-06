@@ -520,6 +520,61 @@ QPushButton:hover{
        <string>/</string>
       </property>
      </widget>
+     <widget class="QLabel" name="Emessage">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>170</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);
+</string>
+      </property>
+      <property name="text">
+       <string>Error</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="HistoryButton">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>140</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Product Sans Light</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #337ab7;  /* Button background color (blue) */
+    color: #ffffff;             /* Text color (white) */
+	border-radius: 3px;
+}
+QPushButton:hover{
+	background-color: #285e8e;
+}</string>
+      </property>
+      <property name="text">
+       <string>History</string>
+      </property>
+     </widget>
     </widget>
     <widget class="Line" name="line">
      <property name="geometry">
