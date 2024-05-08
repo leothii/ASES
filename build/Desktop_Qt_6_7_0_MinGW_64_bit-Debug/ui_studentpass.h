@@ -168,6 +168,7 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
+        passwordedit->setCursorPosition(0);
         Studentpass->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Studentpass);
         menubar->setObjectName("menubar");

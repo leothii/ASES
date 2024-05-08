@@ -298,6 +298,9 @@ QPushButton:hover{
 }
 </string>
     </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

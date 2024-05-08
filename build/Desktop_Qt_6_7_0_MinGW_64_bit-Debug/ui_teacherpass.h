@@ -26,7 +26,7 @@ class Ui_Teacherpass
 {
 public:
     QWidget *centralwidget;
-    QLineEdit *lineEdit_2;
+    QLineEdit *passwordedit;
     QFrame *frame;
     QPushButton *resetButton;
     QPushButton *backButton;
@@ -34,12 +34,12 @@ public:
     QLabel *label_6;
     QLabel *Emessage;
     QLabel *label_7;
-    QLineEdit *lineEdit_3;
+    QLineEdit *passwordedit2;
     QLabel *label_5;
     QLineEdit *lineEdit_4;
     QLabel *label_8;
     QLabel *label_9;
-    QLineEdit *lineEdit_1;
+    QLineEdit *emailedit;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -50,10 +50,10 @@ public:
         Teacherpass->resize(424, 800);
         centralwidget = new QWidget(Teacherpass);
         centralwidget->setObjectName("centralwidget");
-        lineEdit_2 = new QLineEdit(centralwidget);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(120, 400, 191, 31));
-        lineEdit_2->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        passwordedit = new QLineEdit(centralwidget);
+        passwordedit->setObjectName("passwordedit");
+        passwordedit->setGeometry(QRect(120, 400, 191, 31));
+        passwordedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Background color: white */\n"
 "    color: #000000;            /* Text color: black */\n"
 "    border: 1px solid #337ab7; /* Border color: same blue as QPushButton */\n"
@@ -107,10 +107,10 @@ public:
         label_7->setObjectName("label_7");
         label_7->setGeometry(QRect(60, 250, 161, 21));
         label_7->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        lineEdit_3 = new QLineEdit(frame);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setGeometry(QRect(60, 270, 191, 31));
-        lineEdit_3->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        passwordedit2 = new QLineEdit(frame);
+        passwordedit2->setObjectName("passwordedit2");
+        passwordedit2->setGeometry(QRect(60, 270, 191, 31));
+        passwordedit2->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Background color: white */\n"
 "    color: #000000;            /* Text color: black */\n"
 "    border: 1px solid #337ab7; /* Border color: same blue as QPushButton */\n"
@@ -145,10 +145,10 @@ public:
         font.setItalic(true);
         label_9->setFont(font);
         label_9->setStyleSheet(QString::fromUtf8("color: #377ab7;"));
-        lineEdit_1 = new QLineEdit(centralwidget);
-        lineEdit_1->setObjectName("lineEdit_1");
-        lineEdit_1->setGeometry(QRect(120, 280, 191, 31));
-        lineEdit_1->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        emailedit = new QLineEdit(centralwidget);
+        emailedit->setObjectName("emailedit");
+        emailedit->setGeometry(QRect(120, 280, 191, 31));
+        emailedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Background color: white */\n"
 "    color: #000000;            /* Text color: black */\n"
 "    border: 1px solid #337ab7; /* Border color: same blue as QPushButton */\n"
@@ -158,8 +158,8 @@ public:
 ""));
         Teacherpass->setCentralWidget(centralwidget);
         frame->raise();
-        lineEdit_2->raise();
-        lineEdit_1->raise();
+        passwordedit->raise();
+        emailedit->raise();
         menubar = new QMenuBar(Teacherpass);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 424, 25));

@@ -32,6 +32,7 @@ public:
     void on_viewButton_clicked();
     void on_studentButton_clicked();
     void updateStudentCountLabel();
+    void setprogressBar();
 
 private:
     Ui::Adashb *ui;

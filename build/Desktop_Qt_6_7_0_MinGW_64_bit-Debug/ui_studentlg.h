@@ -77,6 +77,7 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
+        lineEdit_3->setEchoMode(QLineEdit::PasswordEchoOnEdit);
         lineEdit_2 = new QLineEdit(centralwidget);
         lineEdit_2->setObjectName("lineEdit_2");
         lineEdit_2->setGeometry(QRect(120, 330, 191, 31));

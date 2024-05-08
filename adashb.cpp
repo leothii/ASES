@@ -26,6 +26,35 @@ Adashb::Adashb(QWidget *parent)
      connect(ui->viewButton, &QPushButton::clicked, this, &Adashb::on_viewButton_clicked);
     connect(ui->studentButton, &QPushButton::clicked, this, &Adashb::on_studentButton_clicked);
      updateStudentCountLabel();
+    setprogressBar();
+}
+
+void Adashb::setprogressBar(){
+
+    QSqlQuery studentQuery(QSqlDatabase::database());
+    studentQuery.prepare("SELECT COUNT(*) FROM EVALUATIONDATA");
+    if (!studentQuery.exec()) {
+        qDebug() << "Error executing student list query:" << studentQuery.lastError().text();
+        return;
+    }
+    studentQuery.next();
+     int studentcount =studentQuery.value(0).toInt();
+
+    // Get the number of rows in TEACHERLIST
+    QSqlQuery teacherQuery(QSqlDatabase::database());
+    teacherQuery.prepare("SELECT COUNT(*) FROM TEACHERLIST");
+    if (!teacherQuery.exec()) {
+        qDebug() << "Error executing teacher list query:" << teacherQuery.lastError().text();
+        return;
+    }
+    teacherQuery.next();
+    int teacherCount = teacherQuery.value(0).toInt();
+    qDebug()<<teacherCount;
+    // Calculate the progress percentage
+    int progress = (studentcount) / teacherCount * studentcount;
+    qDebug()<<progress;
+    // Update the progress bar
+    ui->progressBar->setValue(progress);
 }
 
 void Adashb::updateStudentCountLabel() {
