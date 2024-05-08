@@ -603,7 +603,7 @@ background-color: rgba(0, 0, 0, 0);
        <enum>Qt::AutoText</enum>
       </property>
       <property name="pixmap">
-       <pixmap resource="Images.qrc">:/new/prefix1/ProfileIcon.png</pixmap>
+       <pixmap resource="Assets.qrc">:/assets/assets/ProfileIcon.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1747,7 +1747,7 @@ border-color: rgb(255, 255, 255);</string>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="Images.qrc"/>
+  <include location="Assets.qrc"/>
  </resources>
  <connections/>
 </ui>

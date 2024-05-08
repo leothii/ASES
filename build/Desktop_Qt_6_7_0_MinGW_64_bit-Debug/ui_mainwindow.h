@@ -155,7 +155,7 @@ public:
 "}"));
         label_2->setFrameShape(QFrame::NoFrame);
         label_2->setTextFormat(Qt::AutoText);
-        label_2->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/ProfileIcon.png")));
+        label_2->setPixmap(QPixmap(QString::fromUtf8(":/assets/assets/ProfileIcon.png")));
         label_2->setScaledContents(true);
         label_2->setWordWrap(true);
         label_2->setOpenExternalLinks(true);
