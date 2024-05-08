@@ -7,6 +7,7 @@ release/form3.o
 release/form4.o
 release/form5.o
 release/global.o
+release/history.o
 release/index.o
 release/instruction.o
 release/main.o
@@ -22,8 +23,7 @@ release/tdashb.o
 release/teacherlg.o
 release/teacherpass.o
 release/tselection.o
-release/qrc_Images.o
-release/qrc_Resource.o
+release/qrc_Assets.o
 release/moc_adashb.o
 release/moc_adminlg.o
 release/moc_edit.o
@@ -33,6 +33,7 @@ release/moc_form3.o
 release/moc_form4.o
 release/moc_form5.o
 release/moc_global.o
+release/moc_history.o
 release/moc_index.o
 release/moc_instruction.o
 release/moc_mainwindow.o

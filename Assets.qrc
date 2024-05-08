@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/assets">
+        <file>assets/background.png</file>
+        <file>assets/Bg.png</file>
+        <file>assets/Cict.png</file>
+        <file>assets/data.png</file>
+        <file>assets/down-arrow-square-outlined-button.png</file>
+        <file>assets/dropdown.png</file>
+        <file>assets/icons8-drop-down-50.png</file>
+        <file>assets/profile.png</file>
+        <file>assets/ProfileIcon.png</file>
+        <file>assets/student.png</file>
+        <file>assets/user-regular-24.png</file>
+        <file>assets/wvsu_logo.png</file>
+    </qresource>
+</RCC>

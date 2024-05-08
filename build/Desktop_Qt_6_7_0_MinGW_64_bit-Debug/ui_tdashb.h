@@ -146,7 +146,7 @@ public:
 "}"));
         label_2->setFrameShape(QFrame::NoFrame);
         label_2->setTextFormat(Qt::AutoText);
-        label_2->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/ProfileIcon.png")));
+        label_2->setPixmap(QPixmap(QString::fromUtf8(":/assets/assets/ProfileIcon.png")));
         label_2->setScaledContents(true);
         label_2->setWordWrap(true);
         label_2->setOpenExternalLinks(true);
@@ -210,7 +210,7 @@ public:
         QFont font7;
         font7.setPointSize(1);
         label_7->setFont(font7);
-        label_7->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/wvsu_logo.png")));
+        label_7->setPixmap(QPixmap(QString::fromUtf8(":/assets/assets/wvsu_logo.png")));
         label_7->setScaledContents(true);
         label_8 = new QLabel(frame_3);
         label_8->setObjectName("label_8");
@@ -409,7 +409,7 @@ public:
 "}"));
         label_19->setFrameShape(QFrame::NoFrame);
         label_19->setTextFormat(Qt::AutoText);
-        label_19->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/115746_data_icon.png")));
+        label_19->setPixmap(QPixmap(QString::fromUtf8(":/assets/assets/data.png")));
         label_19->setScaledContents(true);
         label_19->setWordWrap(true);
         label_19->setOpenExternalLinks(true);

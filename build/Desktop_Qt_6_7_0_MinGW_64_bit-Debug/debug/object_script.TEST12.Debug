@@ -7,6 +7,7 @@ debug/form3.o
 debug/form4.o
 debug/form5.o
 debug/global.o
+debug/history.o
 debug/index.o
 debug/instruction.o
 debug/main.o
@@ -22,8 +23,7 @@ debug/tdashb.o
 debug/teacherlg.o
 debug/teacherpass.o
 debug/tselection.o
-debug/qrc_Images.o
-debug/qrc_Resource.o
+debug/qrc_Assets.o
 debug/moc_adashb.o
 debug/moc_adminlg.o
 debug/moc_edit.o
@@ -33,6 +33,7 @@ debug/moc_form3.o
 debug/moc_form4.o
 debug/moc_form5.o
 debug/moc_global.o
+debug/moc_history.o
 debug/moc_index.o
 debug/moc_instruction.o
 debug/moc_mainwindow.o

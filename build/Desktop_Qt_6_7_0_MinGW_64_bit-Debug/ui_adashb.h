@@ -297,7 +297,7 @@ public:
         label_30 = new QLabel(groupBox);
         label_30->setObjectName("label_30");
         label_30->setGeometry(QRect(20, 190, 41, 41));
-        label_30->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/pngegg.png")));
+        label_30->setPixmap(QPixmap(QString::fromUtf8(":/assets/assets/student.png")));
         label_30->setScaledContents(true);
         label_30->setWordWrap(true);
         studentButton = new QPushButton(groupBox);
@@ -352,7 +352,7 @@ public:
         QFont font8;
         font8.setPointSize(1);
         label_7->setFont(font8);
-        label_7->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/wvsu_logo.png")));
+        label_7->setPixmap(QPixmap(QString::fromUtf8(":/assets/assets/wvsu_logo.png")));
         label_7->setScaledContents(true);
         label_8 = new QLabel(frame_3);
         label_8->setObjectName("label_8");

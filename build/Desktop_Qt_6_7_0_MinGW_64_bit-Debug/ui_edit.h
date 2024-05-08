@@ -189,7 +189,8 @@ public:
 "\n"
 "/* QComboBox down arrow style */\n"
 "QComboBox::down-arrow {\n"
-"    	image: url(:/new/prefix1/icons8-expand-arrow-100.png);\n"
+"    	\n"
+"	image: url(:/assets/assets/dropdown.png);\n"
 "    width: 12px; /* Width of the down arrow */\n"
 "    height: 12px; /* Height of the down arrow */\n"
 "}\n"
@@ -197,8 +198,8 @@ public:
 "/* Style for QAbstractItemView (dropdown list) */\n"
 "QComboBox QAbstractItemView {\n"
 "    border: 1px solid #377ab7; /* Border color matches blue */\n"
-"    background-color: #f2f2f2; /* Light gray background f"
-                        "or dropdown */\n"
+"    background-color: #f2f2f2; /* Light gray background for drop"
+                        "down */\n"
 "    selection-background-color: #2b6698; /* Darker blue for selection */\n"
 "    selection-color: white; /* White text color for selected items */\n"
 "    outline: none; /* No outline */\n"
@@ -297,7 +298,8 @@ public:
 "\n"
 "/* QComboBox down arrow style */\n"
 "QComboBox::down-arrow {\n"
-"	image: url(:/new/prefix1/icons8-expand-arrow-100.png);\n"
+"    	\n"
+"	image: url(:/assets/assets/dropdown.png);\n"
 "    width: 12px; /* Width of the down arrow */\n"
 "    height: 12px; /* Height of the down arrow */\n"
 "}\n"
@@ -305,8 +307,8 @@ public:
 "/* Style for QAbstractItemView (dropdown list) */\n"
 "QComboBox QAbstractItemView {\n"
 "    border: 1px solid #377ab7; /* Border color matches blue */\n"
-"    background-color: #f2f2f2; /* Light gray background for d"
-                        "ropdown */\n"
+"    background-color: #f2f2f2; /* Light gray background for drop"
+                        "down */\n"
 "    selection-background-color: #2b6698; /* Darker blue for selection */\n"
 "    selection-color: white; /* White text color for selected items */\n"
 "    outline: none; /* No outline */\n"
@@ -402,7 +404,8 @@ public:
 "\n"
 "/* QComboBox down arrow style */\n"
 "QComboBox::down-arrow {\n"
-"	image: url(:/new/prefix1/icons8-expand-arrow-100.png);\n"
+"    	\n"
+"	image: url(:/assets/assets/dropdown.png);\n"
 "    width: 12px; /* Width of the down arrow */\n"
 "    height: 12px; /* Height of the down arrow */\n"
 "}\n"
@@ -410,8 +413,8 @@ public:
 "/* Style for QAbstractItemView (dropdown list) */\n"
 "QComboBox QAbstractItemView {\n"
 "    border: 1px solid #377ab7; /* Border color matches blue */\n"
-"    background-color: #f2f2f2; /* Light gray background for d"
-                        "ropdown */\n"
+"    background-color: #f2f2f2; /* Light gray background for drop"
+                        "down */\n"
 "    selection-background-color: #2b6698; /* Darker blue for selection */\n"
 "    selection-color: white; /* White text color for selected items */\n"
 "    outline: none; /* No outline */\n"
@@ -448,7 +451,7 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
-        Firstname->setReadOnly(true);
+        Firstname->setReadOnly(false);
         label_5 = new QLabel(frame);
         label_5->setObjectName("label_5");
         label_5->setGeometry(QRect(30, 70, 111, 16));
@@ -479,7 +482,7 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
-        Lastname->setReadOnly(true);
+        Lastname->setReadOnly(false);
         label_12 = new QLabel(frame);
         label_12->setObjectName("label_12");
         label_12->setGeometry(QRect(30, 140, 111, 16));

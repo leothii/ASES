@@ -133,7 +133,7 @@ public:
         QFont font2;
         font2.setPointSize(1);
         label_2->setFont(font2);
-        label_2->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/wvsu_logo.png")));
+        label_2->setPixmap(QPixmap(QString::fromUtf8(":/assets/assets/wvsu_logo.png")));
         label_2->setScaledContents(true);
         nextButton = new QPushButton(frame);
         nextButton->setObjectName("nextButton");

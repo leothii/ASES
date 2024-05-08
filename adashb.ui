@@ -632,7 +632,7 @@ border-radius: 10px;</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Images.qrc">:/new/prefix1/pngegg.png</pixmap>
+       <pixmap resource="Assets.qrc">:/assets/assets/student.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -750,7 +750,7 @@ QPushButton:hover{
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Images.qrc">:/new/prefix1/wvsu_logo.png</pixmap>
+       <pixmap resource="Assets.qrc">:/assets/assets/wvsu_logo.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -941,7 +941,7 @@ QProgressBar::chunk:hover {
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="Images.qrc"/>
+  <include location="Assets.qrc"/>
  </resources>
  <connections/>
 </ui>

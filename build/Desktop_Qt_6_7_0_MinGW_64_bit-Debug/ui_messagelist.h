@@ -81,7 +81,7 @@ public:
         QFont font;
         font.setPointSize(1);
         label_7->setFont(font);
-        label_7->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/wvsu_logo.png")));
+        label_7->setPixmap(QPixmap(QString::fromUtf8(":/assets/assets/wvsu_logo.png")));
         label_7->setScaledContents(true);
         label_8 = new QLabel(frame_3);
         label_8->setObjectName("label_8");

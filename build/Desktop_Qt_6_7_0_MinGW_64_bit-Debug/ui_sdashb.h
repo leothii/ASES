@@ -120,7 +120,7 @@ public:
         font2.setFamilies({QString::fromUtf8("Segoe MDL2 Assets")});
         label_2->setFont(font2);
         label_2->setStyleSheet(QString::fromUtf8(""));
-        label_2->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/ProfileIcon.png")));
+        label_2->setPixmap(QPixmap(QString::fromUtf8(":/assets/assets/ProfileIcon.png")));
         label_2->setScaledContents(true);
         name = new QLabel(groupBox_2);
         name->setObjectName("name");
@@ -296,7 +296,7 @@ public:
         QFont font10;
         font10.setPointSize(1);
         label_7->setFont(font10);
-        label_7->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/wvsu_logo.png")));
+        label_7->setPixmap(QPixmap(QString::fromUtf8(":/assets/assets/wvsu_logo.png")));
         label_7->setScaledContents(true);
         label_8 = new QLabel(frame_3);
         label_8->setObjectName("label_8");

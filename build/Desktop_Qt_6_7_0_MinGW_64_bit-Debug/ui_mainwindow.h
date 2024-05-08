@@ -66,7 +66,7 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Accent, brush1);
         MainWindow->setPalette(palette);
         MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow{\n"
-"background-image: url(:/new/prefix1/background.png);\n"
+"	background-image: url(:/assets/assets/background.png);\n"
 "}"));
         MainWindow->setToolButtonStyle(Qt::ToolButtonIconOnly);
         MainWindow->setTabShape(QTabWidget::Rounded);
@@ -232,8 +232,8 @@ public:
 "}\n"
 "/* QComboBox down arrow style */\n"
 "QComboBox::down-arrow {\n"
-"    \n"
-"	image: url(:/new/prefix1/icons8-expand-arrow-100.png);\n"
+"   \n"
+"	image: url(:/assets/assets/dropdown.png);\n"
 "    width: 12px; /* Width of the down arrow */\n"
 "    height: 12px; /* Height of the down arrow */\n"
 "}\n"
@@ -242,8 +242,8 @@ public:
 "/* Style for QAbstractItemView (dropdown list) */\n"
 "QComboBox QAbstractItemView {\n"
 "    border: 1px solid #377ab7; /* Border color matches blue */\n"
-"    background-color: #f2f2f2; /* Light gray backgro"
-                        "und for dropdown */\n"
+"    background-color: #f2f2f2; /* Light gray background for dropdo"
+                        "wn */\n"
 "    selection-background-color: #2b6698; /* Darker blue for selection */\n"
 "    selection-color: white; /* White text color for selected items */\n"
 "    outline: none; /* No outline */\n"
