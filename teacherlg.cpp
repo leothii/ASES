@@ -2,6 +2,7 @@
 #include "ui_teacherlg.h"
 #include "mainwindow.h"
 #include "tdashb.h"
+#include "teacherpass.h"
 
 
 QString TeacherLg::password;
@@ -17,6 +18,7 @@ TeacherLg::TeacherLg(QWidget *parent)
     ui->setupUi(this);
     connect(ui->backButton, &QPushButton::clicked, this, &TeacherLg::on_backButton_clicked);
     connect(ui->loginButton, &QPushButton::clicked, this, &TeacherLg::on_loginButton_clicked);
+    connect(ui->PassButton, &QPushButton::clicked, this, &TeacherLg::on_passButton_clicked);
 }
 
 
@@ -99,7 +101,24 @@ void TeacherLg::on_loginButton_clicked() {
         ui->Emessage->setText("No matching record found");
     }
     db.close();
+    this->hide();
 }
+
+void TeacherLg::on_passButton_clicked() {
+
+
+    if (Teacherpass::instance) {
+        Teacherpass::instance->show();
+        Teacherpass::instance->raise();\
+            Teacherpass::instance->activateWindow();
+    } else {
+        // Create a new instance of Sdashb
+        Teacherpass::instance = new Teacherpass(this);
+        Teacherpass::instance->show();
+    }
+    this->hide();
+}
+
 
 TeacherLg::~TeacherLg()
 {

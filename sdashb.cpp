@@ -27,6 +27,10 @@ Sdashb::Sdashb(QWidget *parent)
     db.setUserName("sql6698709");
     db.setPassword("wQpFvGwERi");
     db.open();
+
+
+
+
 }
 
 void Sdashb::setStudentInformation(const QString& fullName, const QString& studentNumber, const QString& email) {
@@ -35,8 +39,40 @@ void Sdashb::setStudentInformation(const QString& fullName, const QString& stude
     ui->studentNum->setText("Student Number: " + studentNumber);
     ui->email->setText("Email: " + email);
     this->sNum = studentNumber;
+    setprogressBar();
 }
 
+
+void Sdashb::setprogressBar(){
+
+    QSqlQuery evalQuery(QSqlDatabase::database());
+    evalQuery.prepare("SELECT COUNT(*) FROM EVALUATIONDATA WHERE STUDENTNUMBER = :studentNumber");
+    evalQuery.bindValue(":studentNumber", Sdashb::sNum);
+    if (!evalQuery.exec()) {
+        qDebug() << "Error executing evaluation data query:" << evalQuery.lastError().text();
+        return;
+    }
+    evalQuery.next();
+    int evalCount = evalQuery.value(0).toInt();
+    qDebug()<<evalCount;
+    qDebug()<<Sdashb::sNum;
+
+    // Get the number of rows in TEACHERLIST
+    QSqlQuery teacherQuery(QSqlDatabase::database());
+    teacherQuery.prepare("SELECT COUNT(*) FROM TEACHERLIST");
+    if (!teacherQuery.exec()) {
+        qDebug() << "Error executing teacher list query:" << teacherQuery.lastError().text();
+        return;
+    }
+    teacherQuery.next();
+    int teacherCount = teacherQuery.value(0).toInt();
+    qDebug()<<teacherCount;
+    // Calculate the progress percentage
+    int progress = (evalCount) / teacherCount;
+    qDebug()<<progress;
+    // Update the progress bar
+    ui->progressBar->setValue(progress);
+}
 void Sdashb::on_logoutButton_clicked()
 {
     // Redirect to the main login window

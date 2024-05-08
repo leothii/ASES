@@ -540,7 +540,7 @@ QPushButton:hover{
 </string>
       </property>
       <property name="text">
-       <string>Error</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>

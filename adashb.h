@@ -30,6 +30,7 @@ public:
     void on_saddButton_clicked();
     void on_backButton_clicked();
     void on_viewButton_clicked();
+    void on_studentButton_clicked();
     void updateStudentCountLabel();
 
 private:

@@ -28,11 +28,11 @@ public:
     QWidget *centralwidget;
     QLineEdit *lineEdit_2;
     QFrame *frame;
-    QPushButton *loginButton_2;
-    QPushButton *backButton_2;
+    QPushButton *resetButton;
+    QPushButton *backButton;
     QLabel *label_3;
     QLabel *label_6;
-    QLabel *Emessage_2;
+    QLabel *Emessage;
     QLabel *label_7;
     QLineEdit *lineEdit_3;
     QLabel *label_5;
@@ -69,10 +69,10 @@ public:
 ""));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
-        loginButton_2 = new QPushButton(frame);
-        loginButton_2->setObjectName("loginButton_2");
-        loginButton_2->setGeometry(QRect(190, 330, 83, 29));
-        loginButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        resetButton = new QPushButton(frame);
+        resetButton->setObjectName("resetButton");
+        resetButton->setGeometry(QRect(190, 330, 83, 29));
+        resetButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
 "	border-radius: 3px;\n"
@@ -80,10 +80,10 @@ public:
 "QPushButton:hover{\n"
 "	background-color: #285e8e;\n"
 "}"));
-        backButton_2 = new QPushButton(frame);
-        backButton_2->setObjectName("backButton_2");
-        backButton_2->setGeometry(QRect(20, 330, 83, 29));
-        backButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        backButton = new QPushButton(frame);
+        backButton->setObjectName("backButton");
+        backButton->setGeometry(QRect(20, 330, 83, 29));
+        backButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #337ab7;  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
 "	border-radius: 3px;\n"
@@ -99,10 +99,10 @@ public:
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(60, 190, 161, 16));
         label_6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        Emessage_2 = new QLabel(frame);
-        Emessage_2->setObjectName("Emessage_2");
-        Emessage_2->setGeometry(QRect(120, 40, 63, 20));
-        Emessage_2->setStyleSheet(QString::fromUtf8("color: red;"));
+        Emessage = new QLabel(frame);
+        Emessage->setObjectName("Emessage");
+        Emessage->setGeometry(QRect(120, 40, 63, 20));
+        Emessage->setStyleSheet(QString::fromUtf8("color: red;"));
         label_7 = new QLabel(frame);
         label_7->setObjectName("label_7");
         label_7->setGeometry(QRect(60, 250, 161, 21));
@@ -176,11 +176,11 @@ public:
     void retranslateUi(QMainWindow *Teacherpass)
     {
         Teacherpass->setWindowTitle(QCoreApplication::translate("Teacherpass", "MainWindow", nullptr));
-        loginButton_2->setText(QCoreApplication::translate("Teacherpass", "Reset", nullptr));
-        backButton_2->setText(QCoreApplication::translate("Teacherpass", "Back", nullptr));
+        resetButton->setText(QCoreApplication::translate("Teacherpass", "Reset", nullptr));
+        backButton->setText(QCoreApplication::translate("Teacherpass", "Back", nullptr));
         label_3->setText(QCoreApplication::translate("Teacherpass", "Email", nullptr));
         label_6->setText(QCoreApplication::translate("Teacherpass", "New Password", nullptr));
-        Emessage_2->setText(QString());
+        Emessage->setText(QString());
         label_7->setText(QCoreApplication::translate("Teacherpass", "Confirm New Password", nullptr));
         label_5->setText(QCoreApplication::translate("Teacherpass", "Email", nullptr));
         label_8->setText(QCoreApplication::translate("Teacherpass", "Verification", nullptr));

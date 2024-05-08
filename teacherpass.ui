@@ -54,7 +54,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="loginButton_2">
+    <widget class="QPushButton" name="resetButton">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -77,7 +77,7 @@ QPushButton:hover{
       <string>Reset</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="backButton_2">
+    <widget class="QPushButton" name="backButton">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -132,7 +132,7 @@ QPushButton:hover{
       <string>New Password</string>
      </property>
     </widget>
-    <widget class="QLabel" name="Emessage_2">
+    <widget class="QLabel" name="Emessage">
      <property name="geometry">
       <rect>
        <x>120</x>

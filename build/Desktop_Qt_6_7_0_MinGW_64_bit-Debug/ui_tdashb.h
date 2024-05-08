@@ -481,13 +481,13 @@ public:
         cB->setAlignment(Qt::AlignCenter);
         cC = new QLabel(groupBox_4);
         cC->setObjectName("cC");
-        cC->setGeometry(QRect(170, 40, 16, 16));
+        cC->setGeometry(QRect(165, 40, 21, 16));
         cC->setFont(font17);
         cC->setStyleSheet(QString::fromUtf8("color: black;"));
         cC->setAlignment(Qt::AlignCenter);
         cD = new QLabel(groupBox_4);
         cD->setObjectName("cD");
-        cD->setGeometry(QRect(200, 40, 16, 16));
+        cD->setGeometry(QRect(196, 40, 20, 16));
         cD->setFont(font17);
         cD->setStyleSheet(QString::fromUtf8("color: black;"));
         cD->setAlignment(Qt::AlignCenter);

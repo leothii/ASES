@@ -1298,9 +1298,9 @@ background-color: rgba(0, 0, 0, 0);
       <widget class="QLabel" name="cC">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>165</x>
          <y>40</y>
-         <width>16</width>
+         <width>21</width>
          <height>16</height>
         </rect>
        </property>
@@ -1325,9 +1325,9 @@ background-color: rgba(0, 0, 0, 0);
       <widget class="QLabel" name="cD">
        <property name="geometry">
         <rect>
-         <x>200</x>
+         <x>196</x>
          <y>40</y>
-         <width>16</width>
+         <width>20</width>
          <height>16</height>
         </rect>
        </property>

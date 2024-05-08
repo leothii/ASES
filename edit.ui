@@ -1507,29 +1507,6 @@ QComboBox QAbstractItemView::item:selected {
       <string>Verification</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>580</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>7</pointsize>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(55, 122, 183);
-</string>
-     </property>
-     <property name="text">
-      <string>Forgot Password</string>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="StudentNo">
      <property name="enabled">
       <bool>true</bool>
@@ -1612,6 +1589,30 @@ QComboBox QAbstractItemView::item:selected {
      </property>
      <property name="text">
       <string>Email</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="PassButton">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>520</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#377ab7;
+border: none; 
+background-color: transparent; </string>
+     </property>
+     <property name="text">
+      <string>Forgot Password</string>
      </property>
     </widget>
    </widget>

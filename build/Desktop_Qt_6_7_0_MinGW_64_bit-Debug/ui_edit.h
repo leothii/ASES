@@ -47,11 +47,11 @@ public:
     QLabel *label_12;
     QLineEdit *Password;
     QLabel *label_6;
-    QLabel *label_7;
     QLineEdit *StudentNo;
     QLabel *label_13;
     QLineEdit *Email;
     QLabel *label_14;
+    QPushButton *PassButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -501,15 +501,6 @@ public:
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(30, 510, 131, 21));
         label_6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        label_7 = new QLabel(frame);
-        label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(170, 580, 111, 16));
-        QFont font1;
-        font1.setPointSize(7);
-        font1.setItalic(true);
-        label_7->setFont(font1);
-        label_7->setStyleSheet(QString::fromUtf8("color: rgb(55, 122, 183);\n"
-""));
         StudentNo = new QLineEdit(frame);
         StudentNo->setObjectName("StudentNo");
         StudentNo->setEnabled(true);
@@ -544,6 +535,16 @@ public:
         label_14->setObjectName("label_14");
         label_14->setGeometry(QRect(30, 200, 111, 16));
         label_14->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        PassButton = new QPushButton(frame);
+        PassButton->setObjectName("PassButton");
+        PassButton->setGeometry(QRect(170, 520, 111, 21));
+        QFont font1;
+        font1.setPointSize(8);
+        font1.setItalic(true);
+        PassButton->setFont(font1);
+        PassButton->setStyleSheet(QString::fromUtf8("color:#377ab7;\n"
+"border: none; \n"
+"background-color: transparent; "));
         Edit->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Edit);
         menubar->setObjectName("menubar");
@@ -598,9 +599,9 @@ public:
         label_11->setText(QCoreApplication::translate("Edit", "Middlename", nullptr));
         label_12->setText(QCoreApplication::translate("Edit", "Lastname", nullptr));
         label_6->setText(QCoreApplication::translate("Edit", "Verification", nullptr));
-        label_7->setText(QCoreApplication::translate("Edit", "Forgot Password", nullptr));
         label_13->setText(QCoreApplication::translate("Edit", "Student No.", nullptr));
         label_14->setText(QCoreApplication::translate("Edit", "Email", nullptr));
+        PassButton->setText(QCoreApplication::translate("Edit", "Forgot Password", nullptr));
     } // retranslateUi
 
 };

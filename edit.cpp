@@ -2,6 +2,7 @@
 #include "ui_edit.h"
 #include "edit.h"
 #include "sdashb.h"
+#include "studentpass.h"
 
 
 Edit::Edit(QWidget *parent)
@@ -13,6 +14,7 @@ Edit::Edit(QWidget *parent)
     QString Snum =  Sdashb::sNum;;
     connect(ui->UpdateButton, &QPushButton::clicked, this, &Edit::on_updateButton_clicked);
     connect(ui->CancelButton, &QPushButton::clicked, this, &Edit::on_cancelButton_clicked);
+    connect(ui->PassButton, &QPushButton::clicked, this, &Edit::on_passButton_clicked);
 
     qDebug() << QSqlDatabase::drivers();
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
@@ -175,6 +177,22 @@ void Edit::on_cancelButton_clicked(){
 
     this->hide();
 }
+
+void Edit::on_passButton_clicked(){
+
+
+    if (Studentpass::instance) {
+        Studentpass::instance->show();
+        Studentpass::instance->raise();\
+            Studentpass::instance->activateWindow();
+    } else {
+        // Create a new instance of Sdashb
+        Studentpass::instance = new Studentpass(this);
+        Studentpass::instance->show();
+    }
+    this->hide();
+}
+
 
 Edit::~Edit()
 {

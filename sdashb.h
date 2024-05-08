@@ -34,6 +34,7 @@ private slots:
     void on_logoutButton_clicked();
     void on_EvaluateButton_clicked();
     void on_EditButton_clicked();
+    void setprogressBar();
 private:
     Ui::Sdashb *ui;
     friend class StudentLg;

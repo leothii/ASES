@@ -26,8 +26,10 @@ public:
 private slots:
     void on_updateButton_clicked();
     void on_cancelButton_clicked();
+    void on_passButton_clicked();
 private:
     Ui::Edit *ui;
+    friend class Studentpass;
 };
 
 #endif // EDIT_H

@@ -384,7 +384,7 @@ public:
         AcadYear_2->setText(QCoreApplication::translate("Sdashb", "<html><head/><body><p>Second Semester</p></body></html>", nullptr));
         label_3->setText(QCoreApplication::translate("Sdashb", "ENDED", nullptr));
         label_4->setText(QCoreApplication::translate("Sdashb", "/", nullptr));
-        Emessage->setText(QCoreApplication::translate("Sdashb", "Error", nullptr));
+        Emessage->setText(QString());
         HistoryButton->setText(QCoreApplication::translate("Sdashb", "History", nullptr));
         logoutButton->setText(QCoreApplication::translate("Sdashb", "Log Out", nullptr));
         label_7->setText(QString());

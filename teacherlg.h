@@ -19,6 +19,7 @@ public:
     void on_backButton_clicked();
     void on_loginButton_clicked();
     static QString email, password;
+    void on_passButton_clicked();
 
 private:
     Ui::TeacherLg *ui;

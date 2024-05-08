@@ -271,7 +271,7 @@ public:
 ""));
         ExitButon = new QPushButton(frame);
         ExitButon->setObjectName("ExitButon");
-        ExitButon->setGeometry(QRect(90, 370, 121, 31));
+        ExitButon->setGeometry(QRect(110, 370, 81, 31));
         QPalette palette5;
         QBrush brush8(QColor(255, 255, 255, 255));
         brush8.setStyle(Qt::SolidPattern);
@@ -317,7 +317,7 @@ public:
 "}"));
         NextButton = new QPushButton(frame);
         NextButton->setObjectName("NextButton");
-        NextButton->setGeometry(QRect(90, 330, 121, 31));
+        NextButton->setGeometry(QRect(110, 330, 81, 31));
         QPalette palette6;
         palette6.setBrush(QPalette::Active, QPalette::WindowText, brush8);
         palette6.setBrush(QPalette::Active, QPalette::Button, brush9);

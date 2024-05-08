@@ -121,13 +121,17 @@ QMap<QString, double> Tdashb::calculateAverageRatings(const QString& teacherName
             qDebug() << "No ratings found for the teacher in column " + column;
             averageRatings[column] = 0.0;
         } else {
-            averageRatings[column] = sum / count;
+            double average = sum / count;
+            // Round to two decimal places
+            average = qRound(average * 100) / 100.0;
+            averageRatings[column] = average;
         }
     }
 
     db.close();
     return averageRatings;
 }
+
 
 double Tdashb::calculateAverageRating(const QString& teacherName) {
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");

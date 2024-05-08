@@ -14,6 +14,8 @@ class Teacherpass : public QMainWindow
 public:
     explicit Teacherpass(QWidget *parent = nullptr);
     ~Teacherpass();
+    static Teacherpass *instance;
+    void on_backButton_clicked();
 
 private:
     Ui::Teacherpass *ui;

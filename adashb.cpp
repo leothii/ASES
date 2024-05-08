@@ -2,6 +2,7 @@
 #include "ui_adashb.h"
 #include "mainwindow.h"
 #include "tclist.h"
+#include "studentlist.h"
 
 QString Adashb::teacher;
 QString Adashb::subject;
@@ -10,6 +11,8 @@ QString Adashb::password;
 
 
 tclist* tclist::instance = nullptr;
+
+Studentlist* Studentlist::instance = nullptr;
 
 
 Adashb::Adashb(QWidget *parent)
@@ -21,6 +24,7 @@ Adashb::Adashb(QWidget *parent)
      connect(ui->saddButton, &QPushButton::clicked, this, &Adashb::on_saddButton_clicked);
      connect(ui->backButton, &QPushButton::clicked, this, &Adashb::on_backButton_clicked);
      connect(ui->viewButton, &QPushButton::clicked, this, &Adashb::on_viewButton_clicked);
+    connect(ui->studentButton, &QPushButton::clicked, this, &Adashb::on_studentButton_clicked);
      updateStudentCountLabel();
 }
 
@@ -208,13 +212,33 @@ void Adashb::on_backButton_clicked() {
 
 
 void Adashb::on_viewButton_clicked() {
-    if (tclist::instance == nullptr){
-    tclist::instance = new tclist(this);
-    tclist::instance->show();
-    this->hide();
-    }
 
+
+    if (tclist::instance) {
+        tclist::instance->show();
+        tclist::instance->raise();\
+            tclist::instance->activateWindow();
+    } else {
+        // Create a new instance of Sdashb
+        tclist::instance = new tclist(this);
+        tclist::instance->show();
+    }this->hide();
 }
+
+
+void Adashb::on_studentButton_clicked(){
+
+    if (Studentlist::instance) {
+        Studentlist::instance->show();
+        Studentlist::instance->raise();\
+            Studentlist::instance->activateWindow();
+    } else {
+        // Create a new instance of Sdashb
+        Studentlist::instance = new Studentlist(this);
+        Studentlist::instance->show();
+    }this->hide();
+}
+
 
 Adashb::~Adashb()
 {
