@@ -49,6 +49,39 @@ Tdashb::Tdashb(QWidget *parent) :
 
     connect(ui->logoutButton, &QPushButton::clicked, this, &Tdashb::on_logoutButton_clicked);
     connect(ui->viewButton, &QPushButton::clicked, this, &Tdashb::on_viewButton_clicked);
+
+    qDebug() << QSqlDatabase::drivers();
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("sql6.freesqldatabase.com");
+    db.setDatabaseName("sql6698709");
+    db.setUserName("sql6698709");
+    db.setPassword("wQpFvGwERi");
+
+    if (db.open()) {
+        qDebug() << "Database is connected";
+        QSqlQuery query(db);
+        query.prepare("SELECT EVALUATIONSTATUS, SEMESTER, ACADEMICYEAR FROM SYSTEMINFO");
+        if (query.exec() && query.first()) {
+            QString evaluationStatus = query.value(0).toString();
+            QString semester = query.value(1).toString();
+            QString academicyear = query.value(2).toString();
+
+            ui->Eval->setText(evaluationStatus);
+            ui->Semester->setText(semester);
+            ui->AcadYear->setText("Academic Year: " + academicyear);
+
+            // Set color based on evaluationStatus
+            if (evaluationStatus == "ONGOING") {
+                ui->Eval->setStyleSheet("color: green;");
+            } else if (evaluationStatus == "ENDED") {
+                ui->Eval->setStyleSheet("color: red;");
+            } else {
+                // Handle any other status here
+                // For example, setting it to black for unknown status
+                ui->Eval->setStyleSheet("color: black;");
+            }
+        }
+    }
 }
 
 QString Tdashb::getName(const QString& email) {

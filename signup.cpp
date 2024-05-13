@@ -52,19 +52,58 @@ void Signup::on_signupButton_clicked() {
     // Check for empty fields
     if (email.isEmpty() || studentNumber.isEmpty() || firstName.isEmpty() ||
         lastName.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-        QMessageBox::warning(this, "Error", "All fields must be filled out.");
+        ui->label->setText("Error: All fields must be filled out.");
+
+        QTimer* timer = new QTimer(this);
+
+        // Connect the timeout signal of the timer to a lambda function
+        connect(timer, &QTimer::timeout, [this, timer]() {
+            // Clear the label text when the timer times out
+            ui->label->clear();
+            // Delete the timer object to avoid memory leaks
+            timer->deleteLater();
+        });
+
+        // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+        timer->start(5000);
         return; // Return here to avoid further processing
     }
 
     // Check if the email ends with '@wvsu.edu.ph'
     if (!email.endsWith("@wvsu.edu.ph")) {
-        QMessageBox::warning(this, "Error", "Must use school account");
+        ui->label->setText("Error: Must use school account!");
+
+        QTimer* timer = new QTimer(this);
+
+        // Connect the timeout signal of the timer to a lambda function
+        connect(timer, &QTimer::timeout, [this, timer]() {
+            // Clear the label text when the timer times out
+            ui->label->clear();
+            // Delete the timer object to avoid memory leaks
+            timer->deleteLater();
+        });
+
+        // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+        timer->start(5000);
         return; // Return here to avoid further processing
     }
 
     // Check if password matches confirm password
     if (password != confirmPassword) {
-        QMessageBox::warning(this, "Error", "Passwords do not match!");
+        ui->label->setText("Error: Passwords do not match!");
+
+        QTimer* timer = new QTimer(this);
+
+        // Connect the timeout signal of the timer to a lambda function
+        connect(timer, &QTimer::timeout, [this, timer]() {
+            // Clear the label text when the timer times out
+            ui->label->clear();
+            // Delete the timer object to avoid memory leaks
+            timer->deleteLater();
+        });
+
+        // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+        timer->start(5000);
         return; // Return here to avoid further processing
     }
 
@@ -78,7 +117,7 @@ void Signup::on_signupButton_clicked() {
 
     if (!db.isOpen()) {
         qDebug() << "Database connection failed";
-        QMessageBox::warning(this, "Error", "Database connection failed!");
+       ui->label->setText("Error: Database connection failed!");
         return; // Exit the function if the database connection fails
     }
 
@@ -92,12 +131,37 @@ void Signup::on_signupButton_clicked() {
         int count = queryCheckAccount.value(0).toInt(); // Retrieve the count
 
         if (count > 0) {
-            QMessageBox::warning(this, "Error", "An account with this email or student number already exists.");
+            ui->label->setText("Error: An account with this email or student number already exists.");
+
+            QTimer* timer = new QTimer(this);
+
+            // Connect the timeout signal of the timer to a lambda function
+            connect(timer, &QTimer::timeout, [this, timer]() {
+                // Clear the label text when the timer times out
+                ui->label->clear();
+                // Delete the timer object to avoid memory leaks
+                timer->deleteLater();
+            });
+
+            // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+            timer->start(5000);
             db.close();
             return; // Exit the function if an account already exists
         }
     } else {
-        QMessageBox::warning(this, "Error", "Failed to check for existing account: " + queryCheckAccount.lastError().text());
+        ui->label->setText("Error: Failed to check for existing account: " + queryCheckAccount.lastError().text());
+        QTimer* timer = new QTimer(this);
+
+        // Connect the timeout signal of the timer to a lambda function
+        connect(timer, &QTimer::timeout, [this, timer]() {
+            // Clear the label text when the timer times out
+            ui->label->clear();
+            // Delete the timer object to avoid memory leaks
+            timer->deleteLater();
+        });
+
+        // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+        timer->start(5000);
         db.close();
         return; // Exit the function if the check for existing account failed
     }

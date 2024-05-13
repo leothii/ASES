@@ -16,7 +16,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -47,17 +46,16 @@ public:
     QLineEdit *taddEdit_3;
     QLabel *label_10;
     QGroupBox *groupBox;
-    QLabel *AcadYear_2;
+    QLabel *Semester;
     QLabel *AcadYear;
     QLabel *StatusBar;
-    QLabel *label_3;
-    QLabel *label;
-    QLabel *label_4;
+    QLabel *Eval;
     QLabel *label_6;
     QLabel *Studentno;
     QLabel *label_29;
     QLabel *label_30;
     QPushButton *studentButton;
+    QPushButton *updateButton;
     QFrame *line;
     QPushButton *backButton;
     QFrame *frame_3;
@@ -68,7 +66,6 @@ public:
     QFrame *line_2;
     QFrame *line_3;
     QProgressBar *progressBar;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *Adashb)
@@ -233,16 +230,16 @@ public:
         groupBox->setTabletTracking(false);
         groupBox->setStyleSheet(QString::fromUtf8("background-color: rgb(218, 218, 218);\n"
 "border-radius: 10px;"));
-        AcadYear_2 = new QLabel(groupBox);
-        AcadYear_2->setObjectName("AcadYear_2");
-        AcadYear_2->setGeometry(QRect(10, 10, 231, 31));
+        Semester = new QLabel(groupBox);
+        Semester->setObjectName("Semester");
+        Semester->setGeometry(QRect(10, 10, 231, 31));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("Product Sans Light")});
         font3.setPointSize(18);
         font3.setBold(false);
-        AcadYear_2->setFont(font3);
-        AcadYear_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        AcadYear_2->setWordWrap(true);
+        Semester->setFont(font3);
+        Semester->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        Semester->setWordWrap(true);
         AcadYear = new QLabel(groupBox);
         AcadYear->setObjectName("AcadYear");
         AcadYear->setGeometry(QRect(10, 40, 361, 31));
@@ -258,24 +255,14 @@ public:
         font4.setBold(true);
         StatusBar->setFont(font4);
         StatusBar->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        label_3 = new QLabel(groupBox);
-        label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(290, 90, 121, 41));
+        Eval = new QLabel(groupBox);
+        Eval->setObjectName("Eval");
+        Eval->setGeometry(QRect(200, 90, 121, 41));
         QFont font5;
         font5.setFamilies({QString::fromUtf8("Product Sans")});
         font5.setPointSize(12);
-        label_3->setFont(font5);
-        label_3->setStyleSheet(QString::fromUtf8("color: red;"));
-        label = new QLabel(groupBox);
-        label->setObjectName("label");
-        label->setGeometry(QRect(180, 90, 121, 41));
-        label->setFont(font5);
-        label->setStyleSheet(QString::fromUtf8("color: green;"));
-        label_4 = new QLabel(groupBox);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(280, 90, 16, 41));
-        label_4->setFont(font5);
-        label_4->setStyleSheet(QString::fromUtf8("color: BLACK;"));
+        Eval->setFont(font5);
+        Eval->setStyleSheet(QString::fromUtf8("color: green;"));
         label_6 = new QLabel(groupBox);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(10, 150, 111, 20));
@@ -285,7 +272,7 @@ public:
         label_6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         Studentno = new QLabel(groupBox);
         Studentno->setObjectName("Studentno");
-        Studentno->setGeometry(QRect(190, 200, 21, 16));
+        Studentno->setGeometry(QRect(190, 201, 21, 16));
         QFont font7;
         font7.setBold(true);
         Studentno->setFont(font7);
@@ -302,7 +289,7 @@ public:
         label_30->setWordWrap(true);
         studentButton = new QPushButton(groupBox);
         studentButton->setObjectName("studentButton");
-        studentButton->setGeometry(QRect(220, 200, 61, 21));
+        studentButton->setGeometry(QRect(220, 197, 61, 21));
         studentButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgb(0, 175, 0);  /* Button background color (blue) */\n"
 "    color: #ffffff;             /* Text color (white) */\n"
@@ -312,17 +299,28 @@ public:
 "	background-color: #285e8e;\n"
 "}\n"
 ""));
-        AcadYear_2->raise();
+        updateButton = new QPushButton(groupBox);
+        updateButton->setObjectName("updateButton");
+        updateButton->setGeometry(QRect(300, 10, 81, 31));
+        updateButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #337ab7;  /* Button background color (blue) */\n"
+"    color: #ffffff;             /* Text color (white) */\n"
+"	border-radius: 3px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #285e8e;\n"
+"}\n"
+""));
+        Semester->raise();
         AcadYear->raise();
         StatusBar->raise();
-        label_3->raise();
-        label->raise();
-        label_4->raise();
+        Eval->raise();
         label_6->raise();
         label_29->raise();
         label_30->raise();
         studentButton->raise();
         Studentno->raise();
+        updateButton->raise();
         line = new QFrame(frame);
         line->setObjectName("line");
         line->setGeometry(QRect(10, 310, 401, 20));
@@ -427,10 +425,6 @@ public:
 ""));
         progressBar->setValue(15);
         Adashb->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(Adashb);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 424, 25));
-        Adashb->setMenuBar(menubar);
         statusbar = new QStatusBar(Adashb);
         statusbar->setObjectName("statusbar");
         Adashb->setStatusBar(statusbar);
@@ -460,17 +454,16 @@ public:
         taddEdit_3->setPlaceholderText(QString());
         label_10->setText(QCoreApplication::translate("Adashb", "Password", nullptr));
         groupBox->setTitle(QString());
-        AcadYear_2->setText(QCoreApplication::translate("Adashb", "<html><head/><body><p>Second Semester</p></body></html>", nullptr));
+        Semester->setText(QCoreApplication::translate("Adashb", "<html><head/><body><p>Second Semester</p></body></html>", nullptr));
         AcadYear->setText(QCoreApplication::translate("Adashb", "<html><head/><body><p>Academic Year: 2024-2025<br/></p></body></html>", nullptr));
         StatusBar->setText(QCoreApplication::translate("Adashb", "Evaluation Status:", nullptr));
-        label_3->setText(QCoreApplication::translate("Adashb", "ENDED", nullptr));
-        label->setText(QCoreApplication::translate("Adashb", "ONGOING", nullptr));
-        label_4->setText(QCoreApplication::translate("Adashb", "/", nullptr));
+        Eval->setText(QCoreApplication::translate("Adashb", "ONGOING", nullptr));
         label_6->setText(QCoreApplication::translate("Adashb", "Rating Progress:", nullptr));
         Studentno->setText(QCoreApplication::translate("Adashb", "58", nullptr));
         label_29->setText(QCoreApplication::translate("Adashb", "Total No. of Students:", nullptr));
         label_30->setText(QString());
         studentButton->setText(QCoreApplication::translate("Adashb", "View ", nullptr));
+        updateButton->setText(QCoreApplication::translate("Adashb", "Update", nullptr));
         backButton->setText(QCoreApplication::translate("Adashb", "Back", nullptr));
         label_7->setText(QString());
         label_8->setText(QCoreApplication::translate("Adashb", "WEST VISAYAS STATE UNIVERSITY\n"

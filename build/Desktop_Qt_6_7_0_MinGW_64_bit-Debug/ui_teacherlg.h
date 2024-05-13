@@ -140,6 +140,7 @@ public:
         font1.setPointSize(8);
         font1.setItalic(true);
         PassButton->setFont(font1);
+        PassButton->setCursor(QCursor(Qt::PointingHandCursor));
         PassButton->setStyleSheet(QString::fromUtf8("color:#377ab7;\n"
 "border: none; \n"
 "background-color: transparent; "));
@@ -165,6 +166,7 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
+        lineEdit_2->setEchoMode(QLineEdit::Password);
         TeacherLg->setCentralWidget(centralwidget);
         menubar = new QMenuBar(TeacherLg);
         menubar->setObjectName("menubar");

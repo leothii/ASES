@@ -12,6 +12,7 @@ SOURCES += \
     adashb.cpp \
     adminlg.cpp \
     edit.cpp \
+    evalstats.cpp \
     form1.cpp \
     form2.cpp \
     form3.cpp \
@@ -39,6 +40,7 @@ HEADERS += \
     adashb.h \
     adminlg.h \
     edit.h \
+    evalstats.h \
     form1.h \
     form2.h \
     form3.h \
@@ -65,6 +67,7 @@ FORMS += \
     adashb.ui \
     adminlg.ui \
     edit.ui \
+    evalstats.ui \
     form1.ui \
     form2.ui \
     form3.ui \

@@ -52,6 +52,7 @@ public:
     QLineEdit *Email;
     QLabel *label_14;
     QPushButton *PassButton;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -226,7 +227,7 @@ public:
 ""));
         label_9 = new QLabel(frame);
         label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(110, 20, 151, 31));
+        label_9->setGeometry(QRect(110, 0, 151, 31));
         QFont font;
         font.setPointSize(12);
         font.setBold(false);
@@ -545,9 +546,17 @@ public:
         font1.setPointSize(8);
         font1.setItalic(true);
         PassButton->setFont(font1);
+        PassButton->setCursor(QCursor(Qt::PointingHandCursor));
         PassButton->setStyleSheet(QString::fromUtf8("color:#377ab7;\n"
 "border: none; \n"
 "background-color: transparent; "));
+        label = new QLabel(frame);
+        label->setObjectName("label");
+        label->setGeometry(QRect(110, 40, 141, 20));
+        label->setFont(font1);
+        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
+""));
+        label->setAlignment(Qt::AlignCenter);
         Edit->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Edit);
         menubar->setObjectName("menubar");
@@ -605,6 +614,7 @@ public:
         label_13->setText(QCoreApplication::translate("Edit", "Student No.", nullptr));
         label_14->setText(QCoreApplication::translate("Edit", "Email", nullptr));
         PassButton->setText(QCoreApplication::translate("Edit", "Forgot Password", nullptr));
+        label->setText(QString());
     } // retranslateUi
 
 };

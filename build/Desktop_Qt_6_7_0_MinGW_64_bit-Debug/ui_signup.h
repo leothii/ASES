@@ -31,7 +31,6 @@ public:
     QLabel *label_3;
     QLineEdit *lineEdit_Value_4;
     QLineEdit *lineEdit_Value_2;
-    QLabel *label_9;
     QLabel *label_5;
     QLabel *label_6;
     QLineEdit *lineEdit_Value_3;
@@ -42,6 +41,8 @@ public:
     QPushButton *SignButton;
     QPushButton *backButton;
     QLineEdit *lineEdit_Value_1;
+    QLabel *label_9;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -87,14 +88,6 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
-        label_9 = new QLabel(centralwidget);
-        label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(130, 110, 231, 31));
-        QFont font;
-        font.setPointSize(12);
-        font.setBold(false);
-        label_9->setFont(font);
-        label_9->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label_5 = new QLabel(centralwidget);
         label_5->setObjectName("label_5");
         label_5->setGeometry(QRect(110, 330, 131, 16));
@@ -182,6 +175,24 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
+        label_9 = new QLabel(frame);
+        label_9->setObjectName("label_9");
+        label_9->setGeometry(QRect(70, 0, 231, 31));
+        QFont font;
+        font.setPointSize(12);
+        font.setBold(false);
+        label_9->setFont(font);
+        label_9->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        label = new QLabel(frame);
+        label->setObjectName("label");
+        label->setGeometry(QRect(80, 30, 141, 20));
+        QFont font1;
+        font1.setPointSize(8);
+        font1.setItalic(true);
+        label->setFont(font1);
+        label->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
+""));
+        label->setAlignment(Qt::AlignCenter);
         Signup->setCentralWidget(centralwidget);
         frame->raise();
         label_4->raise();
@@ -193,7 +204,6 @@ public:
         label_6->raise();
         lineEdit_Value_3->raise();
         lineEdit_Value_5->raise();
-        label_9->raise();
         menubar = new QMenuBar(Signup);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 424, 25));
@@ -213,12 +223,13 @@ public:
         label_4->setText(QCoreApplication::translate("Signup", "Student Number", nullptr));
         label_8->setText(QCoreApplication::translate("Signup", "Email", nullptr));
         label_3->setText(QCoreApplication::translate("Signup", "Firstname", nullptr));
-        label_9->setText(QCoreApplication::translate("Signup", "Create An Account", nullptr));
         label_5->setText(QCoreApplication::translate("Signup", "Lastname", nullptr));
         label_6->setText(QCoreApplication::translate("Signup", "Password", nullptr));
         label_7->setText(QCoreApplication::translate("Signup", "Confirm Password", nullptr));
         SignButton->setText(QCoreApplication::translate("Signup", "Sign Up", nullptr));
         backButton->setText(QCoreApplication::translate("Signup", "Back", nullptr));
+        label_9->setText(QCoreApplication::translate("Signup", "Create An Account", nullptr));
+        label->setText(QString());
     } // retranslateUi
 
 };

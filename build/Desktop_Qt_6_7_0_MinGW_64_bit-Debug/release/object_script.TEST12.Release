@@ -1,6 +1,7 @@
 release/adashb.o
 release/adminlg.o
 release/edit.o
+release/evalstats.o
 release/form1.o
 release/form2.o
 release/form3.o
@@ -27,6 +28,7 @@ release/qrc_Assets.o
 release/moc_adashb.o
 release/moc_adminlg.o
 release/moc_edit.o
+release/moc_evalstats.o
 release/moc_form1.o
 release/moc_form2.o
 release/moc_form3.o

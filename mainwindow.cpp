@@ -66,10 +66,25 @@ void MainWindow::on_NextButton_clicked() {
         // Hide the main window
         this->hide();
 
-    }else
-     ui->label->setText("Invalid user selection");
-
     }
+    else {
+        ui->label->setText("Invalid user selection");
+
+        // Create a QTimer object
+        QTimer* timer = new QTimer(this);
+
+        // Connect the timeout signal of the timer to a lambda function
+        connect(timer, &QTimer::timeout, [this, timer]() {
+            // Clear the label text when the timer times out
+            ui->label->clear();
+            // Delete the timer object to avoid memory leaks
+            timer->deleteLater();
+        });
+
+        // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+        timer->start(5000);
+    }
+}
 
 
 MainWindow::~MainWindow()

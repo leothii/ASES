@@ -175,7 +175,7 @@ public:
 "    text-align: center;"));
         studentList->setFrameShape(QFrame::Box);
         studentList->setFrameShadow(QFrame::Plain);
-        studentList->setDragDropMode(QAbstractItemView::InternalMove);
+        studentList->setDragDropMode(QAbstractItemView::NoDragDrop);
         studentList->setAlternatingRowColors(true);
         studentList->setSelectionMode(QAbstractItemView::SingleSelection);
         studentList->setTextElideMode(Qt::ElideNone);
@@ -200,7 +200,7 @@ public:
         detailList->setFrameShadow(QFrame::Plain);
         detailList->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         detailList->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
-        detailList->setDragDropMode(QAbstractItemView::InternalMove);
+        detailList->setDragDropMode(QAbstractItemView::NoDragDrop);
         detailList->setAlternatingRowColors(true);
         detailList->setSelectionMode(QAbstractItemView::SingleSelection);
         detailList->setTextElideMode(Qt::ElideNone);

@@ -24,7 +24,11 @@ Studentlist::Studentlist(QWidget *parent)
     // Fetch data from the database and populate studentList
     QSqlQuery query("SELECT FIRSTNAME, MIDDLENAME, LASTNAME FROM STUDENTINFORMATION", db);
     while (query.next()) {
-        QString fullName = query.value(0).toString() + " " + query.value(1).toString() + " " + query.value(2).toString();
+        QString fullName;
+        if (query.value(1).toString().isEmpty())
+            fullName = query.value(0).toString() + " " + query.value(2).toString();
+        else
+            fullName = query.value(0).toString() + " " + query.value(1).toString() + " " + query.value(2).toString();
         ui->studentList->addItem(fullName);
     }
     QSqlQuery detailQuery("SELECT EMAIL FROM STUDENTINFORMATION", db);

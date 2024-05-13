@@ -31,6 +31,7 @@ public:
     void on_backButton_clicked();
     void on_viewButton_clicked();
     void on_studentButton_clicked();
+    void updateEvalstats();
     void updateStudentCountLabel();
     void setprogressBar();
 

@@ -11,7 +11,7 @@ StudentLg* StudentLg::instance = nullptr;
 Sdashb* Sdashb::instance = nullptr;
 
 
-
+QString StudentLg::studentNumber;
 
 StudentLg::StudentLg(QWidget *parent)
     : QMainWindow(parent),
@@ -27,7 +27,6 @@ StudentLg::StudentLg(QWidget *parent)
 
     ui->setupUi(this);
     this->setFixedSize(424, 800);
-    ui->lineEdit_3->setEchoMode(QLineEdit::Password); // Hide password characters
     connect(ui->loginButton, &QPushButton::clicked, this, &StudentLg::on_loginButton_clicked);
     connect(ui->backButton, &QPushButton::clicked, this, &StudentLg::on_backButton_clicked);
     connect(ui->signupButton, &QPushButton::clicked, this, &StudentLg::on_signUpButton_clicked);
@@ -90,11 +89,24 @@ void StudentLg::on_loginButton_clicked() {
     // Retrieve user input
     QString email = ui->lineEdit_1->text();
     QString password = ui->lineEdit_3->text();
-    QString studentNumber = ui->lineEdit_2->text();
+    StudentLg::studentNumber = ui->lineEdit_2->text();
 
     // Check if any of the fields are empty
     if (email.isEmpty() || password.isEmpty() || studentNumber.isEmpty()) {
         ui->Emessage->setText("Please fill out all fields");
+
+        QTimer* timer = new QTimer(this);
+
+        // Connect the timeout signal of the timer to a lambda function
+        connect(timer, &QTimer::timeout, [this, timer]() {
+            // Clear the label text when the timer times out
+            ui->label->clear();
+            // Delete the timer object to avoid memory leaks
+            timer->deleteLater();
+        });
+
+        // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+        timer->start(5000);
         return;
     }
 
@@ -109,10 +121,24 @@ void StudentLg::on_loginButton_clicked() {
     QSqlQuery queryLogin(db);
     queryLogin.prepare("SELECT FIRSTNAME, LASTNAME, EMAIL, STUDENTNUMBER, PASSWORD FROM STUDENTINFORMATION WHERE EMAIL = :email AND STUDENTNUMBER = :studentNumber");
     queryLogin.bindValue(":email", email);
-    queryLogin.bindValue(":studentNumber", studentNumber);
+    queryLogin.bindValue(":studentNumber", StudentLg::studentNumber);
 
     if (!queryLogin.exec()) {
         ui->Emessage->setText("Log in failed");
+
+        QTimer* timer = new QTimer(this);
+
+        // Connect the timeout signal of the timer to a lambda function
+        connect(timer, &QTimer::timeout, [this, timer]() {
+            // Clear the label text when the timer times out
+            ui->label->clear();
+            // Delete the timer object to avoid memory leaks
+            timer->deleteLater();
+        });
+
+        // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+        timer->start(5000);
+
         db.close();
         return;
     }
@@ -133,7 +159,7 @@ void StudentLg::on_loginButton_clicked() {
                 QSettings settings;
                 settings.setValue("rememberMe", true);
                 settings.setValue("email", email);
-                settings.setValue("studentNumber", studentNumber);
+                settings.setValue("studentNumber", StudentLg::studentNumber);
             } else {
                 // Clear saved values if checkbox is not checked
                 QSettings settings;
@@ -144,26 +170,39 @@ void StudentLg::on_loginButton_clicked() {
 
             // Pass data to the Sdashb instance
             if (Sdashb::instance) {
-                Sdashb::instance->setStudentInformation(fullName, studentNumber, email);
+                Sdashb::instance->setStudentInformation(fullName, StudentLg::studentNumber, email);
                 Sdashb::instance->ui->StudentName->setText(firstName + "!");
                 Sdashb::instance->show();
                 Sdashb::instance->raise();
                 Sdashb::instance->activateWindow();
+                this->hide();
             } else {
                 Sdashb::instance = new Sdashb(this);
-                Sdashb::instance->setStudentInformation(fullName, studentNumber, email);
+                Sdashb::instance->setStudentInformation(fullName, StudentLg::studentNumber, email);
                 Sdashb::instance->ui->StudentName->setText(firstName + "!");
                 Sdashb::instance->show();
+                this->hide();
             }
 
-            // Hide the login window
-            this->hide();
 
         } else {
             ui->Emessage->setText("Invalid credential");
         }
     } else {
        ui->Emessage->setText("No matching record found");
+
+        QTimer* timer = new QTimer(this);
+
+        // Connect the timeout signal of the timer to a lambda function
+        connect(timer, &QTimer::timeout, [this, timer]() {
+            // Clear the label text when the timer times out
+            ui->label->clear();
+            // Delete the timer object to avoid memory leaks
+            timer->deleteLater();
+        });
+
+        // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+        timer->start(5000);
     }
 
     db.close();

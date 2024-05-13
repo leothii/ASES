@@ -11,6 +11,14 @@ Edit::Edit(QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->Firstname->setTabOrder(ui->Firstname, ui->Middlename);
+    ui->Firstname->setTabOrder(ui->Middlename, ui->Lastname);
+    ui->Lastname->setTabOrder(ui->Lastname, ui->StudentNo);
+    ui->StudentNo->setTabOrder(ui->StudentNo, ui->Email);
+    ui->Email->setTabOrder(ui->Email, ui->Program);
+    ui->Password->setTabOrder(ui->Program, ui->Password);
+
+
     QString Snum =  Sdashb::sNum;;
     connect(ui->UpdateButton, &QPushButton::clicked, this, &Edit::on_updateButton_clicked);
     connect(ui->CancelButton, &QPushButton::clicked, this, &Edit::on_cancelButton_clicked);
@@ -77,14 +85,38 @@ void Edit::on_updateButton_clicked() {
     queryCheckPassword.prepare("SELECT PASSWORD FROM STUDENTINFORMATION WHERE STUDENTNUMBER = :STUDENTNUMBER");
     queryCheckPassword.bindValue(":STUDENTNUMBER", Snum);
     if (!queryCheckPassword.exec() || !queryCheckPassword.next()) {
-        QMessageBox::warning(this, "Error", "Failed to retrieve password: " + queryCheckPassword.lastError().text());
+        ui->label->setText("Error: Failed to retrieve password: " + queryCheckPassword.lastError().text());
+        QTimer* timer = new QTimer(this);
+
+        // Connect the timeout signal of the timer to a lambda function
+        connect(timer, &QTimer::timeout, [this, timer]() {
+            // Clear the label text when the timer times out
+            ui->label->clear();
+            // Delete the timer object to avoid memory leaks
+            timer->deleteLater();
+        });
+
+        // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+        timer->start(5000);
         db.close();
         return;
     }
     QString dbPassword = queryCheckPassword.value(0).toString().trimmed();
 
     if (dbPassword != password) {
-        QMessageBox::warning(this, "Error", "Incorrect password!");
+        ui->label->setText("Error: Incorrect password!");
+        QTimer* timer = new QTimer(this);
+
+        // Connect the timeout signal of the timer to a lambda function
+        connect(timer, &QTimer::timeout, [this, timer]() {
+            // Clear the label text when the timer times out
+            ui->label->clear();
+            // Delete the timer object to avoid memory leaks
+            timer->deleteLater();
+        });
+
+        // Start the timer with a timeout of 5000 milliseconds (5 seconds)
+        timer->start(5000);
         db.close();
         return;
     }

@@ -3,6 +3,7 @@
 #include "mainwindow.h"
 #include "tclist.h"
 #include "studentlist.h"
+#include "evalstats.h"
 
 QString Adashb::teacher;
 QString Adashb::subject;
@@ -13,6 +14,7 @@ QString Adashb::password;
 tclist* tclist::instance = nullptr;
 
 Studentlist* Studentlist::instance = nullptr;
+Evalstats* Evalstats::instance = nullptr;
 
 
 Adashb::Adashb(QWidget *parent)
@@ -24,11 +26,44 @@ Adashb::Adashb(QWidget *parent)
      connect(ui->saddButton, &QPushButton::clicked, this, &Adashb::on_saddButton_clicked);
      connect(ui->backButton, &QPushButton::clicked, this, &Adashb::on_backButton_clicked);
      connect(ui->viewButton, &QPushButton::clicked, this, &Adashb::on_viewButton_clicked);
+     connect(ui->updateButton, &QPushButton::clicked, this, &Adashb::updateEvalstats);
     connect(ui->studentButton, &QPushButton::clicked, this, &Adashb::on_studentButton_clicked);
      updateStudentCountLabel();
     setprogressBar();
-}
 
+     qDebug() << QSqlDatabase::drivers();
+     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+     db.setHostName("sql6.freesqldatabase.com");
+     db.setDatabaseName("sql6698709");
+     db.setUserName("sql6698709");
+     db.setPassword("wQpFvGwERi");
+
+     if (db.open()) {
+         qDebug() << "Database is connected";
+         QSqlQuery query(db);
+         query.prepare("SELECT EVALUATIONSTATUS, SEMESTER, ACADEMICYEAR FROM SYSTEMINFO");
+         if (query.exec() && query.first()) {
+             QString evaluationStatus = query.value(0).toString();
+             QString semester = query.value(1).toString();
+             QString academicyear = query.value(2).toString();
+
+             ui->Eval->setText(evaluationStatus);
+             ui->Semester->setText(semester);
+             ui->AcadYear->setText("Academic Year: " + academicyear);
+
+             // Set color based on evaluationStatus
+             if (evaluationStatus == "ONGOING") {
+                 ui->Eval->setStyleSheet("color: green;");
+             } else if (evaluationStatus == "ENDED") {
+                 ui->Eval->setStyleSheet("color: red;");
+             } else {
+                 // Handle any other status here
+                 // For example, setting it to black for unknown status
+                 ui->Eval->setStyleSheet("color: black;");
+             }
+         }
+     }
+}
 void Adashb::setprogressBar(){
 
     QSqlQuery studentQuery(QSqlDatabase::database());
@@ -38,7 +73,7 @@ void Adashb::setprogressBar(){
         return;
     }
     studentQuery.next();
-     int studentcount =studentQuery.value(0).toInt();
+     double studentcount =studentQuery.value(0).toInt();
 
     // Get the number of rows in TEACHERLIST
     QSqlQuery teacherQuery(QSqlDatabase::database());
@@ -48,13 +83,13 @@ void Adashb::setprogressBar(){
         return;
     }
     teacherQuery.next();
-    int teacherCount = teacherQuery.value(0).toInt();
+    double teacherCount = teacherQuery.value(0).toInt();
     qDebug()<<teacherCount;
     // Calculate the progress percentage
-    int progress = (studentcount) / teacherCount * studentcount;
+    double progress = (double)((studentcount) / (teacherCount * studentcount));
     qDebug()<<progress;
     // Update the progress bar
-    ui->progressBar->setValue(progress);
+    ui->progressBar->setValue(progress * 100);
 }
 
 void Adashb::updateStudentCountLabel() {
@@ -252,6 +287,19 @@ void Adashb::on_viewButton_clicked() {
         tclist::instance = new tclist(this);
         tclist::instance->show();
     }this->hide();
+}
+
+void Adashb::updateEvalstats() {
+
+    if (Evalstats::instance) {
+        Evalstats::instance->show();
+        Evalstats::instance->raise();\
+            Evalstats::instance->activateWindow();
+    } else {
+        // Create a new instance of Sdashb
+        Evalstats::instance = new Evalstats(this);
+        Evalstats::instance->show();
+    }this->close();
 }
 
 

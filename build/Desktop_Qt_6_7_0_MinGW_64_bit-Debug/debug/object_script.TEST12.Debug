@@ -1,6 +1,7 @@
 debug/adashb.o
 debug/adminlg.o
 debug/edit.o
+debug/evalstats.o
 debug/form1.o
 debug/form2.o
 debug/form3.o
@@ -27,6 +28,7 @@ debug/qrc_Assets.o
 debug/moc_adashb.o
 debug/moc_adminlg.o
 debug/moc_edit.o
+debug/moc_evalstats.o
 debug/moc_form1.o
 debug/moc_form2.o
 debug/moc_form3.o

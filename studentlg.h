@@ -28,6 +28,7 @@ public:
     static StudentLg *instance;
 
     void on_backButton_clicked();
+    static QString studentNumber;
 
 signals:
     void signUpClicked();

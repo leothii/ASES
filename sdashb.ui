@@ -399,13 +399,13 @@ QPushButton:hover{
        <string>Evaluation Status:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="Eval">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>180</x>
         <y>90</y>
         <width>121</width>
-        <height>41</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -450,7 +450,7 @@ QPushButton:hover{
        <string>Edit Profile</string>
       </property>
      </widget>
-     <widget class="QLabel" name="AcadYear_2">
+     <widget class="QLabel" name="Semester">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -474,50 +474,6 @@ QPushButton:hover{
       </property>
       <property name="wordWrap">
        <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>90</y>
-        <width>121</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Product Sans</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: red;</string>
-      </property>
-      <property name="text">
-       <string>ENDED</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_4">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>90</y>
-        <width>16</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Product Sans</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: BLACK;</string>
-      </property>
-      <property name="text">
-       <string>/</string>
       </property>
      </widget>
      <widget class="QLabel" name="Emessage">

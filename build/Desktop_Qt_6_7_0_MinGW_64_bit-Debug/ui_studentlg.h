@@ -77,7 +77,7 @@ public:
 "    padding: 4px;              /* Optional: add some padding */\n"
 "}\n"
 ""));
-        lineEdit_3->setEchoMode(QLineEdit::PasswordEchoOnEdit);
+        lineEdit_3->setEchoMode(QLineEdit::Password);
         lineEdit_2 = new QLineEdit(centralwidget);
         lineEdit_2->setObjectName("lineEdit_2");
         lineEdit_2->setGeometry(QRect(120, 330, 191, 31));
@@ -203,6 +203,8 @@ public:
         font2.setPointSize(8);
         font2.setItalic(true);
         PassButton->setFont(font2);
+        PassButton->setCursor(QCursor(Qt::PointingHandCursor));
+        PassButton->setMouseTracking(false);
         PassButton->setStyleSheet(QString::fromUtf8("color:#377ab7;\n"
 "border: none; \n"
 "background-color: transparent; "));

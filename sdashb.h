@@ -29,12 +29,16 @@ public:
 
     //function nga ma update sang user info
     void setStudentInformation(const QString& fullName, const QString& studentNumber, const QString& email);
+    void setprogressBar();
+    void on_logoutButton_clicked();
 
 private slots:
-    void on_logoutButton_clicked();
+
     void on_EvaluateButton_clicked();
     void on_EditButton_clicked();
-    void setprogressBar();
+    void on_HistoryButton_clicked();
+
+
 private:
     Ui::Sdashb *ui;
     friend class StudentLg;

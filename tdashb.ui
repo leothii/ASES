@@ -626,7 +626,7 @@ QProgressBar::chunk:hover {
        <string>Rating Progress:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="AcadYear_2">
+     <widget class="QLabel" name="AcadYear">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -652,7 +652,7 @@ QProgressBar::chunk:hover {
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="AcadYear">
+     <widget class="QLabel" name="Semester">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -678,7 +678,7 @@ QProgressBar::chunk:hover {
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="Eval">
       <property name="geometry">
        <rect>
         <x>200</x>
@@ -723,58 +723,12 @@ QProgressBar::chunk:hover {
        <string>Evaluation Status:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_4">
-      <property name="geometry">
-       <rect>
-        <x>300</x>
-        <y>90</y>
-        <width>16</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Product Sans</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: BLACK;</string>
-      </property>
-      <property name="text">
-       <string>/</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>90</y>
-        <width>121</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Product Sans</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: red;</string>
-      </property>
-      <property name="text">
-       <string>ENDED</string>
-      </property>
-     </widget>
      <zorder>progressBar</zorder>
      <zorder>label_6</zorder>
-     <zorder>AcadYear_2</zorder>
      <zorder>AcadYear</zorder>
+     <zorder>Semester</zorder>
      <zorder>StatusBar</zorder>
-     <zorder>label_4</zorder>
-     <zorder>label_3</zorder>
-     <zorder>label</zorder>
+     <zorder>Eval</zorder>
     </widget>
     <widget class="QGroupBox" name="groupBox_3">
      <property name="geometry">

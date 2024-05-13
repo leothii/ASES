@@ -150,7 +150,7 @@ public:
         frame_2->setFrameShadow(QFrame::Raised);
         label_22 = new QLabel(frame_2);
         label_22->setObjectName("label_22");
-        label_22->setGeometry(QRect(20, 20, 191, 16));
+        label_22->setGeometry(QRect(160, 20, 101, 16));
         label_22->setFont(font3);
         label_22->setTabletTracking(false);
         label_22->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));

@@ -14,6 +14,9 @@ class History : public QMainWindow
 public:
     explicit History(QWidget *parent = nullptr);
     ~History();
+    static History *instance;
+    void on_backButton_clicked();
+
 
 private:
     Ui::History *ui;

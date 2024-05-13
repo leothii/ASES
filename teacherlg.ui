@@ -202,6 +202,9 @@ QPushButton:hover{
        <italic>true</italic>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
       <string notr="true">color:#377ab7;
 border: none; 
@@ -250,6 +253,9 @@ background-color: transparent; </string>
     padding: 4px;              /* Optional: add some padding */
 }
 </string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
     </property>
    </widget>
   </widget>

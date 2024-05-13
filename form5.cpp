@@ -87,6 +87,7 @@ void Form5::on_submitButton_clicked(){
         qDebug() << "Error updating MESSAGE column in database:" << messageQuery.lastError().text();
     } else {
         qDebug() << "MESSAGE column updated successfully with message:" << message;
+        QMessageBox::information(this, "Evaluation Status", "Evaluation Successful");
     }
     Sdashb::instance->show();
     this->hide();
