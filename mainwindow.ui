@@ -472,7 +472,7 @@ border-radius: 8px;
       </property>
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>28</x>
         <y>10</y>
         <width>81</width>
         <height>81</height>

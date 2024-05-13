@@ -129,7 +129,7 @@ public:
         label_2 = new QLabel(frame_2);
         label_2->setObjectName("label_2");
         label_2->setEnabled(false);
-        label_2->setGeometry(QRect(30, 10, 81, 81));
+        label_2->setGeometry(QRect(28, 10, 81, 81));
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::Button, brush3);
         palette3.setBrush(QPalette::Active, QPalette::Base, brush3);

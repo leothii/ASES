@@ -30,7 +30,9 @@ Messagelist::Messagelist(QWidget *parent)
             while (query.next()) {
                 QString message = query.value(0).toString();
                 qDebug() << "Message retrieved:" << message; // Debug output
-                ui->messageList->addItem(message);
+                if (!message.isEmpty()) { // Check if message is not empty
+                    ui->messageList->addItem(message);
+                }
             }
         } else {
             qDebug() << "Query execution error:" << query.lastError().text();
@@ -39,7 +41,6 @@ Messagelist::Messagelist(QWidget *parent)
         qDebug() << "Database connection error:" << db.lastError().text();
     }
 }
-
 void Messagelist::on_backButton_clicked()
 {
     // Redirect to the main login window

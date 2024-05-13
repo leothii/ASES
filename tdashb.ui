@@ -631,7 +631,7 @@ QProgressBar::chunk:hover {
        <rect>
         <x>20</x>
         <y>40</y>
-        <width>231</width>
+        <width>361</width>
         <height>31</height>
        </rect>
       </property>

@@ -284,7 +284,7 @@ border-radius: 10px;</string>
         <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
-        <string>EVALUTION SYSTEM INFO</string>
+        <string>EVALUATION SYSTEM INFO</string>
        </property>
       </widget>
      </widget>
@@ -292,22 +292,22 @@ border-radius: 10px;</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>100</y>
+        <y>80</y>
         <width>131</width>
-        <height>21</height>
+        <height>16</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>Evaluation Status:</string>
+       <string>Evaluation Status</string>
       </property>
      </widget>
      <widget class="QComboBox" name="ESbox">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>30</x>
         <y>100</y>
         <width>121</width>
         <height>21</height>
@@ -678,7 +678,7 @@ QComboBox QAbstractItemView::item:selected {
         <x>30</x>
         <y>140</y>
         <width>131</width>
-        <height>21</height>
+        <height>16</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1098,7 +1098,7 @@ QPushButton:hover{
       <x>40</x>
       <y>340</y>
       <width>131</width>
-      <height>20</height>
+      <height>16</height>
      </rect>
     </property>
     <property name="styleSheet">

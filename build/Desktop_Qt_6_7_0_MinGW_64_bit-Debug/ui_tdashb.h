@@ -300,7 +300,7 @@ public:
         label_6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         AcadYear = new QLabel(groupBox_2);
         AcadYear->setObjectName("AcadYear");
-        AcadYear->setGeometry(QRect(20, 40, 231, 31));
+        AcadYear->setGeometry(QRect(20, 40, 361, 31));
         QFont font12;
         font12.setFamilies({QString::fromUtf8("Product Sans Light")});
         font12.setPointSize(18);

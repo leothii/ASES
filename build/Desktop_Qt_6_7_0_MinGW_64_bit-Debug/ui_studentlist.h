@@ -186,7 +186,7 @@ public:
         studentList->setSortingEnabled(true);
         detailList = new QListWidget(groupBox_3);
         detailList->setObjectName("detailList");
-        detailList->setGeometry(QRect(230, 60, 141, 431));
+        detailList->setGeometry(QRect(230, 60, 151, 431));
         detailList->setFont(font4);
         detailList->setFocusPolicy(Qt::StrongFocus);
         detailList->setLayoutDirection(Qt::LeftToRight);

@@ -185,7 +185,7 @@ public:
 "	border-radius: 3px;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	background-color: #285e8e;\n"
+"	background-color: #006d00;\n"
 "}\n"
 ""));
         line_5 = new QFrame(groupBox_2);
@@ -296,7 +296,7 @@ public:
 "	border-radius: 3px;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	background-color: #285e8e;\n"
+"	background-color: rgb(0, 109, 0);\n"
 "}\n"
 ""));
         updateButton = new QPushButton(groupBox);
@@ -463,7 +463,7 @@ public:
         label_29->setText(QCoreApplication::translate("Adashb", "Total No. of Students:", nullptr));
         label_30->setText(QString());
         studentButton->setText(QCoreApplication::translate("Adashb", "View ", nullptr));
-        updateButton->setText(QCoreApplication::translate("Adashb", "Update", nullptr));
+        updateButton->setText(QCoreApplication::translate("Adashb", "Edit", nullptr));
         backButton->setText(QCoreApplication::translate("Adashb", "Back", nullptr));
         label_7->setText(QString());
         label_8->setText(QCoreApplication::translate("Adashb", "WEST VISAYAS STATE UNIVERSITY\n"

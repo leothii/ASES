@@ -156,30 +156,74 @@ public:
         label_22->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         messageList = new QListWidget(groupBox_3);
         messageList->setObjectName("messageList");
-        messageList->setGeometry(QRect(10, 60, 381, 371));
+        messageList->setEnabled(false);
+        messageList->setGeometry(QRect(10, 60, 381, 361));
+        QPalette palette;
+        QBrush brush(QColor(0, 0, 0, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        QBrush brush1(QColor(218, 218, 218, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        QBrush brush2(QColor(0, 0, 0, 128));
+        brush2.setStyle(Qt::SolidPattern);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush2);
+#endif
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush2);
+#endif
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush2);
+#endif
+        messageList->setPalette(palette);
         QFont font4;
         font4.setUnderline(false);
         messageList->setFont(font4);
         messageList->setFocusPolicy(Qt::StrongFocus);
         messageList->setLayoutDirection(Qt::LeftToRight);
         messageList->setAutoFillBackground(true);
-        messageList->setStyleSheet(QString::fromUtf8("color:black;\n"
-"  border-bottom: 1px solid #ccc; /* Border between rows */\n"
-" border-left: 1px solid #ccc; /* Border between rows */\n"
-" border-right: 1px solid #ccc; /* Border between rows */\n"
-" border-top: 1px solid #ccc; /* Border between rows */\n"
+        messageList->setStyleSheet(QString::fromUtf8("QListWidget {\n"
+"    color: black;\n"
+"}\n"
+"\n"
+"QListWidget::item {\n"
+"    border-bottom: 1px solid #ccc; /* Border between rows */\n"
 "    padding: 5px; /* Padding for each item */\n"
-"    text-align: center;"));
+"    text-align: center;\n"
+"}\n"
+"\n"
+"QListWidget::item:last {\n"
+"    border-bottom: none; /* Remove bottom border for last item */\n"
+"}\n"
+""));
         messageList->setFrameShape(QFrame::Box);
         messageList->setFrameShadow(QFrame::Plain);
         messageList->setDragDropMode(QAbstractItemView::InternalMove);
+        messageList->setDefaultDropAction(Qt::IgnoreAction);
         messageList->setAlternatingRowColors(true);
         messageList->setSelectionMode(QAbstractItemView::SingleSelection);
         messageList->setTextElideMode(Qt::ElideNone);
         messageList->setFlow(QListView::TopToBottom);
         messageList->setProperty("isWrapping", QVariant(true));
         messageList->setUniformItemSizes(true);
-        messageList->setWordWrap(false);
+        messageList->setWordWrap(true);
         messageList->setSortingEnabled(true);
         line = new QFrame(frame);
         line->setObjectName("line");

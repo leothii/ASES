@@ -157,11 +157,11 @@ public:
         label_23->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label_16 = new QLabel(groupBox_4);
         label_16->setObjectName("label_16");
-        label_16->setGeometry(QRect(30, 100, 131, 21));
+        label_16->setGeometry(QRect(30, 80, 131, 16));
         label_16->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         ESbox = new QComboBox(groupBox_4);
         ESbox->setObjectName("ESbox");
-        ESbox->setGeometry(QRect(150, 100, 121, 21));
+        ESbox->setGeometry(QRect(30, 100, 121, 21));
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -267,7 +267,7 @@ public:
 ""));
         label_14 = new QLabel(groupBox_4);
         label_14->setObjectName("label_14");
-        label_14->setGeometry(QRect(30, 140, 131, 21));
+        label_14->setGeometry(QRect(30, 140, 131, 16));
         label_14->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         Sbox = new QComboBox(groupBox_4);
         Sbox->setObjectName("Sbox");
@@ -384,7 +384,7 @@ public:
 ""));
         label_13 = new QLabel(centralwidget);
         label_13->setObjectName("label_13");
-        label_13->setGeometry(QRect(40, 340, 131, 20));
+        label_13->setGeometry(QRect(40, 340, 131, 16));
         label_13->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         AYedit = new QLineEdit(centralwidget);
         AYedit->setObjectName("AYedit");
@@ -421,8 +421,8 @@ public:
         label_12->setText(QCoreApplication::translate("Evalstats", "Lapaz, Iloilo CIty", nullptr));
         label_6->setText(QCoreApplication::translate("Evalstats", "DASHBOARD", nullptr));
         groupBox_4->setTitle(QString());
-        label_23->setText(QCoreApplication::translate("Evalstats", "EVALUTION SYSTEM INFO", nullptr));
-        label_16->setText(QCoreApplication::translate("Evalstats", "Evaluation Status:", nullptr));
+        label_23->setText(QCoreApplication::translate("Evalstats", "EVALUATION SYSTEM INFO", nullptr));
+        label_16->setText(QCoreApplication::translate("Evalstats", "Evaluation Status", nullptr));
 #if QT_CONFIG(accessibility)
         ESbox->setAccessibleName(QCoreApplication::translate("Evalstats", "Select", nullptr));
 #endif // QT_CONFIG(accessibility)

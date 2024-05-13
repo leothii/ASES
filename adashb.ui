@@ -298,7 +298,7 @@ QPushButton:hover{
 	border-radius: 3px;
 }
 QPushButton:hover{
-	background-color: #285e8e;
+	background-color: #006d00;
 }
 </string>
       </property>
@@ -613,7 +613,7 @@ border-radius: 10px;</string>
 	border-radius: 3px;
 }
 QPushButton:hover{
-	background-color: #285e8e;
+	background-color: rgb(0, 109, 0);
 }
 </string>
       </property>
@@ -642,7 +642,7 @@ QPushButton:hover{
 </string>
       </property>
       <property name="text">
-       <string>Update</string>
+       <string>Edit</string>
       </property>
      </widget>
      <zorder>Semester</zorder>
