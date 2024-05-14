@@ -35,9 +35,7 @@ namespace {
 #ifdef QT_MOC_HAS_STRINGDATA
 struct qt_meta_stringdata_CLASSForm5ENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSForm5ENDCLASS = QtMocHelpers::stringData(
-    "Form5",
-    "on_submitButton_clicked",
-    ""
+    "Form5"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -50,18 +48,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSForm5ENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       0,    0, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
-
- // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x0a,    1 /* Public */,
-
- // slots: parameters
-    QMetaType::Void,
 
        0        // eod
 };
@@ -74,23 +66,16 @@ Q_CONSTINIT const QMetaObject Form5::staticMetaObject = { {
     nullptr,
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSForm5ENDCLASS_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<Form5, std::true_type>,
-        // method 'on_submitButton_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<Form5, std::true_type>
     >,
     nullptr
 } };
 
 void Form5::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<Form5 *>(_o);
-        (void)_t;
-        switch (_id) {
-        case 0: _t->on_submitButton_clicked(); break;
-        default: ;
-        }
-    }
+    (void)_o;
+    (void)_id;
+    (void)_c;
     (void)_a;
 }
 
@@ -110,17 +95,6 @@ void *Form5::qt_metacast(const char *_clname)
 int Form5::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QMainWindow::qt_metacall(_c, _id, _a);
-    if (_id < 0)
-        return _id;
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
-    }
     return _id;
 }
 QT_WARNING_POP

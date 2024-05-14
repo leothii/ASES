@@ -12,6 +12,7 @@
 #include <QSettings>
 #include <signup.h>
 #include <QString>
+#include <QTimer>
 
 namespace Ui {
 class Sdashb;

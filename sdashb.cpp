@@ -140,22 +140,23 @@ void Sdashb::on_EvaluateButton_clicked() {
 
         // Check if any specified column is empty
         if (middleName.isEmpty() || academicLevel.isEmpty() || program.isEmpty() || yearLevel.isEmpty() || section.isEmpty()) {
-            ui->Emessage->setText("Edit your profile first!");
+            ui->Emessage->setText("Incomplete Profile");
 
+            // Create a QTimer object
             QTimer* timer = new QTimer(this);
 
             // Connect the timeout signal of the timer to a lambda function
             connect(timer, &QTimer::timeout, [this, timer]() {
                 // Clear the label text when the timer times out
-                ui->Eval->clear();
+                ui->Emessage->clear();
                 // Delete the timer object to avoid memory leaks
                 timer->deleteLater();
             });
 
             // Start the timer with a timeout of 5000 milliseconds (5 seconds)
             timer->start(5000);
-            return;
         }
+
     } else {
         qDebug() << "No student found with student number:" << sNum;
         return;

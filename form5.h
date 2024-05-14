@@ -8,6 +8,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QString>
+#include <QObject>
 
 namespace Ui {
 class Form5;
@@ -20,13 +21,14 @@ class Form5 : public QMainWindow
 public:
     explicit Form5(QWidget *parent = nullptr);
     ~Form5();
-     static Form5 *instance;
+    static Form5 *instance;
     QString studentnum;
     QString Teacher;
     QString Subject;
 
-public slots:
     void on_submitButton_clicked();
+public slots:
+
 
 private:
     Ui::Form5 *ui;

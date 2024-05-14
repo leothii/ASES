@@ -2,7 +2,6 @@
 #include "ui_form5.h"
 #include "tselection.h"
 #include "sdashb.h"
-#include "studentlg.h"
 
 Form5 * Form5::instance=nullptr;
 Form5::Form5(QWidget *parent)
@@ -15,7 +14,9 @@ Form5::Form5(QWidget *parent)
     Subject= tselection::subject;
 
 
-    connect(ui->submitButton, &QPushButton::clicked, this, &Form5::on_submitButton_clicked);
+    if (!QObject::connect(ui->submitButton, &QPushButton::clicked, this, &Form5::on_submitButton_clicked, Qt::UniqueConnection)) {
+        qDebug() << "Failed to connect submitButton signal to on_submitButton_clicked slot";
+    }
 
 }
 
