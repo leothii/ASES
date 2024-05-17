@@ -155,6 +155,7 @@ void Sdashb::on_EvaluateButton_clicked() {
 
             // Start the timer with a timeout of 5000 milliseconds (5 seconds)
             timer->start(5000);
+            return;
         }
 
     } else {
